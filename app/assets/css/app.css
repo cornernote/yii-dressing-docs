@@ -27,6 +27,11 @@ body {
     padding-top: 0;
 }
 
+#holder {
+    min-height: 100%;
+    position: relative;
+}
+
 #body > header {
     padding-top: 80px;
 }
@@ -34,6 +39,11 @@ body {
 #holder {
     min-height: 100%;
     position: relative;
+    margin-bottom: -250px;
+}
+
+#body {
+    padding-bottom: 250px;
 }
 
 #holder > footer {
