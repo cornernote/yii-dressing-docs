@@ -24,7 +24,7 @@ if ($this->showNavBar) {
     ));
 }
 ?>
-<div class="holder">
+<div id="holder">
     <div id="body">
         <header class="jumbotron<?php echo isFront() ? '' : ' subhead'; ?>">
             <div class="container">

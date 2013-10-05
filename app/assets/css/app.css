@@ -18,9 +18,28 @@
 /* Body and structure
 -------------------------------------------------- */
 
+html, body {
+    height: 100%
+}
+
 body {
     position: relative;
-    padding-top: 40px;
+    padding-top: 0;
+}
+
+#body > header {
+    padding-top: 80px;
+}
+
+#holder {
+    min-height: 100%;
+    position: relative;
+}
+
+#holder > footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
 /* Code in headings */
@@ -1107,8 +1126,6 @@ thead th {
     /* padding: 5px;*/
 }
 
-
-
 /*********************
     Breadcrumbs
 *********************/
@@ -1237,7 +1254,6 @@ thead th {
     border-left-color: #ccc !important;
     color: #333;
 }
-
 
 /*********************
     Misc
