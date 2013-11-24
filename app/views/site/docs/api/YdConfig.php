@@ -133,11 +133,6 @@ This class was written and compiled by Brett O'Donnell and Zain ul abidin.</div>
   <td>Returns a static instance.</td>
   <td>YdConfig</td>
 </tr>
-<tr id="mergeArray">
-  <td><?php echo CHtml::link('mergeArray()', array('/site/doc', 'view' => 'YdConfig', '#' => 'mergeArray-detail')); ?></td>
-  <td>Merges two or more arrays into one recursively.</td>
-  <td>YdConfig</td>
-</tr>
 <tr id="setConfig">
   <td><?php echo CHtml::link('setConfig()', array('/site/doc', 'view' => 'YdConfig', '#' => 'setConfig-detail')); ?></td>
   <td>Set the value of a config key</td>
@@ -377,55 +372,6 @@ It is provided for invoking static instance methods.</p>
 <h4>See Also</h4>
 <ul>
 	<li><?php echo CHtml::link('createInstance', array('/site/doc', 'view' => 'YdConfig', '#' => 'createInstance')); ?></li>
-</ul>
-</div>
-
-<div class="detailHeader" id="mergeArray-detail">
-mergeArray()
-<span class="detailHeaderTag">
-method
-</span>
-</div>
-
-<table class="summaryTable">
-<tr><td colspan="3">
-<div class="signature2">
-public static array <b>mergeArray</b>(array $a, array $b)</div>
-</td></tr>
-<tr>
-  <td class="paramNameCol">$a</td>
-  <td class="paramTypeCol">array</td>
-  <td class="paramDescCol">array to be merged to</td>
-</tr>
-<tr>
-  <td class="paramNameCol">$b</td>
-  <td class="paramTypeCol">array</td>
-  <td class="paramDescCol">array to be merged from. You can specify additional
-arrays via third argument, fourth argument etc.</td>
-</tr>
-<tr>
-  <td class="paramNameCol">{return}</td>
-  <td class="paramTypeCol">array</td>
-  <td class="paramDescCol">the merged array (the original arrays are not changed.)</td>
-</tr>
-</table>
-
-<div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/YdConfig.php#L317">dressing/YdConfig.php#L317</a> (<b><a href="#" class="show">show</a></b>)
-<div class="code"><code><span style="color: #000000">
-<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;static&nbsp;function&nbsp;</span><span style="color: #0000BB">mergeArray</span><span style="color: #007700">(</span><span style="color: #0000BB">$a</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$b</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$args&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">func_get_args</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$res&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">array_shift</span><span style="color: #007700">(</span><span style="color: #0000BB">$args</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(!empty(</span><span style="color: #0000BB">$args</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$next&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">array_shift</span><span style="color: #007700">(</span><span style="color: #0000BB">$args</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach&nbsp;(</span><span style="color: #0000BB">$next&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">$k&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$v</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #0000BB">is_integer</span><span style="color: #007700">(</span><span style="color: #0000BB">$k</span><span style="color: #007700">))<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isset(</span><span style="color: #0000BB">$res</span><span style="color: #007700">[</span><span style="color: #0000BB">$k</span><span style="color: #007700">])&nbsp;?&nbsp;</span><span style="color: #0000BB">$res</span><span style="color: #007700">[]&nbsp;=&nbsp;</span><span style="color: #0000BB">$v&nbsp;</span><span style="color: #007700">:&nbsp;</span><span style="color: #0000BB">$res</span><span style="color: #007700">[</span><span style="color: #0000BB">$k</span><span style="color: #007700">]&nbsp;=&nbsp;</span><span style="color: #0000BB">$v</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elseif&nbsp;(</span><span style="color: #0000BB">is_array</span><span style="color: #007700">(</span><span style="color: #0000BB">$v</span><span style="color: #007700">)&nbsp;&amp;&amp;&nbsp;isset(</span><span style="color: #0000BB">$res</span><span style="color: #007700">[</span><span style="color: #0000BB">$k</span><span style="color: #007700">])&nbsp;&amp;&amp;&nbsp;</span><span style="color: #0000BB">is_array</span><span style="color: #007700">(</span><span style="color: #0000BB">$res</span><span style="color: #007700">[</span><span style="color: #0000BB">$k</span><span style="color: #007700">]))<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$res</span><span style="color: #007700">[</span><span style="color: #0000BB">$k</span><span style="color: #007700">]&nbsp;=&nbsp;</span><span style="color: #0000BB">self</span><span style="color: #007700">::</span><span style="color: #0000BB">mergeArray</span><span style="color: #007700">(</span><span style="color: #0000BB">$res</span><span style="color: #007700">[</span><span style="color: #0000BB">$k</span><span style="color: #007700">],&nbsp;</span><span style="color: #0000BB">$v</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$res</span><span style="color: #007700">[</span><span style="color: #0000BB">$k</span><span style="color: #007700">]&nbsp;=&nbsp;</span><span style="color: #0000BB">$v</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$res</span><span style="color: #007700">;<br />}</span>
-</span>
-</code></div>
-</div>
-<p>Merges two or more arrays into one recursively.
-If each array has an element with the same string key value, the latter will overwrite the former (different from array_merge_recursive).
-Recursive merging will be conducted if both arrays have an element of array type and are having the same key.
-For integer-keyed elements, the elements from the latter array will be appended to the former array.</p>
-
-<div class="SeeAlso">
-<h4>See Also</h4>
-<ul>
-	<li>mergeWith</li>
 </ul>
 </div>
 
