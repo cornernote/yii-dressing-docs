@@ -34,7 +34,7 @@ $this->breadcrumbs[] = 'YdErrorEmailCommand';
 </table>
 
 <div id="classDescription">
-YdErrorEmailCommand</div>
+YdErrorEmailCommand will email errors that have been generated into the error runtime folder.</div>
 <a name="properties"></a>
 
 <div class="summary docProperty">

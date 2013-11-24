@@ -35,7 +35,7 @@ $this->breadcrumbs[] = 'YdDropdownColumn';
 </table>
 
 <div id="classDescription">
-ItemPriceFieldColumn</div>
+YdDropdownColumn</div>
 <a name="properties"></a>
 
 <div class="summary docProperty">

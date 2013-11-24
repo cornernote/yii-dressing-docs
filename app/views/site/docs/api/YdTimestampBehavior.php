@@ -40,7 +40,7 @@ $this->breadcrumbs[] = 'YdTimestampBehavior';
 </table>
 
 <div id="classDescription">
-YdTimestampBehavior</div>
+YdTimestampBehavior automatically detects the created and updated fields and populates them when the model is saved.</div>
 <a name="properties"></a>
 
 <div class="summary docProperty">
@@ -61,13 +61,19 @@ YdTimestampBehavior</div>
 <tr id="autoColumns">
   <td><?php echo CHtml::link('autoColumns', array('/site/doc', 'view' => 'YdTimestampBehavior', '#' => 'autoColumns-detail')); ?></td>
   <td>bool</td>
-  <td></td>
+  <td>True to attempt to detect the fields to use for created and updated.</td>
   <td>YdTimestampBehavior</td>
 </tr>
-<tr id="createAttribute">
-  <td><?php echo CHtml::link('createAttribute', array('/site/doc', 'view' => 'YdTimestampBehavior', '#' => 'createAttribute-detail')); ?></td>
+<tr class="inherited" id="createAttribute">
+  <td><?php echo CHtml::link('createAttribute', array('/site/doc', 'view' => 'CTimestampBehavior', '#' => 'createAttribute-detail')); ?></td>
   <td>mixed</td>
   <td>The name of the attribute to store the creation time.</td>
+  <td><?php echo CHtml::link('CTimestampBehavior', array('/site/doc', 'view' => 'CTimestampBehavior')); ?></td>
+</tr>
+<tr id="createAttributes">
+  <td><?php echo CHtml::link('createAttributes', array('/site/doc', 'view' => 'YdTimestampBehavior', '#' => 'createAttributes-detail')); ?></td>
+  <td>array</td>
+  <td>Contains any fields that may be used to store the created timestamp.</td>
   <td>YdTimestampBehavior</td>
 </tr>
 <tr class="inherited" id="enabled">
@@ -94,10 +100,16 @@ YdTimestampBehavior</div>
   <td>The expression that will be used for generating the timestamp.</td>
   <td><?php echo CHtml::link('CTimestampBehavior', array('/site/doc', 'view' => 'CTimestampBehavior')); ?></td>
 </tr>
-<tr id="updateAttribute">
-  <td><?php echo CHtml::link('updateAttribute', array('/site/doc', 'view' => 'YdTimestampBehavior', '#' => 'updateAttribute-detail')); ?></td>
+<tr class="inherited" id="updateAttribute">
+  <td><?php echo CHtml::link('updateAttribute', array('/site/doc', 'view' => 'CTimestampBehavior', '#' => 'updateAttribute-detail')); ?></td>
   <td>mixed</td>
   <td>The name of the attribute to store the modification time.</td>
+  <td><?php echo CHtml::link('CTimestampBehavior', array('/site/doc', 'view' => 'CTimestampBehavior')); ?></td>
+</tr>
+<tr id="updateAttributes">
+  <td><?php echo CHtml::link('updateAttributes', array('/site/doc', 'view' => 'YdTimestampBehavior', '#' => 'updateAttributes-detail')); ?></td>
+  <td>array</td>
+  <td>Contains any fields that may be used to store the updated timestamp.</td>
   <td>YdTimestampBehavior</td>
 </tr>
 </table>
@@ -381,33 +393,31 @@ property
 <div class="signature">
 public bool <b>$autoColumns</b>;</div>
 
-<p></p>
+<p>True to attempt to detect the fields to use for created and updated.</p>
 
 
-<div class="detailHeader" id="createAttribute-detail">
-createAttribute<span class="detailHeaderTag">
+<div class="detailHeader" id="createAttributes-detail">
+createAttributes<span class="detailHeaderTag">
 property
 </span>
 </div>
 
 <div class="signature">
-public mixed <b>$createAttribute</b>;</div>
+public array <b>$createAttributes</b>;</div>
 
-<p>The name of the attribute to store the creation time.  Set to null to not
-use a timestamp for the creation attribute.</p>
+<p>Contains any fields that may be used to store the created timestamp.</p>
 
 
-<div class="detailHeader" id="updateAttribute-detail">
-updateAttribute<span class="detailHeaderTag">
+<div class="detailHeader" id="updateAttributes-detail">
+updateAttributes<span class="detailHeaderTag">
 property
 </span>
 </div>
 
 <div class="signature">
-public mixed <b>$updateAttribute</b>;</div>
+public array <b>$updateAttributes</b>;</div>
 
-<p>The name of the attribute to store the modification time.  Set to null to not
-use a timestamp for the update attribute.</p>
+<p>Contains any fields that may be used to store the updated timestamp.</p>
 
 
 <h2>Method Details</h2>
@@ -432,7 +442,7 @@ public void <b>beforeSave</b>(<?php echo CHtml::link('CModelEvent', array('/site
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdTimestampBehavior.php#L43">dressing\behaviors\YdTimestampBehavior.php#L43</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdTimestampBehavior.php#L41">dressing\behaviors\YdTimestampBehavior.php#L41</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">beforeSave</span><span style="color: #007700">(</span><span style="color: #0000BB">$event</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_setAttributes</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">parent</span><span style="color: #007700">::</span><span style="color: #0000BB">beforeSave</span><span style="color: #007700">(</span><span style="color: #0000BB">$event</span><span style="color: #007700">);<br />}</span>
 </span>

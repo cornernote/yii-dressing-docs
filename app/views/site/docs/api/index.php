@@ -27,46 +27,46 @@ $this->breadcrumbs[] = Yii::t('app', 'Documentation');
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdDressing', array('/site/doc', 'view' => 'YdDressing')); ?></td>
-	  <td>In configuration file main.php add this lines of code:</td>
+	  <td>YdDressing is the main application component for YiiDressing.</td>
 	</tr>
 		<tr>
 		  <td rowspan="1"><a name="dressing.actions"></a>dressing.actions</td>
 		  <td><?php echo CHtml::link('YdGeneratePropertiesAction', array('/site/doc', 'view' => 'YdGeneratePropertiesAction')); ?></td>
-	  <td>Class YdGeneratePropertiesAction</td>
+	  <td>YdGeneratePropertiesAction allows you to update model files to contain correct phpdoc definitions regarding fields,</td>
 	</tr>
 		<tr>
 		  <td rowspan="6"><a name="dressing.behaviors"></a>dressing.behaviors</td>
 		  <td><?php echo CHtml::link('YdAuditBehavior', array('/site/doc', 'view' => 'YdAuditBehavior')); ?></td>
-	  <td>YdAuditBehavior</td>
+	  <td>YdAuditBehavior automatically tracks changes to model data.</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdCacheBehavior', array('/site/doc', 'view' => 'YdCacheBehavior')); ?></td>
-	  <td>YdCacheBehavior</td>
+	  <td>YdCacheBehavior allows simple assignment of cached data to a model which is automatically cleared when the model</td>
 	</tr>
 		<tr>
-		  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
-	  <td>YdEavBaseBehavior class file.</td>
+		  <td><?php echo CHtml::link('YdEavAuditBehavior', array('/site/doc', 'view' => 'YdEavAuditBehavior')); ?></td>
+	  <td>YdEavAuditBehavior extends YdEavBehavior with support for YdAuditBehavior tracking.</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdEavBehavior', array('/site/doc', 'view' => 'YdEavBehavior')); ?></td>
-	  <td></td>
+	  <td>Entity-Attribute-Value behavior.</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdSoftDeleteBehavior', array('/site/doc', 'view' => 'YdSoftDeleteBehavior')); ?></td>
-	  <td>YdSoftDeleteBehavior</td>
+	  <td>YdSoftDeleteBehavior automatically sets a deleted field to the date instead of deleting the row from the database.</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdTimestampBehavior', array('/site/doc', 'view' => 'YdTimestampBehavior')); ?></td>
-	  <td>YdTimestampBehavior</td>
+	  <td>YdTimestampBehavior automatically detects the created and updated fields and populates them when the model is saved.</td>
 	</tr>
 		<tr>
 		  <td rowspan="2"><a name="dressing.commands"></a>dressing.commands</td>
 		  <td><?php echo CHtml::link('YdEmailSpoolCommand', array('/site/doc', 'view' => 'YdEmailSpoolCommand')); ?></td>
-	  <td>YdEmailSpoolCommand</td>
+	  <td>YdEmailSpoolCommand will send emails that are pending in the spool.</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdErrorEmailCommand', array('/site/doc', 'view' => 'YdErrorEmailCommand')); ?></td>
-	  <td>YdErrorEmailCommand</td>
+	  <td>YdErrorEmailCommand will email errors that have been generated into the error runtime folder.</td>
 	</tr>
 		<tr>
 		  <td rowspan="40"><a name="dressing.components"></a>dressing.components</td>
@@ -232,120 +232,116 @@ $this->breadcrumbs[] = Yii::t('app', 'Documentation');
 		<tr>
 		  <td rowspan="13"><a name="dressing.controllers"></a>dressing.controllers</td>
 		  <td><?php echo CHtml::link('YdAccountController', array('/site/doc', 'view' => 'YdAccountController')); ?></td>
-	  <td>AccountController</td>
+	  <td>YdAccountController</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdAttachmentController', array('/site/doc', 'view' => 'YdAttachmentController')); ?></td>
-	  <td>AttachmentController</td>
+	  <td>YdAttachmentController</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdAuditController', array('/site/doc', 'view' => 'YdAuditController')); ?></td>
-	  <td>AuditController</td>
+	  <td>YdAuditController</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdAuditTrailController', array('/site/doc', 'view' => 'YdAuditTrailController')); ?></td>
-	  <td>AuditTrailController</td>
+	  <td>YdAuditTrailController</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdContactUsController', array('/site/doc', 'view' => 'YdContactUsController')); ?></td>
-	  <td>Class ContactUsController</td>
+	  <td>YdContactUsController</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdEmailSpoolController', array('/site/doc', 'view' => 'YdEmailSpoolController')); ?></td>
-	  <td>EmailSpoolController</td>
+	  <td>YdEmailSpoolController</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdEmailTemplateController', array('/site/doc', 'view' => 'YdEmailTemplateController')); ?></td>
-	  <td>EmailTemplateController</td>
+	  <td>YdEmailTemplateController</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdErrorController', array('/site/doc', 'view' => 'YdErrorController')); ?></td>
-	  <td>ErrorController</td>
+	  <td>YdErrorController</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdLookupController', array('/site/doc', 'view' => 'YdLookupController')); ?></td>
-	  <td>LookupController</td>
+	  <td>YdLookupController</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdRoleController', array('/site/doc', 'view' => 'YdRoleController')); ?></td>
-	  <td>Class RoleController</td>
+	  <td>YdRoleController</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdSettingController', array('/site/doc', 'view' => 'YdSettingController')); ?></td>
-	  <td>SettingController</td>
+	  <td>YdSettingController</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdSiteMenuController', array('/site/doc', 'view' => 'YdSiteMenuController')); ?></td>
-	  <td>MenuController</td>
+	  <td>YdMenuController</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdUserController', array('/site/doc', 'view' => 'YdUserController')); ?></td>
-	  <td>UserController</td>
+	  <td>YdUserController</td>
 	</tr>
 		<tr>
-		  <td rowspan="18"><a name="dressing.models"></a>dressing.models</td>
+		  <td rowspan="17"><a name="dressing.models"></a>dressing.models</td>
 		  <td><?php echo CHtml::link('YdAttachment', array('/site/doc', 'view' => 'YdAttachment')); ?></td>
-	  <td>--- BEGIN GenerateProperties ---</td>
+	  <td>YdAttachment</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdAudit', array('/site/doc', 'view' => 'YdAudit')); ?></td>
-	  <td>--- BEGIN GenerateProperties ---</td>
+	  <td>YdAudit</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdAuditTrail', array('/site/doc', 'view' => 'YdAuditTrail')); ?></td>
-	  <td>--- BEGIN GenerateProperties ---</td>
+	  <td>YdAuditTrail</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdContactUs', array('/site/doc', 'view' => 'YdContactUs')); ?></td>
-	  <td>--- BEGIN GenerateProperties ---</td>
+	  <td>YdContactUs</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdEmailSpool', array('/site/doc', 'view' => 'YdEmailSpool')); ?></td>
-	  <td>--- BEGIN GenerateProperties ---</td>
+	  <td>YdEmailSpool</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdEmailTemplate', array('/site/doc', 'view' => 'YdEmailTemplate')); ?></td>
-	  <td>--- BEGIN GenerateProperties ---</td>
-	</tr>
-		<tr>
-		  <td><?php echo CHtml::link('YdLoginForm', array('/site/doc', 'view' => 'YdLoginForm')); ?></td>
-	  <td>YdLoginForm class.</td>
+	  <td>YdEmailTemplate</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdLookup', array('/site/doc', 'view' => 'YdLookup')); ?></td>
-	  <td>--- BEGIN GenerateProperties ---</td>
+	  <td>YdLookup</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdRole', array('/site/doc', 'view' => 'YdRole')); ?></td>
-	  <td>--- BEGIN AutoGenerated by tool/generateProperties ---</td>
+	  <td>YdRole</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdSetting', array('/site/doc', 'view' => 'YdSetting')); ?></td>
-	  <td>--- BEGIN GenerateProperties ---</td>
+	  <td>YdSetting</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdSiteMenu', array('/site/doc', 'view' => 'YdSiteMenu')); ?></td>
-	  <td>--- BEGIN GenerateProperties ---</td>
+	  <td>YdSiteMenu</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdToken', array('/site/doc', 'view' => 'YdToken')); ?></td>
-	  <td>--- BEGIN GenerateProperties ---</td>
+	  <td>YdToken</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdUser', array('/site/doc', 'view' => 'YdUser')); ?></td>
-	  <td>--- BEGIN GenerateProperties ---</td>
+	  <td>YdUser</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdUserLogin', array('/site/doc', 'view' => 'YdUserLogin')); ?></td>
-	  <td>UserLogin is the data structure for keeping user login form data.</td>
+	  <td>YdUserLogin is the data structure for keeping user login form data.</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdUserPassword', array('/site/doc', 'view' => 'YdUserPassword')); ?></td>
-	  <td>UserPassword class.</td>
+	  <td>YdUserPassword is the data structure for keeping user password form data.</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdUserRecover', array('/site/doc', 'view' => 'YdUserRecover')); ?></td>
-	  <td>UserRecover class.</td>
+	  <td>YdUserRecover is the data structure for keeping user recover form data.</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdUserSignup', array('/site/doc', 'view' => 'YdUserSignup')); ?></td>
@@ -353,7 +349,7 @@ $this->breadcrumbs[] = Yii::t('app', 'Documentation');
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdUserToRole', array('/site/doc', 'view' => 'YdUserToRole')); ?></td>
-	  <td>--- BEGIN GenerateProperties ---</td>
+	  <td>YdUserToRole</td>
 	</tr>
 		<tr>
 		  <td rowspan="2"><a name="dressing.validators"></a>dressing.validators</td>
@@ -362,7 +358,7 @@ $this->breadcrumbs[] = Yii::t('app', 'Documentation');
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdRequiredOtherValidator', array('/site/doc', 'view' => 'YdRequiredOtherValidator')); ?></td>
-	  <td>YdRequiredOtherValidator</td>
+	  <td>YdRequiredOtherValidator validates that the specified attribute does not have null or empty value when the</td>
 	</tr>
 		<tr>
 		  <td rowspan="17"><a name="dressing.widgets"></a>dressing.widgets</td>
@@ -371,15 +367,15 @@ $this->breadcrumbs[] = Yii::t('app', 'Documentation');
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdAskToSaveWork', array('/site/doc', 'view' => 'YdAskToSaveWork')); ?></td>
-	  <td>This extension ask for a confirmation to user before leaving the page</td>
+	  <td>YdAskToSaveWork will ask for a confirmation to user before leaving the page after they make a change to the form.</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdClueTip', array('/site/doc', 'view' => 'YdClueTip')); ?></td>
-	  <td>Class YdClueTip</td>
+	  <td>YdClueTip</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdDatePicker', array('/site/doc', 'view' => 'YdDatePicker')); ?></td>
-	  <td>Override CJuiDatePicker</td>
+	  <td>YdDatePicker</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdDetailView', array('/site/doc', 'view' => 'YdDetailView')); ?></td>
@@ -387,11 +383,11 @@ $this->breadcrumbs[] = Yii::t('app', 'Documentation');
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdDropdownColumn', array('/site/doc', 'view' => 'YdDropdownColumn')); ?></td>
-	  <td>ItemPriceFieldColumn</td>
+	  <td>YdDropdownColumn</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdGridView', array('/site/doc', 'view' => 'YdGridView')); ?></td>
-	  <td>Class YdGridView</td>
+	  <td>YdGridView</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdHighchartsWidget', array('/site/doc', 'view' => 'YdHighchartsWidget')); ?></td>
@@ -399,31 +395,31 @@ $this->breadcrumbs[] = Yii::t('app', 'Documentation');
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdHomeMenu', array('/site/doc', 'view' => 'YdHomeMenu')); ?></td>
-	  <td>Class YdHomeMenu</td>
+	  <td>YdHomeMenu</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdJavaScriptWidget', array('/site/doc', 'view' => 'YdJavaScriptWidget')); ?></td>
-	  <td>Class YdJavaScriptWidget</td>
+	  <td>YdJavaScriptWidget</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdListView', array('/site/doc', 'view' => 'YdListView')); ?></td>
-	  <td>Class YdListView</td>
+	  <td>YdListView</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdModal', array('/site/doc', 'view' => 'YdModal')); ?></td>
-	  <td>Class YdModal</td>
+	  <td>YdModal</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdNavbar', array('/site/doc', 'view' => 'YdNavbar')); ?></td>
-	  <td>Class Navbar</td>
+	  <td>Navbar</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdPager', array('/site/doc', 'view' => 'YdPager')); ?></td>
-	  <td>Class YdPager</td>
+	  <td>YdPager</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdQTip', array('/site/doc', 'view' => 'YdQTip')); ?></td>
-	  <td>Class YdQTip</td>
+	  <td>YdQTip</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdReCaptcha', array('/site/doc', 'view' => 'YdReCaptcha')); ?></td>

@@ -36,7 +36,7 @@ $this->breadcrumbs[] = 'YdErrorController';
 </table>
 
 <div id="classDescription">
-ErrorController</div>
+YdErrorController</div>
 <a name="properties"></a>
 
 <div class="summary docProperty">

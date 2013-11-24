@@ -37,7 +37,7 @@ $this->breadcrumbs[] = 'YdDatePicker';
 </table>
 
 <div id="classDescription">
-Override CJuiDatePicker</div>
+YdDatePicker</div>
 <a name="properties"></a>
 
 <div class="summary docProperty">

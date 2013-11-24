@@ -30,7 +30,7 @@ $this->breadcrumbs[] = 'YdClueTip';
 </table>
 
 <div id="classDescription">
-Class YdClueTip</div>
+YdClueTip</div>
 <a name="properties"></a>
 
 <div class="summary docProperty">

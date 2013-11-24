@@ -29,7 +29,7 @@ $this->breadcrumbs[] = 'YdFormModel';
 </tr>
 <tr>
   <th>Subclasses</th>
-  <td><?php echo CHtml::link('YdActiveFormModel', array('/site/doc', 'view' => 'YdActiveFormModel')); ?>, <?php echo CHtml::link('YdLoginForm', array('/site/doc', 'view' => 'YdLoginForm')); ?>, <?php echo CHtml::link('YdUserLogin', array('/site/doc', 'view' => 'YdUserLogin')); ?>, <?php echo CHtml::link('YdUserPassword', array('/site/doc', 'view' => 'YdUserPassword')); ?>, <?php echo CHtml::link('YdUserRecover', array('/site/doc', 'view' => 'YdUserRecover')); ?>, <?php echo CHtml::link('YdUserSignup', array('/site/doc', 'view' => 'YdUserSignup')); ?></td>
+  <td><?php echo CHtml::link('YdActiveFormModel', array('/site/doc', 'view' => 'YdActiveFormModel')); ?>, <?php echo CHtml::link('YdUserLogin', array('/site/doc', 'view' => 'YdUserLogin')); ?>, <?php echo CHtml::link('YdUserPassword', array('/site/doc', 'view' => 'YdUserPassword')); ?>, <?php echo CHtml::link('YdUserRecover', array('/site/doc', 'view' => 'YdUserRecover')); ?>, <?php echo CHtml::link('YdUserSignup', array('/site/doc', 'view' => 'YdUserSignup')); ?></td>
 </tr>
 <tr>
   <th>Source Code</th>

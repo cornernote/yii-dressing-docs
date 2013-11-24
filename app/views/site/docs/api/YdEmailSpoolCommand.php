@@ -34,7 +34,7 @@ $this->breadcrumbs[] = 'YdEmailSpoolCommand';
 </table>
 
 <div id="classDescription">
-YdEmailSpoolCommand</div>
+YdEmailSpoolCommand will send emails that are pending in the spool.</div>
 <a name="properties"></a>
 
 <div class="summary docProperty">

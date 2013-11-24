@@ -35,7 +35,7 @@ $this->breadcrumbs[] = 'YdNavbar';
 </table>
 
 <div id="classDescription">
-Class Navbar</div>
+Navbar</div>
 <a name="properties"></a>
 
 <div class="summary docProperty">

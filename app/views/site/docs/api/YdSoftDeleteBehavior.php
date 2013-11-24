@@ -39,7 +39,7 @@ $this->breadcrumbs[] = 'YdSoftDeleteBehavior';
 </table>
 
 <div id="classDescription">
-YdSoftDeleteBehavior</div>
+YdSoftDeleteBehavior automatically sets a deleted field to the date instead of deleting the row from the database.</div>
 <a name="properties"></a>
 
 <div class="summary docProperty">
@@ -60,13 +60,13 @@ YdSoftDeleteBehavior</div>
 <tr id="deleted">
   <td><?php echo CHtml::link('deleted', array('/site/doc', 'view' => 'YdSoftDeleteBehavior', '#' => 'deleted-detail')); ?></td>
   <td>string</td>
-  <td></td>
+  <td>The field to use to store the deleted date.</td>
   <td>YdSoftDeleteBehavior</td>
 </tr>
 <tr id="deletedBy">
   <td><?php echo CHtml::link('deletedBy', array('/site/doc', 'view' => 'YdSoftDeleteBehavior', '#' => 'deletedBy-detail')); ?></td>
   <td>string</td>
-  <td></td>
+  <td>The field to use to store the user who deleted the row.</td>
   <td>YdSoftDeleteBehavior</td>
 </tr>
 <tr class="inherited" id="enabled">
@@ -151,7 +151,7 @@ YdSoftDeleteBehavior</div>
 </tr>
 <tr id="beforeDelete">
   <td><?php echo CHtml::link('beforeDelete()', array('/site/doc', 'view' => 'YdSoftDeleteBehavior', '#' => 'beforeDelete-detail')); ?></td>
-  <td></td>
+  <td>Override the default delete to update the deleted field instead of deleting the row from the database.</td>
   <td>YdSoftDeleteBehavior</td>
 </tr>
 <tr class="inherited" id="canGetProperty">
@@ -166,7 +166,7 @@ YdSoftDeleteBehavior</div>
 </tr>
 <tr id="deleteds">
   <td><?php echo CHtml::link('deleteds()', array('/site/doc', 'view' => 'YdSoftDeleteBehavior', '#' => 'deleteds-detail')); ?></td>
-  <td></td>
+  <td>Method available to the model to help finding deleted records.</td>
   <td>YdSoftDeleteBehavior</td>
 </tr>
 <tr class="inherited" id="detach">
@@ -249,9 +249,9 @@ YdSoftDeleteBehavior</div>
   <td>Determines whether a property is defined.</td>
   <td><?php echo CHtml::link('CComponent', array('/site/doc', 'view' => 'CComponent')); ?></td>
 </tr>
-<tr id="notdeleteds">
-  <td><?php echo CHtml::link('notdeleteds()', array('/site/doc', 'view' => 'YdSoftDeleteBehavior', '#' => 'notdeleteds-detail')); ?></td>
-  <td></td>
+<tr id="notDeleteds">
+  <td><?php echo CHtml::link('notDeleteds()', array('/site/doc', 'view' => 'YdSoftDeleteBehavior', '#' => 'notDeleteds-detail')); ?></td>
+  <td>Method available to the model to help excluding deleted records from the results.</td>
   <td>YdSoftDeleteBehavior</td>
 </tr>
 <tr class="inherited" id="raiseEvent">
@@ -266,7 +266,7 @@ YdSoftDeleteBehavior</div>
 </tr>
 <tr id="undelete">
   <td><?php echo CHtml::link('undelete()', array('/site/doc', 'view' => 'YdSoftDeleteBehavior', '#' => 'undelete-detail')); ?></td>
-  <td></td>
+  <td>Method available to the model to perform an undelete.</td>
   <td>YdSoftDeleteBehavior</td>
 </tr>
 </table>
@@ -344,7 +344,7 @@ property
 <div class="signature">
 public string <b>$deleted</b>;</div>
 
-<p></p>
+<p>The field to use to store the deleted date.</p>
 
 
 <div class="detailHeader" id="deletedBy-detail">
@@ -356,7 +356,7 @@ property
 <div class="signature">
 public string <b>$deletedBy</b>;</div>
 
-<p></p>
+<p>The field to use to store the user who deleted the row.</p>
 
 
 <h2>Method Details</h2>
@@ -381,13 +381,13 @@ public void <b>beforeDelete</b>(<?php echo CHtml::link('CModelEvent', array('/si
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdSoftDeleteBehavior.php#L27">dressing\behaviors\YdSoftDeleteBehavior.php#L27</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdSoftDeleteBehavior.php#L31">dressing\behaviors\YdSoftDeleteBehavior.php#L31</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
-<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">beforeDelete</span><span style="color: #007700">(</span><span style="color: #0000BB">$event</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(isset(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">owner</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">tableSchema</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">columns</span><span style="color: #007700">[</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">deleted</span><span style="color: #007700">]))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">owner</span><span style="color: #007700">-&gt;{</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">deleted</span><span style="color: #007700">}&nbsp;=&nbsp;</span><span style="color: #0000BB">date</span><span style="color: #007700">(</span><span style="color: #DD0000">'Y-m-d&nbsp;H:i:s'</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(isset(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">owner</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">tableSchema</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">columns</span><span style="color: #007700">[</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">deletedBy</span><span style="color: #007700">]))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">owner</span><span style="color: #007700">-&gt;{</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">deletedBy</span><span style="color: #007700">}&nbsp;=&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">app</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">user</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">id</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">owner</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">save</span><span style="color: #007700">(</span><span style="color: #0000BB">false</span><span style="color: #007700">);<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//prevent&nbsp;real&nbsp;deletion<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$event</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">isValid&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span><span style="color: #007700">;<br />}</span>
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">beforeDelete</span><span style="color: #007700">(</span><span style="color: #0000BB">$event</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">deleted&nbsp;</span><span style="color: #007700">&amp;&amp;&nbsp;isset(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">owner</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">tableSchema</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">columns</span><span style="color: #007700">[</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">deleted</span><span style="color: #007700">]))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">owner</span><span style="color: #007700">-&gt;{</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">deleted</span><span style="color: #007700">}&nbsp;=&nbsp;</span><span style="color: #0000BB">date</span><span style="color: #007700">(</span><span style="color: #DD0000">'Y-m-d&nbsp;H:i:s'</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">deletedBy&nbsp;</span><span style="color: #007700">&amp;&amp;&nbsp;isset(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">owner</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">tableSchema</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">columns</span><span style="color: #007700">[</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">deletedBy</span><span style="color: #007700">]))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">owner</span><span style="color: #007700">-&gt;{</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">deletedBy</span><span style="color: #007700">}&nbsp;=&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">app</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">user</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">id</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">owner</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">save</span><span style="color: #007700">(</span><span style="color: #0000BB">false</span><span style="color: #007700">);<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//prevent&nbsp;real&nbsp;deletion<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$event</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">isValid&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span><span style="color: #007700">;<br />}</span>
 </span>
 </code></div>
 </div>
-<p></p>
+<p>Override the default delete to update the deleted field instead of deleting the row from the database.</p>
 
 
 <div class="detailHeader" id="deleteds-detail">
@@ -410,17 +410,22 @@ public mixed <b>deleteds</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdSoftDeleteBehavior.php#L61">dressing\behaviors\YdSoftDeleteBehavior.php#L61</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdSoftDeleteBehavior.php#L72">dressing\behaviors\YdSoftDeleteBehavior.php#L72</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">deleteds</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">owner</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">dbCriteria</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">mergeWith</span><span style="color: #007700">(array(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'condition'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">deleted&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'&nbsp;IS&nbsp;NOT&nbsp;NULL'<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">));<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">owner</span><span style="color: #007700">;<br />}</span>
 </span>
 </code></div>
 </div>
-<p></p>
+<p>Method available to the model to help finding deleted records.
+<br/><br/>
+eg:
+<pre>
+Model::model()-&gt;deleteds()-&gt;findAll();
+</pre></p>
 
 
-<div class="detailHeader" id="notdeleteds-detail">
-notdeleteds()
+<div class="detailHeader" id="notDeleteds-detail">
+notDeleteds()
 <span class="detailHeaderTag">
 method
 </span>
@@ -429,7 +434,7 @@ method
 <table class="summaryTable">
 <tr><td colspan="3">
 <div class="signature2">
-public mixed <b>notdeleteds</b>()</div>
+public mixed <b>notDeleteds</b>()</div>
 </td></tr>
 <tr>
   <td class="paramNameCol">{return}</td>
@@ -439,13 +444,18 @@ public mixed <b>notdeleteds</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdSoftDeleteBehavior.php#L72">dressing\behaviors\YdSoftDeleteBehavior.php#L72</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdSoftDeleteBehavior.php#L89">dressing\behaviors\YdSoftDeleteBehavior.php#L89</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
-<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">notdeleteds</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">owner</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">dbCriteria</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">mergeWith</span><span style="color: #007700">(array(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'condition'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">deleted&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'&nbsp;IS&nbsp;NULL'<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">));<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">owner</span><span style="color: #007700">;<br />}</span>
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">notDeleteds</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">owner</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">dbCriteria</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">mergeWith</span><span style="color: #007700">(array(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'condition'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">deleted&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'&nbsp;IS&nbsp;NULL'<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">));<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">owner</span><span style="color: #007700">;<br />}</span>
 </span>
 </code></div>
 </div>
-<p></p>
+<p>Method available to the model to help excluding deleted records from the results.
+<br/><br/>
+eg:
+<pre>
+Model::model()-&gt;notDeleteds()-&gt;findAll();
+</pre></p>
 
 
 <div class="detailHeader" id="undelete-detail">
@@ -468,12 +478,12 @@ public mixed <b>undelete</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdSoftDeleteBehavior.php#L45">dressing\behaviors\YdSoftDeleteBehavior.php#L45</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdSoftDeleteBehavior.php#L50">dressing\behaviors\YdSoftDeleteBehavior.php#L50</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">undelete</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">owner</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">isNewRecord</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">trace</span><span style="color: #007700">(</span><span style="color: #0000BB">get_class</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">)&nbsp;.&nbsp;</span><span style="color: #DD0000">'.undelete()'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'system.db.ar.CActiveRecord'</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$updateFields&nbsp;</span><span style="color: #007700">=&nbsp;array(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">deleted&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">null</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">owner</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">updateByPk</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">owner</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getPrimaryKey</span><span style="color: #007700">(),&nbsp;</span><span style="color: #0000BB">$updateFields</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;else<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;new&nbsp;</span><span style="color: #0000BB">CDbException</span><span style="color: #007700">(</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">t</span><span style="color: #007700">(</span><span style="color: #DD0000">'yii'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'The&nbsp;active&nbsp;record&nbsp;cannot&nbsp;be&nbsp;undeleted&nbsp;because&nbsp;it&nbsp;is&nbsp;new.'</span><span style="color: #007700">));<br />}</span>
 </span>
 </code></div>
 </div>
-<p></p>
+<p>Method available to the model to perform an undelete.</p>
 
 

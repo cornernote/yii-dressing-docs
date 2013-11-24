@@ -19,7 +19,6 @@ $this->breadcrumbs[] = 'YdEavBehavior';
 <tr>
   <th>Inheritance</th>
   <td>class YdEavBehavior &raquo;
-<?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?> &raquo;
 <?php echo CHtml::link('CActiveRecordBehavior', array('/site/doc', 'view' => 'CActiveRecordBehavior')); ?> &raquo;
 <?php echo CHtml::link('CModelBehavior', array('/site/doc', 'view' => 'CModelBehavior')); ?> &raquo;
 <?php echo CHtml::link('CBehavior', array('/site/doc', 'view' => 'CBehavior')); ?> &raquo;
@@ -30,17 +29,26 @@ $this->breadcrumbs[] = 'YdEavBehavior';
   <td><?php echo CHtml::link('IBehavior', array('/site/doc', 'view' => 'IBehavior')); ?></td>
 </tr>
 <tr>
+  <th>Subclasses</th>
+  <td><?php echo CHtml::link('YdEavAuditBehavior', array('/site/doc', 'view' => 'YdEavAuditBehavior')); ?></td>
+</tr>
+<tr>
+  <th>Version</th>
+  <td>0.5</td>
+</tr>
+<tr>
   <th>Source Code</th>
   <td><a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php">dressing\behaviors\YdEavBehavior.php</a></td>
 </tr>
 <tr>
-  <th>Authors</th>
-  <td>Brett O&#039;Donnell &lt;cornernote@gmail.com&gt;, Zain Ul abidin &lt;zainengineer@gmail.com&gt;</td>
+  <th>Author</th>
+  <td>Veaceslav Medvedev &lt;slavcopost@gmail.com&gt;</td>
 </tr>
 </table>
 
 <div id="classDescription">
-</div>
+Entity-Attribute-Value behavior.
+Allows model to work with custom fields on the fly (EAV pattern).</div>
 <a name="properties"></a>
 
 <div class="summary docProperty">
@@ -58,29 +66,29 @@ $this->breadcrumbs[] = 'YdEavBehavior';
 <tr>
   <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
 </tr>
-<tr class="inherited" id="attributeField">
-  <td><?php echo CHtml::link('attributeField', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'attributeField-detail')); ?></td>
+<tr id="attributeField">
+  <td><?php echo CHtml::link('attributeField', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'attributeField-detail')); ?></td>
   <td>string</td>
   <td>name of the column to store attribute key.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="attributesPrefix">
-  <td><?php echo CHtml::link('attributesPrefix', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'attributesPrefix-detail')); ?></td>
+<tr id="attributesPrefix">
+  <td><?php echo CHtml::link('attributesPrefix', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'attributesPrefix-detail')); ?></td>
   <td>string</td>
   <td>prefix for each attribute.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
 <tr id="cacheId">
   <td><?php echo CHtml::link('cacheId', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'cacheId-detail')); ?></td>
   <td>string</td>
-  <td></td>
+  <td>caching component Id.</td>
   <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="eavAttributes">
-  <td><?php echo CHtml::link('eavAttributes', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'eavAttributes-detail')); ?></td>
+<tr id="eavAttributes">
+  <td><?php echo CHtml::link('eavAttributes', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'eavAttributes-detail')); ?></td>
   <td>array</td>
   <td></td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
 <tr class="inherited" id="enabled">
   <td><?php echo CHtml::link('enabled', array('/site/doc', 'view' => 'CBehavior', '#' => 'enabled-detail')); ?></td>
@@ -88,11 +96,11 @@ $this->breadcrumbs[] = 'YdEavBehavior';
   <td>whether this behavior is enabled</td>
   <td><?php echo CHtml::link('CBehavior', array('/site/doc', 'view' => 'CBehavior')); ?></td>
 </tr>
-<tr class="inherited" id="entityField">
-  <td><?php echo CHtml::link('entityField', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'entityField-detail')); ?></td>
+<tr id="entityField">
+  <td><?php echo CHtml::link('entityField', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'entityField-detail')); ?></td>
   <td>string</td>
   <td>name of the column to store entity name.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
 <tr class="inherited" id="owner">
   <td><?php echo CHtml::link('owner', array('/site/doc', 'view' => 'CBehavior', '#' => 'owner-detail')); ?></td>
@@ -100,29 +108,23 @@ $this->breadcrumbs[] = 'YdEavBehavior';
   <td>the owner component that this behavior is attached to.</td>
   <td><?php echo CHtml::link('CBehavior', array('/site/doc', 'view' => 'CBehavior')); ?></td>
 </tr>
-<tr id="owner">
-  <td><?php echo CHtml::link('owner', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'owner-detail')); ?></td>
-  <td><?php echo CHtml::link('YdActiveRecord', array('/site/doc', 'view' => 'YdActiveRecord')); ?></td>
-  <td></td>
-  <td>YdEavBehavior</td>
-</tr>
-<tr class="inherited" id="preload">
-  <td><?php echo CHtml::link('preload', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'preload-detail')); ?></td>
+<tr id="preload">
+  <td><?php echo CHtml::link('preload', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'preload-detail')); ?></td>
   <td>boolean</td>
   <td>loaded attributes after find model.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="tableName">
-  <td><?php echo CHtml::link('tableName', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'tableName-detail')); ?></td>
+<tr id="tableName">
+  <td><?php echo CHtml::link('tableName', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'tableName-detail')); ?></td>
   <td>string</td>
   <td>name of the table where data is stored.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="valueField">
-  <td><?php echo CHtml::link('valueField', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'valueField-detail')); ?></td>
+<tr id="valueField">
+  <td><?php echo CHtml::link('valueField', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'valueField-detail')); ?></td>
   <td>string</td>
   <td>name of the column to store value.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
 </table>
 </div>
@@ -141,41 +143,41 @@ $this->breadcrumbs[] = 'YdEavBehavior';
 <tr>
   <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
 </tr>
-<tr class="inherited" id="attributes">
-  <td><?php echo CHtml::link('attributes', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'attributes-detail')); ?></td>
+<tr id="attributes">
+  <td><?php echo CHtml::link('attributes', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'attributes-detail')); ?></td>
   <td><?php echo CHtml::link('CAttributeCollection', array('/site/doc', 'view' => 'CAttributeCollection')); ?></td>
   <td>attributes store.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="cache">
-  <td><?php echo CHtml::link('cache', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'cache-detail')); ?></td>
+<tr id="cache">
+  <td><?php echo CHtml::link('cache', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'cache-detail')); ?></td>
   <td><?php echo CHtml::link('ICache', array('/site/doc', 'view' => 'ICache')); ?></td>
   <td>cache component object.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="cacheKey">
-  <td><?php echo CHtml::link('cacheKey', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'cacheKey-detail')); ?></td>
+<tr id="cacheKey">
+  <td><?php echo CHtml::link('cacheKey', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'cacheKey-detail')); ?></td>
   <td>string</td>
   <td>Returns key for caching model attributes.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="changedAttributes">
-  <td><?php echo CHtml::link('changedAttributes', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'changedAttributes-detail')); ?></td>
+<tr id="changedAttributes">
+  <td><?php echo CHtml::link('changedAttributes', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'changedAttributes-detail')); ?></td>
   <td><?php echo CHtml::link('CList', array('/site/doc', 'view' => 'CList')); ?></td>
   <td>changed attributes list.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="deleteCommand">
-  <td><?php echo CHtml::link('deleteCommand', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'deleteCommand-detail')); ?></td>
+<tr id="deleteCommand">
+  <td><?php echo CHtml::link('deleteCommand', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'deleteCommand-detail')); ?></td>
   <td><?php echo CHtml::link('CDbCommand', array('/site/doc', 'view' => 'CDbCommand')); ?></td>
   <td></td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="deleteEavAttributesCriteria">
-  <td><?php echo CHtml::link('deleteEavAttributesCriteria', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'deleteEavAttributesCriteria-detail')); ?></td>
+<tr id="deleteEavAttributesCriteria">
+  <td><?php echo CHtml::link('deleteEavAttributesCriteria', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'deleteEavAttributesCriteria-detail')); ?></td>
   <td><?php echo CHtml::link('CDbCriteria', array('/site/doc', 'view' => 'CDbCriteria')); ?></td>
   <td></td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
 <tr id="loadEavAttributesCriteria">
   <td><?php echo CHtml::link('loadEavAttributesCriteria', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'loadEavAttributesCriteria-detail')); ?></td>
@@ -183,29 +185,29 @@ $this->breadcrumbs[] = 'YdEavBehavior';
   <td></td>
   <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="modelId">
-  <td><?php echo CHtml::link('modelId', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'modelId-detail')); ?></td>
+<tr id="modelId">
+  <td><?php echo CHtml::link('modelId', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'modelId-detail')); ?></td>
   <td>mixed</td>
   <td>Returns owner model id.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="modelTableFk">
-  <td><?php echo CHtml::link('modelTableFk', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'modelTableFk-detail')); ?></td>
+<tr id="modelTableFk">
+  <td><?php echo CHtml::link('modelTableFk', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'modelTableFk-detail')); ?></td>
   <td>string</td>
   <td>Returns owner model FK name.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="safeAttributes">
-  <td><?php echo CHtml::link('safeAttributes', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'safeAttributes-detail')); ?></td>
+<tr id="safeAttributes">
+  <td><?php echo CHtml::link('safeAttributes', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'safeAttributes-detail')); ?></td>
   <td><?php echo CHtml::link('CList', array('/site/doc', 'view' => 'CList')); ?></td>
   <td>safe attributes list.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="safeAttributesArray">
-  <td><?php echo CHtml::link('safeAttributesArray', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'safeAttributesArray-detail')); ?></td>
+<tr id="safeAttributesArray">
+  <td><?php echo CHtml::link('safeAttributesArray', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'safeAttributesArray-detail')); ?></td>
   <td>array</td>
   <td>Return safe attributes key. If not set returns all keys.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
 </table>
 </div>
@@ -230,10 +232,10 @@ $this->breadcrumbs[] = 'YdEavBehavior';
   <td>Calls the named method which is not a class method.</td>
   <td><?php echo CHtml::link('CComponent', array('/site/doc', 'view' => 'CComponent')); ?></td>
 </tr>
-<tr class="inherited" id="__construct">
-  <td><?php echo CHtml::link('__construct()', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => '__construct-detail')); ?></td>
+<tr id="__construct">
+  <td><?php echo CHtml::link('__construct()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => '__construct-detail')); ?></td>
   <td></td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
 <tr class="inherited" id="__get">
   <td><?php echo CHtml::link('__get()', array('/site/doc', 'view' => 'CComponent', '#' => '__get-detail')); ?></td>
@@ -255,30 +257,30 @@ $this->breadcrumbs[] = 'YdEavBehavior';
   <td>Sets a component property to be null.</td>
   <td><?php echo CHtml::link('CComponent', array('/site/doc', 'view' => 'CComponent')); ?></td>
 </tr>
-<tr class="inherited" id="afterDelete">
-  <td><?php echo CHtml::link('afterDelete()', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'afterDelete-detail')); ?></td>
+<tr id="afterDelete">
+  <td><?php echo CHtml::link('afterDelete()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'afterDelete-detail')); ?></td>
   <td></td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="afterFind">
-  <td><?php echo CHtml::link('afterFind()', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'afterFind-detail')); ?></td>
+<tr id="afterFind">
+  <td><?php echo CHtml::link('afterFind()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'afterFind-detail')); ?></td>
   <td></td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="afterSave">
-  <td><?php echo CHtml::link('afterSave()', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'afterSave-detail')); ?></td>
+<tr id="afterSave">
+  <td><?php echo CHtml::link('afterSave()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'afterSave-detail')); ?></td>
   <td></td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
 <tr class="inherited" id="asa">
   <td><?php echo CHtml::link('asa()', array('/site/doc', 'view' => 'CComponent', '#' => 'asa-detail')); ?></td>
   <td>Returns the named behavior object.</td>
   <td><?php echo CHtml::link('CComponent', array('/site/doc', 'view' => 'CComponent')); ?></td>
 </tr>
-<tr class="inherited" id="attach">
-  <td><?php echo CHtml::link('attach()', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'attach-detail')); ?></td>
+<tr id="attach">
+  <td><?php echo CHtml::link('attach()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'attach-detail')); ?></td>
   <td></td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
 <tr class="inherited" id="attachBehavior">
   <td><?php echo CHtml::link('attachBehavior()', array('/site/doc', 'view' => 'CComponent', '#' => 'attachBehavior-detail')); ?></td>
@@ -360,15 +362,15 @@ $this->breadcrumbs[] = 'YdEavBehavior';
   <td>Declares events and the corresponding event handler methods.</td>
   <td><?php echo CHtml::link('CActiveRecordBehavior', array('/site/doc', 'view' => 'CActiveRecordBehavior')); ?></td>
 </tr>
-<tr class="inherited" id="getEavAttribute">
-  <td><?php echo CHtml::link('getEavAttribute()', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'getEavAttribute-detail')); ?></td>
+<tr id="getEavAttribute">
+  <td><?php echo CHtml::link('getEavAttribute()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'getEavAttribute-detail')); ?></td>
   <td></td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="getEavAttributes">
-  <td><?php echo CHtml::link('getEavAttributes()', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'getEavAttributes-detail')); ?></td>
+<tr id="getEavAttributes">
+  <td><?php echo CHtml::link('getEavAttributes()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'getEavAttributes-detail')); ?></td>
   <td></td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
 <tr class="inherited" id="getEnabled">
   <td><?php echo CHtml::link('getEnabled()', array('/site/doc', 'view' => 'CBehavior', '#' => 'getEnabled-detail')); ?></td>
@@ -410,40 +412,40 @@ $this->breadcrumbs[] = 'YdEavBehavior';
   <td>Raises an event.</td>
   <td><?php echo CHtml::link('CComponent', array('/site/doc', 'view' => 'CComponent')); ?></td>
 </tr>
-<tr class="inherited" id="saveEavAttributes">
-  <td><?php echo CHtml::link('saveEavAttributes()', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'saveEavAttributes-detail')); ?></td>
+<tr id="saveEavAttributes">
+  <td><?php echo CHtml::link('saveEavAttributes()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'saveEavAttributes-detail')); ?></td>
   <td></td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="setEavAttribute">
-  <td><?php echo CHtml::link('setEavAttribute()', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'setEavAttribute-detail')); ?></td>
+<tr id="setEavAttribute">
+  <td><?php echo CHtml::link('setEavAttribute()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'setEavAttribute-detail')); ?></td>
   <td>Sets attribute key.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="setEavAttributes">
-  <td><?php echo CHtml::link('setEavAttributes()', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'setEavAttributes-detail')); ?></td>
+<tr id="setEavAttributes">
+  <td><?php echo CHtml::link('setEavAttributes()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'setEavAttributes-detail')); ?></td>
   <td>Sets attributes values for change.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
 <tr class="inherited" id="setEnabled">
   <td><?php echo CHtml::link('setEnabled()', array('/site/doc', 'view' => 'CBehavior', '#' => 'setEnabled-detail')); ?></td>
   <td>Sets whether this behavior is enabled</td>
   <td><?php echo CHtml::link('CBehavior', array('/site/doc', 'view' => 'CBehavior')); ?></td>
 </tr>
-<tr class="inherited" id="setModelTableFk">
-  <td><?php echo CHtml::link('setModelTableFk()', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'setModelTableFk-detail')); ?></td>
+<tr id="setModelTableFk">
+  <td><?php echo CHtml::link('setModelTableFk()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'setModelTableFk-detail')); ?></td>
   <td>Set owner model FK name.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="setSafeAttributes">
-  <td><?php echo CHtml::link('setSafeAttributes()', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'setSafeAttributes-detail')); ?></td>
+<tr id="setSafeAttributes">
+  <td><?php echo CHtml::link('setSafeAttributes()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'setSafeAttributes-detail')); ?></td>
   <td>Set safe attributes array.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="withEavAttributes">
-  <td><?php echo CHtml::link('withEavAttributes()', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'withEavAttributes-detail')); ?></td>
+<tr id="withEavAttributes">
+  <td><?php echo CHtml::link('withEavAttributes()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'withEavAttributes-detail')); ?></td>
   <td>Limit current AR query to have all attributes and values specified.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
 </table>
 </div>
@@ -496,71 +498,119 @@ $this->breadcrumbs[] = 'YdEavBehavior';
   <td>Responds to <?php echo CHtml::link('CModel::onBeforeValidate', array('/site/doc', 'view' => 'CModel', '#' => 'onBeforeValidate')); ?> event.</td>
   <td><?php echo CHtml::link('CModelBehavior', array('/site/doc', 'view' => 'CModelBehavior')); ?></td>
 </tr>
-<tr class="inherited" id="getCacheKey">
-  <td><?php echo CHtml::link('getCacheKey()', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'getCacheKey-detail')); ?></td>
+<tr id="getCacheKey">
+  <td><?php echo CHtml::link('getCacheKey()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'getCacheKey-detail')); ?></td>
   <td>Returns key for caching model attributes.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="getDeleteCommand">
-  <td><?php echo CHtml::link('getDeleteCommand()', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'getDeleteCommand-detail')); ?></td>
+<tr id="getDeleteCommand">
+  <td><?php echo CHtml::link('getDeleteCommand()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'getDeleteCommand-detail')); ?></td>
   <td></td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="getDeleteEavAttributesCriteria">
-  <td><?php echo CHtml::link('getDeleteEavAttributesCriteria()', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'getDeleteEavAttributesCriteria-detail')); ?></td>
+<tr id="getDeleteEavAttributesCriteria">
+  <td><?php echo CHtml::link('getDeleteEavAttributesCriteria()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'getDeleteEavAttributesCriteria-detail')); ?></td>
   <td></td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
 <tr id="getFindByEavAttributesCriteria">
   <td><?php echo CHtml::link('getFindByEavAttributesCriteria()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'getFindByEavAttributesCriteria-detail')); ?></td>
   <td></td>
   <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="getLoadEavAttributesCommand">
-  <td><?php echo CHtml::link('getLoadEavAttributesCommand()', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'getLoadEavAttributesCommand-detail')); ?></td>
+<tr id="getLoadEavAttributesCommand">
+  <td><?php echo CHtml::link('getLoadEavAttributesCommand()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'getLoadEavAttributesCommand-detail')); ?></td>
   <td></td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
 <tr id="getLoadEavAttributesCriteria">
   <td><?php echo CHtml::link('getLoadEavAttributesCriteria()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'getLoadEavAttributesCriteria-detail')); ?></td>
   <td></td>
   <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="getModelId">
-  <td><?php echo CHtml::link('getModelId()', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'getModelId-detail')); ?></td>
+<tr id="getModelId">
+  <td><?php echo CHtml::link('getModelId()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'getModelId-detail')); ?></td>
   <td>Returns owner model id.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="getModelTableFk">
-  <td><?php echo CHtml::link('getModelTableFk()', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'getModelTableFk-detail')); ?></td>
+<tr id="getModelTableFk">
+  <td><?php echo CHtml::link('getModelTableFk()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'getModelTableFk-detail')); ?></td>
   <td>Returns owner model FK name.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="getSafeAttributesArray">
-  <td><?php echo CHtml::link('getSafeAttributesArray()', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'getSafeAttributesArray-detail')); ?></td>
+<tr id="getSafeAttributesArray">
+  <td><?php echo CHtml::link('getSafeAttributesArray()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'getSafeAttributesArray-detail')); ?></td>
   <td>Return safe attributes key. If not set returns all keys.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
 <tr id="getSaveEavAttributeCommand">
   <td><?php echo CHtml::link('getSaveEavAttributeCommand()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'getSaveEavAttributeCommand-detail')); ?></td>
   <td></td>
   <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="hasSafeAttribute">
-  <td><?php echo CHtml::link('hasSafeAttribute()', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'hasSafeAttribute-detail')); ?></td>
+<tr id="hasSafeAttribute">
+  <td><?php echo CHtml::link('hasSafeAttribute()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'hasSafeAttribute-detail')); ?></td>
   <td></td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
-<tr class="inherited" id="stripPrefix">
-  <td><?php echo CHtml::link('stripPrefix()', array('/site/doc', 'view' => 'YdEavBaseBehavior', '#' => 'stripPrefix-detail')); ?></td>
+<tr id="stripPrefix">
+  <td><?php echo CHtml::link('stripPrefix()', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'stripPrefix-detail')); ?></td>
   <td>Strip prefix from attribute key.</td>
-  <td><?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?></td>
+  <td>YdEavBehavior</td>
 </tr>
 </table>
 </div>
 <a name="events"></a>
 
 <h2>Property Details</h2>
+<div class="detailHeader" id="attributeField-detail">
+attributeField<span class="detailHeaderTag">
+property
+</span>
+</div>
+
+<div class="signature">
+public string <b>$attributeField</b>;</div>
+
+<p>name of the column to store attribute key.</p>
+
+
+<div class="detailHeader" id="attributes-detail">
+attributes<span class="detailHeaderTag">
+property
+</span>
+</div>
+
+<div class="signature">
+protected <?php echo CHtml::link('CAttributeCollection', array('/site/doc', 'view' => 'CAttributeCollection')); ?> <b>$attributes</b>;</div>
+
+<p>attributes store.</p>
+
+
+<div class="detailHeader" id="attributesPrefix-detail">
+attributesPrefix<span class="detailHeaderTag">
+property
+</span>
+</div>
+
+<div class="signature">
+public string <b>$attributesPrefix</b>;</div>
+
+<p>prefix for each attribute.</p>
+
+
+<div class="detailHeader" id="cache-detail">
+cache<span class="detailHeaderTag">
+property
+</span>
+</div>
+
+<div class="signature">
+protected <?php echo CHtml::link('ICache', array('/site/doc', 'view' => 'ICache')); ?> <b>$cache</b>;</div>
+
+<p>cache component object.</p>
+
+
 <div class="detailHeader" id="cacheId-detail">
 cacheId<span class="detailHeaderTag">
 property
@@ -570,7 +620,82 @@ property
 <div class="signature">
 public string <b>$cacheId</b>;</div>
 
+<p>caching component Id.</p>
+
+
+<div class="detailHeader" id="cacheKey-detail">
+cacheKey<span class="detailHeaderTag">
+property
+ <em>read-only</em> </span>
+</div>
+
+<div class="signature">
+protected string <?php echo CHtml::link('<b>getCacheKey</b>', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'getCacheKey')); ?>()</div>
+
+<p>Returns key for caching model attributes.</p>
+
+
+<div class="detailHeader" id="changedAttributes-detail">
+changedAttributes<span class="detailHeaderTag">
+property
+</span>
+</div>
+
+<div class="signature">
+protected <?php echo CHtml::link('CList', array('/site/doc', 'view' => 'CList')); ?> <b>$changedAttributes</b>;</div>
+
+<p>changed attributes list.</p>
+
+
+<div class="detailHeader" id="deleteCommand-detail">
+deleteCommand<span class="detailHeaderTag">
+property
+ <em>read-only</em> </span>
+</div>
+
+<div class="signature">
+protected <?php echo CHtml::link('CDbCommand', array('/site/doc', 'view' => 'CDbCommand')); ?> <?php echo CHtml::link('<b>getDeleteCommand</b>', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'getDeleteCommand')); ?>($attributes $attributes=array (
+))</div>
+
 <p></p>
+
+
+<div class="detailHeader" id="deleteEavAttributesCriteria-detail">
+deleteEavAttributesCriteria<span class="detailHeaderTag">
+property
+ <em>read-only</em> </span>
+</div>
+
+<div class="signature">
+protected <?php echo CHtml::link('CDbCriteria', array('/site/doc', 'view' => 'CDbCriteria')); ?> <?php echo CHtml::link('<b>getDeleteEavAttributesCriteria</b>', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'getDeleteEavAttributesCriteria')); ?>($attributes $attributes=array (
+))</div>
+
+<p></p>
+
+
+<div class="detailHeader" id="eavAttributes-detail">
+eavAttributes<span class="detailHeaderTag">
+property
+</span>
+</div>
+
+<div class="signature">
+public array <?php echo CHtml::link('<b>getEavAttributes</b>', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'getEavAttributes')); ?>(array $attributes=array (
+))<br/>public <?php echo CHtml::link('CActiveRecord', array('/site/doc', 'view' => 'CActiveRecord')); ?> <?php echo CHtml::link('<b>setEavAttributes</b>', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'setEavAttributes')); ?>(array $attributes, boolean $save=false)</div>
+
+<p></p>
+
+
+<div class="detailHeader" id="entityField-detail">
+entityField<span class="detailHeaderTag">
+property
+</span>
+</div>
+
+<div class="signature">
+public string <b>$entityField</b>;</div>
+
+<p>name of the column to store entity name.</p>
 
 
 <div class="detailHeader" id="loadEavAttributesCriteria-detail">
@@ -586,19 +711,256 @@ protected <?php echo CHtml::link('CDbCriteria', array('/site/doc', 'view' => 'CD
 <p></p>
 
 
-<div class="detailHeader" id="owner-detail">
-owner<span class="detailHeaderTag">
+<div class="detailHeader" id="modelId-detail">
+modelId<span class="detailHeaderTag">
+property
+ <em>read-only</em> </span>
+</div>
+
+<div class="signature">
+protected mixed <?php echo CHtml::link('<b>getModelId</b>', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'getModelId')); ?>()</div>
+
+<p>Returns owner model id.</p>
+
+
+<div class="detailHeader" id="modelTableFk-detail">
+modelTableFk<span class="detailHeaderTag">
 property
 </span>
 </div>
 
 <div class="signature">
-<?php echo CHtml::link('YdActiveRecord', array('/site/doc', 'view' => 'YdActiveRecord')); ?> <b>owner</b>;</div>
+protected string <?php echo CHtml::link('<b>getModelTableFk</b>', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'getModelTableFk')); ?>()<br/>public void <?php echo CHtml::link('<b>setModelTableFk</b>', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'setModelTableFk')); ?>(string $modelTableFk)</div>
 
-<p></p>
+<p>Returns owner model FK name.</p>
+
+
+<div class="detailHeader" id="preload-detail">
+preload<span class="detailHeaderTag">
+property
+</span>
+</div>
+
+<div class="signature">
+public boolean <b>$preload</b>;</div>
+
+<p>loaded attributes after find model.</p>
+
+
+<div class="detailHeader" id="safeAttributes-detail">
+safeAttributes<span class="detailHeaderTag">
+property
+</span>
+</div>
+
+<div class="signature">
+protected <?php echo CHtml::link('CList', array('/site/doc', 'view' => 'CList')); ?> <b>$safeAttributes</b>;</div>
+
+<p>safe attributes list.</p>
+
+
+<div class="detailHeader" id="safeAttributesArray-detail">
+safeAttributesArray<span class="detailHeaderTag">
+property
+ <em>read-only</em> </span>
+</div>
+
+<div class="signature">
+protected array <?php echo CHtml::link('<b>getSafeAttributesArray</b>', array('/site/doc', 'view' => 'YdEavBehavior', '#' => 'getSafeAttributesArray')); ?>()</div>
+
+<p>Return safe attributes key. If not set returns all keys.</p>
+
+
+<div class="detailHeader" id="tableName-detail">
+tableName<span class="detailHeaderTag">
+property
+</span>
+</div>
+
+<div class="signature">
+public string <b>$tableName</b>;</div>
+
+<p>name of the table where data is stored. Required to be set on init behavior.</p>
+
+
+<div class="detailHeader" id="valueField-detail">
+valueField<span class="detailHeaderTag">
+property
+</span>
+</div>
+
+<div class="signature">
+public string <b>$valueField</b>;</div>
+
+<p>name of the column to store value.</p>
 
 
 <h2>Method Details</h2>
+
+<div class="detailHeader" id="__construct-detail">
+__construct()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public void <b>__construct</b>()</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol">void</td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L192">dressing\behaviors\YdEavBehavior.php#L192</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">__construct</span><span style="color: #007700">()&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Prepare&nbsp;attributes&nbsp;collection.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributes&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">CAttributeCollection</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">caseSensitive&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">TRUE</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Prepare&nbsp;safe&nbsp;attributes&nbsp;list.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">safeAttributes&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">CList</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Prepare&nbsp;changed&nbsp;attributes&nbsp;list.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">changedAttributes&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">CList</span><span style="color: #007700">;<br />}</span>
+</span>
+</code></div>
+</div>
+<p></p>
+
+
+<div class="detailHeader" id="afterDelete-detail">
+afterDelete()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public void <b>afterDelete</b>(<?php echo CHtml::link('CEvent', array('/site/doc', 'view' => 'CEvent')); ?> $event)</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">$event</td>
+  <td class="paramTypeCol"><?php echo CHtml::link('CEvent', array('/site/doc', 'view' => 'CEvent')); ?></td>
+  <td class="paramDescCol"></td>
+</tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol">void</td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L251">dressing\behaviors\YdEavBehavior.php#L251</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">afterDelete</span><span style="color: #007700">(</span><span style="color: #0000BB">$event</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Delete&nbsp;all&nbsp;attributes.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">deleteEavAttributes</span><span style="color: #007700">(array(),&nbsp;</span><span style="color: #0000BB">TRUE</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Call&nbsp;parent&nbsp;method&nbsp;for&nbsp;convenience.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">parent</span><span style="color: #007700">::</span><span style="color: #0000BB">afterDelete</span><span style="color: #007700">(</span><span style="color: #0000BB">$event</span><span style="color: #007700">);<br />}</span>
+</span>
+</code></div>
+</div>
+<p></p>
+
+
+<div class="detailHeader" id="afterFind-detail">
+afterFind()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public void <b>afterFind</b>(<?php echo CHtml::link('CEvent', array('/site/doc', 'view' => 'CEvent')); ?> $event)</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">$event</td>
+  <td class="paramTypeCol"><?php echo CHtml::link('CEvent', array('/site/doc', 'view' => 'CEvent')); ?></td>
+  <td class="paramDescCol"></td>
+</tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol">void</td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L262">dressing\behaviors\YdEavBehavior.php#L262</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">afterFind</span><span style="color: #007700">(</span><span style="color: #0000BB">$event</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Load&nbsp;attributes&nbsp;for&nbsp;model.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">preload</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">loadEavAttributes</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getSafeAttributesArray</span><span style="color: #007700">());<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Call&nbsp;parent&nbsp;method&nbsp;for&nbsp;convenience.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">parent</span><span style="color: #007700">::</span><span style="color: #0000BB">afterFind</span><span style="color: #007700">(</span><span style="color: #0000BB">$event</span><span style="color: #007700">);<br />}</span>
+</span>
+</code></div>
+</div>
+<p></p>
+
+
+<div class="detailHeader" id="afterSave-detail">
+afterSave()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public void <b>afterSave</b>(<?php echo CHtml::link('CEvent', array('/site/doc', 'view' => 'CEvent')); ?> $event)</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">$event</td>
+  <td class="paramTypeCol"><?php echo CHtml::link('CEvent', array('/site/doc', 'view' => 'CEvent')); ?></td>
+  <td class="paramDescCol"></td>
+</tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol">void</td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L236">dressing\behaviors\YdEavBehavior.php#L236</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">afterSave</span><span style="color: #007700">(</span><span style="color: #0000BB">$event</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;TODO&nbsp;afterSave&nbsp;не&nbsp;срабатывает&nbsp;если&nbsp;модель&nbsp;не&nbsp;была&nbsp;изменена<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;Save&nbsp;changed&nbsp;attributes.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">changedAttributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">count&nbsp;</span><span style="color: #007700">&gt;&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">saveEavAttributes</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">changedAttributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">toArray</span><span style="color: #007700">());<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Call&nbsp;parent&nbsp;method&nbsp;for&nbsp;convenience.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">parent</span><span style="color: #007700">::</span><span style="color: #0000BB">afterSave</span><span style="color: #007700">(</span><span style="color: #0000BB">$event</span><span style="color: #007700">);<br />}</span>
+</span>
+</code></div>
+</div>
+<p></p>
+
+
+<div class="detailHeader" id="attach-detail">
+attach()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public void <b>attach</b>(<?php echo CHtml::link('CComponent', array('/site/doc', 'view' => 'CComponent')); ?> $owner)</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">$owner</td>
+  <td class="paramTypeCol"><?php echo CHtml::link('CComponent', array('/site/doc', 'view' => 'CComponent')); ?></td>
+  <td class="paramDescCol"></td>
+</tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol">void</td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L207">dressing\behaviors\YdEavBehavior.php#L207</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">attach</span><span style="color: #007700">(</span><span style="color: #0000BB">$owner</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Check&nbsp;required&nbsp;property&nbsp;tableName.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(!</span><span style="color: #0000BB">is_string</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">tableName</span><span style="color: #007700">)&nbsp;||&nbsp;empty(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">tableName</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;new&nbsp;</span><span style="color: #0000BB">CException</span><span style="color: #007700">(</span><span style="color: #0000BB">self</span><span style="color: #007700">::</span><span style="color: #0000BB">t</span><span style="color: #007700">(</span><span style="color: #DD0000">'yii'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Property&nbsp;"{class}.{property}"&nbsp;is&nbsp;not&nbsp;defined.'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(</span><span style="color: #DD0000">'{class}'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">get_class</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">),&nbsp;</span><span style="color: #DD0000">'{property}'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'tableName'</span><span style="color: #007700">)));<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Prepare&nbsp;translate&nbsp;component&nbsp;for&nbsp;behavior&nbsp;messages.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(!</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">app</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">hasComponent</span><span style="color: #007700">(</span><span style="color: #0000BB">__CLASS__&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'Messages'</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">app</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">setComponents</span><span style="color: #007700">(array(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">__CLASS__&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'Messages'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;array(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'class'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'CPhpMessageSource'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'basePath'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">dirname</span><span style="color: #007700">(</span><span style="color: #0000BB">__FILE__</span><span style="color: #007700">)&nbsp;.&nbsp;</span><span style="color: #0000BB">DIRECTORY_SEPARATOR&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'messages'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;));<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Prepare&nbsp;cache&nbsp;component.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">cache&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">app</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">getComponent</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">cacheId</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">cache&nbsp;</span><span style="color: #007700">instanceof&nbsp;</span><span style="color: #0000BB">ICache</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;If&nbsp;not&nbsp;set&nbsp;cache&nbsp;component,&nbsp;use&nbsp;dummy&nbsp;cache.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">cache&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">CDummyCache</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Call&nbsp;parent&nbsp;method&nbsp;for&nbsp;convenience.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">parent</span><span style="color: #007700">::</span><span style="color: #0000BB">attach</span><span style="color: #007700">(</span><span style="color: #0000BB">$owner</span><span style="color: #007700">);<br />}</span>
+</span>
+</code></div>
+</div>
+<p></p>
+
 
 <div class="detailHeader" id="deleteEavAttributes-detail">
 deleteEavAttributes()
@@ -631,9 +993,177 @@ public <?php echo CHtml::link('CActiveRecord', array('/site/doc', 'view' => 'CAc
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L149">dressing\behaviors\YdEavBehavior.php#L149</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L340">dressing\behaviors\YdEavBehavior.php#L340</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
-<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">deleteEavAttributes</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes&nbsp;</span><span style="color: #007700">=&nbsp;array(),&nbsp;</span><span style="color: #0000BB">$save&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">FALSE</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">parent</span><span style="color: #007700">::</span><span style="color: #0000BB">deleteEavAttributes</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$save</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">cache</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">delete</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getCacheKey</span><span style="color: #007700">());<br />}</span>
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">deleteEavAttributes</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes&nbsp;</span><span style="color: #007700">=&nbsp;array(),&nbsp;</span><span style="color: #0000BB">$save&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">FALSE</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;If&nbsp;not&nbsp;set&nbsp;attributes&nbsp;for&nbsp;deleting,&nbsp;delete&nbsp;all.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(empty(</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$attributes&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">keys</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Delete&nbsp;each&nbsp;attributes.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">foreach&nbsp;(</span><span style="color: #0000BB">$attributes&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">remove</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">changedAttributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">add</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Auto&nbsp;save&nbsp;if&nbsp;set.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(</span><span style="color: #0000BB">$save</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">saveEavAttributes</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Return&nbsp;model.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getOwner</span><span style="color: #007700">();<br />}</span>
+</span>
+</code></div>
+</div>
+<p></p>
+
+
+<div class="detailHeader" id="getCacheKey-detail">
+getCacheKey()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+protected string <b>getCacheKey</b>()</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol">string</td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L111">dressing\behaviors\YdEavBehavior.php#L111</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">getCacheKey</span><span style="color: #007700">()&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">__CLASS__&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">tableName&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributesPrefix&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getOwner</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">tableName</span><span style="color: #007700">()&nbsp;.&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getModelId</span><span style="color: #007700">();<br />}</span>
+</span>
+</code></div>
+</div>
+<p>Returns key for caching model attributes.</p>
+
+
+<div class="detailHeader" id="getDeleteCommand-detail">
+getDeleteCommand()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+protected <?php echo CHtml::link('CDbCommand', array('/site/doc', 'view' => 'CDbCommand')); ?> <b>getDeleteCommand</b>($attributes $attributes=array (
+))</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">$attributes</td>
+  <td class="paramTypeCol">$attributes</td>
+  <td class="paramDescCol"></td>
+</tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol"><?php echo CHtml::link('CDbCommand', array('/site/doc', 'view' => 'CDbCommand')); ?></td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L482">dressing\behaviors\YdEavBehavior.php#L482</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">getDeleteCommand</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes&nbsp;</span><span style="color: #007700">=&nbsp;array())&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getOwner</span><span style="color: #007700">()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt;</span><span style="color: #0000BB">getCommandBuilder</span><span style="color: #007700">()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt;</span><span style="color: #0000BB">createDeleteCommand</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">tableName</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getDeleteEavAttributesCriteria</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">));<br />}</span>
+</span>
+</code></div>
+</div>
+<p></p>
+
+
+<div class="detailHeader" id="getDeleteEavAttributesCriteria-detail">
+getDeleteEavAttributesCriteria()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+protected <?php echo CHtml::link('CDbCriteria', array('/site/doc', 'view' => 'CDbCriteria')); ?> <b>getDeleteEavAttributesCriteria</b>($attributes $attributes=array (
+))</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">$attributes</td>
+  <td class="paramTypeCol">$attributes</td>
+  <td class="paramDescCol"></td>
+</tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol"><?php echo CHtml::link('CDbCriteria', array('/site/doc', 'view' => 'CDbCriteria')); ?></td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L507">dressing\behaviors\YdEavBehavior.php#L507</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">getDeleteEavAttributesCriteria</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes&nbsp;</span><span style="color: #007700">=&nbsp;array())&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getLoadEavAttributesCriteria</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">);<br />}</span>
+</span>
+</code></div>
+</div>
+<p></p>
+
+
+<div class="detailHeader" id="getEavAttribute-detail">
+getEavAttribute()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public mixed <b>getEavAttribute</b>(string $attribute)</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">$attribute</td>
+  <td class="paramTypeCol">string</td>
+  <td class="paramDescCol">attribute for get.</td>
+</tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol">mixed</td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L426">dressing\behaviors\YdEavBehavior.php#L426</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">getEavAttribute</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$values&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getEavAttributes</span><span style="color: #007700">(array(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">));<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">itemAt</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">);<br />}</span>
+</span>
+</code></div>
+</div>
+<p></p>
+
+
+<div class="detailHeader" id="getEavAttributes-detail">
+getEavAttributes()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public array <b>getEavAttributes</b>(array $attributes=array (
+))</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">$attributes</td>
+  <td class="paramTypeCol">array</td>
+  <td class="paramDescCol">attributes key for get.</td>
+</tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol">array</td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L390">dressing\behaviors\YdEavBehavior.php#L390</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">getEavAttributes</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes&nbsp;</span><span style="color: #007700">=&nbsp;array())&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Get&nbsp;all&nbsp;attributes&nbsp;if&nbsp;not&nbsp;specified.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(empty(</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$attributes&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getSafeAttributesArray</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Values&nbsp;array.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$values&nbsp;</span><span style="color: #007700">=&nbsp;array();<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Queue&nbsp;for&nbsp;load.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$loadQueue&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">CList</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;foreach&nbsp;(</span><span style="color: #0000BB">$attributes&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Check&nbsp;is&nbsp;safe.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">hasSafeAttribute</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$values</span><span style="color: #007700">[</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">]&nbsp;=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">itemAt</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;If&nbsp;attribute&nbsp;not&nbsp;set&nbsp;and&nbsp;not&nbsp;load,&nbsp;prepare&nbsp;array&nbsp;for&nbsp;loaded.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(!</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">preload&nbsp;</span><span style="color: #007700">&amp;&amp;&nbsp;</span><span style="color: #0000BB">$values</span><span style="color: #007700">[</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">]&nbsp;===&nbsp;</span><span style="color: #0000BB">NULL</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$loadQueue</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">add</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;If&nbsp;array&nbsp;for&nbsp;loaded&nbsp;not&nbsp;empty,&nbsp;load&nbsp;attributes.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(!</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">preload&nbsp;</span><span style="color: #007700">&amp;&amp;&nbsp;</span><span style="color: #0000BB">$loadQueue</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">count</span><span style="color: #007700">()&nbsp;&gt;&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">loadEavAttributes</span><span style="color: #007700">(</span><span style="color: #0000BB">$loadQueue</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">toArray</span><span style="color: #007700">());<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach&nbsp;(</span><span style="color: #0000BB">$loadQueue&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$values</span><span style="color: #007700">[</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">]&nbsp;=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">itemAt</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Delete&nbsp;load&nbsp;queue.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">unset(</span><span style="color: #0000BB">$loadQueue</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Return&nbsp;values.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">return&nbsp;</span><span style="color: #0000BB">$values</span><span style="color: #007700">;<br />}</span>
 </span>
 </code></div>
 </div>
@@ -665,9 +1195,43 @@ protected <?php echo CHtml::link('CDbCriteria', array('/site/doc', 'view' => 'CD
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L86">dressing\behaviors\YdEavBehavior.php#L86</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L516">dressing\behaviors\YdEavBehavior.php#L516</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
-<span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">getFindByEavAttributesCriteria</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$criteria&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">CDbCriteria</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$pk&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getModelTableFk</span><span style="color: #007700">();<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$conn&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getOwner</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">getDbConnection</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$i&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;foreach&nbsp;(</span><span style="color: #0000BB">$attributes&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">$attribute&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$values</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;If&nbsp;search&nbsp;models&nbsp;with&nbsp;attribute&nbsp;name&nbsp;with&nbsp;specified&nbsp;values.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(</span><span style="color: #0000BB">is_string</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$attribute&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$conn</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">quoteValue</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$joinTableName&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">"eav_</span><span style="color: #0000BB">$attribute</span><span style="color: #DD0000">"</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!</span><span style="color: #0000BB">is_array</span><span style="color: #007700">(</span><span style="color: #0000BB">$values</span><span style="color: #007700">))&nbsp;</span><span style="color: #0000BB">$values&nbsp;</span><span style="color: #007700">=&nbsp;array(</span><span style="color: #0000BB">$values</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach&nbsp;(</span><span style="color: #0000BB">$values&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">$value</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$value&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$conn</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">quoteValue</span><span style="color: #007700">(</span><span style="color: #0000BB">$value</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$criteria</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">join&nbsp;</span><span style="color: #007700">.=&nbsp;</span><span style="color: #DD0000">"\nJOIN&nbsp;</span><span style="color: #007700">{</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">tableName</span><span style="color: #007700">}</span><span style="color: #DD0000">&nbsp;</span><span style="color: #0000BB">$joinTableName</span><span style="color: #DD0000">"<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">"\nON&nbsp;t.</span><span style="color: #007700">{</span><span style="color: #0000BB">$pk</span><span style="color: #007700">}</span><span style="color: #DD0000">&nbsp;=&nbsp;</span><span style="color: #0000BB">$joinTableName</span><span style="color: #DD0000">.</span><span style="color: #007700">{</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">entityField</span><span style="color: #007700">}</span><span style="color: #DD0000">"<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">"\nAND&nbsp;</span><span style="color: #0000BB">$joinTableName</span><span style="color: #DD0000">.</span><span style="color: #007700">{</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributeField</span><span style="color: #007700">}</span><span style="color: #DD0000">&nbsp;=&nbsp;</span><span style="color: #0000BB">$attribute</span><span style="color: #DD0000">"<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">"\nAND&nbsp;</span><span style="color: #0000BB">$joinTableName</span><span style="color: #DD0000">.</span><span style="color: #007700">{</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">valueField</span><span style="color: #007700">}</span><span style="color: #DD0000">&nbsp;=&nbsp;</span><span style="color: #0000BB">$value</span><span style="color: #DD0000">"</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$i</span><span style="color: #007700">++;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;If&nbsp;search&nbsp;models&nbsp;with&nbsp;attribute&nbsp;name&nbsp;with&nbsp;anything&nbsp;values.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">elseif&nbsp;(</span><span style="color: #0000BB">is_int</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$joinTableName&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">"eav_</span><span style="color: #0000BB">$values</span><span style="color: #DD0000">"</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$values&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$conn</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">quoteValue</span><span style="color: #007700">(</span><span style="color: #0000BB">$values</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$criteria</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">join&nbsp;</span><span style="color: #007700">.=&nbsp;</span><span style="color: #DD0000">"\nJOIN&nbsp;</span><span style="color: #007700">{</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">tableName</span><span style="color: #007700">}</span><span style="color: #DD0000">&nbsp;</span><span style="color: #0000BB">$joinTableName</span><span style="color: #DD0000">"<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">"\nON&nbsp;t.</span><span style="color: #007700">{</span><span style="color: #0000BB">$pk</span><span style="color: #007700">}</span><span style="color: #DD0000">&nbsp;=&nbsp;</span><span style="color: #0000BB">$joinTableName</span><span style="color: #DD0000">.</span><span style="color: #007700">{</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">entityField</span><span style="color: #007700">}</span><span style="color: #DD0000">"<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">"\nAND&nbsp;</span><span style="color: #0000BB">$joinTableName</span><span style="color: #DD0000">.</span><span style="color: #007700">{</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributeField</span><span style="color: #007700">}</span><span style="color: #DD0000">&nbsp;=&nbsp;</span><span style="color: #0000BB">$values</span><span style="color: #DD0000">"</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$i</span><span style="color: #007700">++;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$criteria</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">distinct&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">TRUE</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$criteria</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">group&nbsp;</span><span style="color: #007700">.=&nbsp;</span><span style="color: #DD0000">"t.</span><span style="color: #007700">{</span><span style="color: #0000BB">$pk</span><span style="color: #007700">}</span><span style="color: #DD0000">"</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$criteria</span><span style="color: #007700">;<br />}</span>
+<span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">getFindByEavAttributesCriteria</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">){<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$criteria&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">CDbCriteria</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$pk&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getModelTableFk</span><span style="color: #007700">();<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$conn&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getOwner</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">getDbConnection</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$i&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;foreach&nbsp;(</span><span style="color: #0000BB">$attributes&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">$attribute&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$values</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;If&nbsp;search&nbsp;models&nbsp;with&nbsp;attribute&nbsp;name&nbsp;with&nbsp;specified&nbsp;values.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(</span><span style="color: #0000BB">is_string</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$attribute&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$conn</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">quoteValue</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!</span><span style="color: #0000BB">is_array</span><span style="color: #007700">(</span><span style="color: #0000BB">$values</span><span style="color: #007700">))&nbsp;</span><span style="color: #0000BB">$values&nbsp;</span><span style="color: #007700">=&nbsp;array(</span><span style="color: #0000BB">$values</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach&nbsp;(</span><span style="color: #0000BB">$values&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">$value</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$value&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$conn</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">quoteValue</span><span style="color: #007700">(</span><span style="color: #0000BB">$value</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$criteria</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">join&nbsp;</span><span style="color: #007700">.=&nbsp;</span><span style="color: #DD0000">"\nJOIN&nbsp;</span><span style="color: #007700">{</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">tableName</span><span style="color: #007700">}</span><span style="color: #DD0000">&nbsp;eavb</span><span style="color: #0000BB">$i</span><span style="color: #DD0000">"<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">.&nbsp;&nbsp;</span><span style="color: #DD0000">"\nON&nbsp;t.</span><span style="color: #007700">{</span><span style="color: #0000BB">$pk</span><span style="color: #007700">}</span><span style="color: #DD0000">&nbsp;=&nbsp;eavb</span><span style="color: #0000BB">$i</span><span style="color: #DD0000">.</span><span style="color: #007700">{</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">entityField</span><span style="color: #007700">}</span><span style="color: #DD0000">"<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">.&nbsp;&nbsp;</span><span style="color: #DD0000">"\nAND&nbsp;eavb</span><span style="color: #0000BB">$i</span><span style="color: #DD0000">.</span><span style="color: #007700">{</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributeField</span><span style="color: #007700">}</span><span style="color: #DD0000">&nbsp;=&nbsp;</span><span style="color: #0000BB">$attribute</span><span style="color: #DD0000">"<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">.&nbsp;&nbsp;</span><span style="color: #DD0000">"\nAND&nbsp;eavb</span><span style="color: #0000BB">$i</span><span style="color: #DD0000">.</span><span style="color: #007700">{</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">valueField</span><span style="color: #007700">}</span><span style="color: #DD0000">&nbsp;=&nbsp;</span><span style="color: #0000BB">$value</span><span style="color: #DD0000">"</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$i</span><span style="color: #007700">++;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;If&nbsp;search&nbsp;models&nbsp;with&nbsp;attribute&nbsp;name&nbsp;with&nbsp;anything&nbsp;values.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">elseif&nbsp;(</span><span style="color: #0000BB">is_int</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$values&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$conn</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">quoteValue</span><span style="color: #007700">(</span><span style="color: #0000BB">$values</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$criteria</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">join&nbsp;</span><span style="color: #007700">.=&nbsp;</span><span style="color: #DD0000">"\nJOIN&nbsp;</span><span style="color: #007700">{</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">tableName</span><span style="color: #007700">}</span><span style="color: #DD0000">&nbsp;eavb</span><span style="color: #0000BB">$i</span><span style="color: #DD0000">"<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">.&nbsp;&nbsp;</span><span style="color: #DD0000">"\nON&nbsp;t.</span><span style="color: #007700">{</span><span style="color: #0000BB">$pk</span><span style="color: #007700">}</span><span style="color: #DD0000">&nbsp;=&nbsp;eavb</span><span style="color: #0000BB">$i</span><span style="color: #DD0000">.</span><span style="color: #007700">{</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">entityField</span><span style="color: #007700">}</span><span style="color: #DD0000">"<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">.&nbsp;&nbsp;</span><span style="color: #DD0000">"\nAND&nbsp;eavb</span><span style="color: #0000BB">$i</span><span style="color: #DD0000">.</span><span style="color: #007700">{</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributeField</span><span style="color: #007700">}</span><span style="color: #DD0000">&nbsp;=&nbsp;</span><span style="color: #0000BB">$values</span><span style="color: #DD0000">"</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$i</span><span style="color: #007700">++;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$criteria</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">distinct&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">TRUE</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$criteria</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">group&nbsp;</span><span style="color: #007700">.=&nbsp;</span><span style="color: #DD0000">"t.</span><span style="color: #007700">{</span><span style="color: #0000BB">$pk</span><span style="color: #007700">}</span><span style="color: #DD0000">"</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$criteria</span><span style="color: #007700">;<br />}</span>
+</span>
+</code></div>
+</div>
+<p></p>
+
+
+<div class="detailHeader" id="getLoadEavAttributesCommand-detail">
+getLoadEavAttributesCommand()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+protected <?php echo CHtml::link('CDbCommand', array('/site/doc', 'view' => 'CDbCommand')); ?> <b>getLoadEavAttributesCommand</b>($attributes $attributes)</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">$attributes</td>
+  <td class="paramTypeCol">$attributes</td>
+  <td class="paramDescCol"></td>
+</tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol"><?php echo CHtml::link('CDbCommand', array('/site/doc', 'view' => 'CDbCommand')); ?></td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L471">dressing\behaviors\YdEavBehavior.php#L471</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">getLoadEavAttributesCommand</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getOwner</span><span style="color: #007700">()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt;</span><span style="color: #0000BB">getCommandBuilder</span><span style="color: #007700">()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt;</span><span style="color: #0000BB">createFindCommand</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">tableName</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getLoadEavAttributesCriteria</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">));<br />}</span>
 </span>
 </code></div>
 </div>
@@ -700,13 +1264,100 @@ protected <?php echo CHtml::link('CDbCriteria', array('/site/doc', 'view' => 'CD
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L129">dressing\behaviors\YdEavBehavior.php#L129</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L493">dressing\behaviors\YdEavBehavior.php#L493</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
-<span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">getLoadEavAttributesCriteria</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes&nbsp;</span><span style="color: #007700">=&nbsp;array())<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$criteria&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">CDbCriteria</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$conn&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getOwner</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">getDbConnection</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$id&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getModelId</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!</span><span style="color: #0000BB">is_int</span><span style="color: #007700">(</span><span style="color: #0000BB">$id</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$id&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$conn</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">quoteValue</span><span style="color: #007700">(</span><span style="color: #0000BB">$id</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$criteria</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">addCondition</span><span style="color: #007700">(</span><span style="color: #DD0000">"</span><span style="color: #007700">{</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">entityField</span><span style="color: #007700">}</span><span style="color: #DD0000">&nbsp;=&nbsp;</span><span style="color: #0000BB">$id</span><span style="color: #DD0000">"</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!empty(</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$criteria</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">addInCondition</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributeField</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$criteria</span><span style="color: #007700">;<br />}</span>
+<span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">getLoadEavAttributesCriteria</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes&nbsp;</span><span style="color: #007700">=&nbsp;array())&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$criteria&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">CDbCriteria</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$criteria</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">addCondition</span><span style="color: #007700">(</span><span style="color: #DD0000">"</span><span style="color: #007700">{</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">entityField</span><span style="color: #007700">}</span><span style="color: #DD0000">&nbsp;=&nbsp;</span><span style="color: #007700">{</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getModelId</span><span style="color: #007700">()}</span><span style="color: #DD0000">"</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!empty(</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$criteria</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">addInCondition</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributeField</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$criteria</span><span style="color: #007700">;<br />}</span>
 </span>
 </code></div>
 </div>
 <p></p>
+
+
+<div class="detailHeader" id="getModelId-detail">
+getModelId()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+protected mixed <b>getModelId</b>()</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol">mixed</td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L102">dressing\behaviors\YdEavBehavior.php#L102</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">getModelId</span><span style="color: #007700">()&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getOwner</span><span style="color: #007700">()-&gt;{</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getModelTableFk</span><span style="color: #007700">()};<br />}</span>
+</span>
+</code></div>
+</div>
+<p>Returns owner model id.</p>
+
+
+<div class="detailHeader" id="getModelTableFk-detail">
+getModelTableFk()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+protected string <b>getModelTableFk</b>()</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol">string</td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L132">dressing\behaviors\YdEavBehavior.php#L132</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">getModelTableFk</span><span style="color: #007700">()&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Check&nbsp;required&nbsp;property&nbsp;modelTableFk.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(empty(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">modelTableFk</span><span style="color: #007700">)&nbsp;||&nbsp;!</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getOwner</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">hasAttribute</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">modelTableFk</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;If&nbsp;property&nbsp;modelTableFk&nbsp;not&nbsp;set,&nbsp;trying&nbsp;to&nbsp;get&nbsp;a&nbsp;primary&nbsp;key&nbsp;from&nbsp;model&nbsp;table.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">modelTableFk&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getOwner</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">getTableSchema</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">primaryKey</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(!</span><span style="color: #0000BB">is_string</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">modelTableFk</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;new&nbsp;</span><span style="color: #0000BB">CException</span><span style="color: #007700">(</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">t</span><span style="color: #007700">(</span><span style="color: #DD0000">'yiiext'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Table&nbsp;"{table}"&nbsp;does&nbsp;not&nbsp;have&nbsp;a&nbsp;primary&nbsp;key&nbsp;defined.'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(</span><span style="color: #DD0000">'{table}'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getOwner</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">getTableSchema</span><span style="color: #007700">())));<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">modelTableFk</span><span style="color: #007700">;<br />}</span>
+</span>
+</code></div>
+</div>
+<p>Returns owner model FK name.</p>
+
+
+<div class="detailHeader" id="getSafeAttributesArray-detail">
+getSafeAttributesArray()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+protected array <b>getSafeAttributesArray</b>()</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol">array</td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L173">dressing\behaviors\YdEavBehavior.php#L173</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">getSafeAttributesArray</span><span style="color: #007700">()&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">safeAttributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">count</span><span style="color: #007700">()&nbsp;==&nbsp;</span><span style="color: #0000BB">0&nbsp;</span><span style="color: #007700">?&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">keys&nbsp;</span><span style="color: #007700">:&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">safeAttributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">toArray</span><span style="color: #007700">();<br />}</span>
+</span>
+</code></div>
+</div>
+<p>Return safe attributes key. If not set returns all keys.</p>
 
 
 <div class="detailHeader" id="getSaveEavAttributeCommand-detail">
@@ -739,9 +1390,43 @@ protected <?php echo CHtml::link('CDbCommand', array('/site/doc', 'view' => 'CDb
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L49">dressing\behaviors\YdEavBehavior.php#L49</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L455">dressing\behaviors\YdEavBehavior.php#L455</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
-<span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">getSaveEavAttributeCommand</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$value</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getOwner</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">asa</span><span style="color: #007700">(</span><span style="color: #DD0000">'AuditBehavior'</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$auditId&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">YdAudit</span><span style="color: #007700">::</span><span style="color: #0000BB">findCurrentId</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$userid&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">app</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">user</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">id</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;catch&nbsp;(</span><span style="color: #0000BB">Exception&nbsp;$e</span><span style="color: #007700">)&nbsp;{&nbsp;</span><span style="color: #FF8000">//If&nbsp;we&nbsp;have&nbsp;no&nbsp;user&nbsp;object,&nbsp;this&nbsp;must&nbsp;be&nbsp;a&nbsp;command&nbsp;line&nbsp;program<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$userid&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$old&nbsp;</span><span style="color: #007700">=&nbsp;isset(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">dbAttributes</span><span style="color: #007700">[</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">])&nbsp;?&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">dbAttributes</span><span style="color: #007700">[</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">]&nbsp;:&nbsp;</span><span style="color: #DD0000">''</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$new&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$value</span><span style="color: #007700">;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;log&nbsp;in&nbsp;the&nbsp;audit&nbsp;trail<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(</span><span style="color: #0000BB">$old&nbsp;</span><span style="color: #007700">!=&nbsp;</span><span style="color: #0000BB">$new</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$log&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">YdAuditTrail</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$log</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">old_value&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$old</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$log</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">new_value&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$new</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$log</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">action&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'EAV&nbsp;SAVE'</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$log</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">model&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">get_class</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">owner</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getAuditModel</span><span style="color: #007700">());<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$log</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">model_id&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">owner</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getAuditModel</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">getPrimaryKey</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$log</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">field&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">tableName&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'.'&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$log</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">created&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">date</span><span style="color: #007700">(</span><span style="color: #DD0000">'Y-m-d&nbsp;H:i:s'</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$log</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">user_id&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$userid</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$log</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">audit_id&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$auditId</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$log</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">save</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;return&nbsp;parent<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">return&nbsp;</span><span style="color: #0000BB">parent</span><span style="color: #007700">::</span><span style="color: #0000BB">getSaveEavAttributeCommand</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$value</span><span style="color: #007700">);<br />}</span>
+<span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">getSaveEavAttributeCommand</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$value</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$data&nbsp;</span><span style="color: #007700">=&nbsp;array(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">entityField&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getModelId</span><span style="color: #007700">(),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributeField&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">valueField&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$value</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;);<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getOwner</span><span style="color: #007700">()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt;</span><span style="color: #0000BB">getCommandBuilder</span><span style="color: #007700">()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt;</span><span style="color: #0000BB">createInsertCommand</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">tableName</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$data</span><span style="color: #007700">);<br />}</span>
+</span>
+</code></div>
+</div>
+<p></p>
+
+
+<div class="detailHeader" id="hasSafeAttribute-detail">
+hasSafeAttribute()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+protected boolean <b>hasSafeAttribute</b>(string $attribute)</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">$attribute</td>
+  <td class="paramTypeCol">string</td>
+  <td class="paramDescCol">attribute key</td>
+</tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol">boolean</td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L182">dressing\behaviors\YdEavBehavior.php#L182</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">hasSafeAttribute</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">safeAttributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">count</span><span style="color: #007700">()&nbsp;&gt;&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">safeAttributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">contains</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">TRUE</span><span style="color: #007700">;<br />}</span>
 </span>
 </code></div>
 </div>
@@ -763,7 +1448,7 @@ public <?php echo CHtml::link('CActiveRecord', array('/site/doc', 'view' => 'CAc
 <tr>
   <td class="paramNameCol">$attributes</td>
   <td class="paramTypeCol">array</td>
-  <td class="paramDescCol">key for load.</td>
+  <td class="paramDescCol">attributes key for load.</td>
 </tr>
 <tr>
   <td class="paramNameCol">{return}</td>
@@ -773,12 +1458,266 @@ public <?php echo CHtml::link('CActiveRecord', array('/site/doc', 'view' => 'CAc
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L35">dressing\behaviors\YdEavBehavior.php#L35</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L311">dressing\behaviors\YdEavBehavior.php#L311</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
-<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">loadEavAttributes</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">parent</span><span style="color: #007700">::</span><span style="color: #0000BB">loadEavAttributes</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">dbAttributes&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">toArray</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Return&nbsp;model.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getOwner</span><span style="color: #007700">();<br />}</span>
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">loadEavAttributes</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;If&nbsp;exists&nbsp;cache,&nbsp;return&nbsp;it.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$data&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">cache</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">get</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getCacheKey</span><span style="color: #007700">());<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #0000BB">$data&nbsp;</span><span style="color: #007700">!==&nbsp;</span><span style="color: #0000BB">FALSE</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">mergeWith</span><span style="color: #007700">(</span><span style="color: #0000BB">$data</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">FALSE</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getOwner</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Query&nbsp;DB.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$data&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getLoadEavAttributesCommand</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">)-&gt;</span><span style="color: #0000BB">query</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;foreach(</span><span style="color: #0000BB">$data&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">$row</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$attribute&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">stripPrefix</span><span style="color: #007700">(</span><span style="color: #0000BB">$row</span><span style="color: #007700">[</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributeField</span><span style="color: #007700">]);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$value&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$row</span><span style="color: #007700">[</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">valueField</span><span style="color: #007700">];<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Check&nbsp;if&nbsp;value&nbsp;exists.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(!</span><span style="color: #0000BB">is_null</span><span style="color: #007700">(</span><span style="color: #0000BB">$current&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">itemAt</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">))&nbsp;&amp;&amp;&nbsp;</span><span style="color: #0000BB">$current&nbsp;</span><span style="color: #007700">!=&nbsp;</span><span style="color: #0000BB">$value</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$value&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">is_array</span><span style="color: #007700">(</span><span style="color: #0000BB">$current</span><span style="color: #007700">)&nbsp;?&nbsp;</span><span style="color: #0000BB">$current</span><span style="color: #007700">[]&nbsp;=&nbsp;</span><span style="color: #0000BB">$value&nbsp;</span><span style="color: #007700">:&nbsp;array(</span><span style="color: #0000BB">$current</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$value</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">add</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$value</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Save&nbsp;loaded&nbsp;attributes&nbsp;to&nbsp;cache.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">cache</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">set</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getCacheKey</span><span style="color: #007700">(),&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">toArray</span><span style="color: #007700">());<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Return&nbsp;model.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getOwner</span><span style="color: #007700">();<br />}</span>
 </span>
 </code></div>
 </div>
 <p></p>
+
+
+<div class="detailHeader" id="saveEavAttributes-detail">
+saveEavAttributes()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public <?php echo CHtml::link('CActiveRecord', array('/site/doc', 'view' => 'CActiveRecord')); ?> <b>saveEavAttributes</b>(array $attributes)</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">$attributes</td>
+  <td class="paramTypeCol">array</td>
+  <td class="paramDescCol">attributes key for save.</td>
+</tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol"><?php echo CHtml::link('CActiveRecord', array('/site/doc', 'view' => 'CActiveRecord')); ?></td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L275">dressing\behaviors\YdEavBehavior.php#L275</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">saveEavAttributes</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Delete&nbsp;old&nbsp;attributes&nbsp;values&nbsp;from&nbsp;DB.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getDeleteCommand</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">)-&gt;</span><span style="color: #0000BB">execute</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Process&nbsp;each&nbsp;attributes.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">foreach&nbsp;(</span><span style="color: #0000BB">$attributes&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Skip&nbsp;if&nbsp;null&nbsp;attributes.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(!</span><span style="color: #0000BB">is_null</span><span style="color: #007700">(</span><span style="color: #0000BB">$values&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">itemAt</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">)))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Create&nbsp;array&nbsp;of&nbsp;values&nbsp;for&nbsp;convenience.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(!</span><span style="color: #0000BB">is_array</span><span style="color: #007700">(</span><span style="color: #0000BB">$values</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$values&nbsp;</span><span style="color: #007700">=&nbsp;array(</span><span style="color: #0000BB">$values</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Save&nbsp;each&nbsp;value&nbsp;of&nbsp;attribute&nbsp;into&nbsp;DB.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">foreach&nbsp;(</span><span style="color: #0000BB">$values&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">$value</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getSaveEavAttributeCommand</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributesPrefix&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$value</span><span style="color: #007700">)-&gt;</span><span style="color: #0000BB">execute</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Remove&nbsp;from&nbsp;changed&nbsp;list.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">changedAttributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">remove</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Save&nbsp;attributes&nbsp;to&nbsp;cache.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">count&nbsp;</span><span style="color: #007700">&gt;&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">cache</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">set</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getCacheKey</span><span style="color: #007700">(),&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">toArray</span><span style="color: #007700">());<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Or&nbsp;delete&nbsp;cache&nbsp;is&nbsp;attributes&nbsp;not&nbsp;exists.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">else&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">cache</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">delete</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getCacheKey</span><span style="color: #007700">());<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Return&nbsp;model.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getOwner</span><span style="color: #007700">();<br />}</span>
+</span>
+</code></div>
+</div>
+<p></p>
+
+
+<div class="detailHeader" id="setEavAttribute-detail">
+setEavAttribute()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public <?php echo CHtml::link('CActiveRecord', array('/site/doc', 'view' => 'CActiveRecord')); ?> <b>setEavAttribute</b>(string $attribute, mixed $value, boolean $save=false)</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">$attribute</td>
+  <td class="paramTypeCol">string</td>
+  <td class="paramDescCol">attribute key.</td>
+</tr>
+<tr>
+  <td class="paramNameCol">$value</td>
+  <td class="paramTypeCol">mixed</td>
+  <td class="paramDescCol">attribute value.</td>
+</tr>
+<tr>
+  <td class="paramNameCol">$save</td>
+  <td class="paramTypeCol">boolean</td>
+  <td class="paramDescCol">whether auto save attributes.</td>
+</tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol"><?php echo CHtml::link('CActiveRecord', array('/site/doc', 'view' => 'CActiveRecord')); ?></td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L382">dressing\behaviors\YdEavBehavior.php#L382</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">setEavAttribute</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$value</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$save&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">FALSE</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">setEavAttributes</span><span style="color: #007700">(array(</span><span style="color: #0000BB">$attribute&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$value</span><span style="color: #007700">),&nbsp;</span><span style="color: #0000BB">$save</span><span style="color: #007700">);<br />}</span>
+</span>
+</code></div>
+</div>
+<p></p>
+
+
+<div class="detailHeader" id="setEavAttributes-detail">
+setEavAttributes()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public <?php echo CHtml::link('CActiveRecord', array('/site/doc', 'view' => 'CActiveRecord')); ?> <b>setEavAttributes</b>(array $attributes, boolean $save=false)</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">$attributes</td>
+  <td class="paramTypeCol">array</td>
+  <td class="paramDescCol">attributes values for change.</td>
+</tr>
+<tr>
+  <td class="paramNameCol">$save</td>
+  <td class="paramTypeCol">boolean</td>
+  <td class="paramDescCol">whether auto save attributes.</td>
+</tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol"><?php echo CHtml::link('CActiveRecord', array('/site/doc', 'view' => 'CActiveRecord')); ?></td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L363">dressing\behaviors\YdEavBehavior.php#L363</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">setEavAttributes</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$save&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">FALSE</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;foreach&nbsp;(</span><span style="color: #0000BB">$attributes&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">$attribute&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$value</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">add</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$value</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">changedAttributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">add</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Auto&nbsp;save&nbsp;if&nbsp;set.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(</span><span style="color: #0000BB">$save</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">saveEavAttributes</span><span style="color: #007700">(</span><span style="color: #0000BB">array_keys</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">));<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Return&nbsp;model.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getOwner</span><span style="color: #007700">();<br />}</span>
+</span>
+</code></div>
+</div>
+<p></p>
+
+
+<div class="detailHeader" id="setModelTableFk-detail">
+setModelTableFk()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public void <b>setModelTableFk</b>(string $modelTableFk)</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">$modelTableFk</td>
+  <td class="paramTypeCol">string</td>
+  <td class="paramDescCol">owner model FK name.</td>
+</tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol">void</td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L120">dressing\behaviors\YdEavBehavior.php#L120</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">setModelTableFk</span><span style="color: #007700">(</span><span style="color: #0000BB">$modelTableFk</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #0000BB">is_string</span><span style="color: #007700">(</span><span style="color: #0000BB">$modelTableFk</span><span style="color: #007700">)&nbsp;&amp;&amp;&nbsp;!empty(</span><span style="color: #0000BB">$modelTableFk</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">modelTableFk&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$modelTableFk</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />}</span>
+</span>
+</code></div>
+</div>
+<p>Set owner model FK name.</p>
+
+
+<div class="detailHeader" id="setSafeAttributes-detail">
+setSafeAttributes()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public void <b>setSafeAttributes</b>(array $safeAttributes)</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">$safeAttributes</td>
+  <td class="paramTypeCol">array</td>
+  <td class="paramDescCol">safe attributes.</td>
+</tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol">void</td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L164">dressing\behaviors\YdEavBehavior.php#L164</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">setSafeAttributes</span><span style="color: #007700">(</span><span style="color: #0000BB">$safeAttributes</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">safeAttributes</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">copyFrom</span><span style="color: #007700">(</span><span style="color: #0000BB">$safeAttributes</span><span style="color: #007700">);<br />}</span>
+</span>
+</code></div>
+</div>
+<p>Set safe attributes array.</p>
+
+
+<div class="detailHeader" id="stripPrefix-detail">
+stripPrefix()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+protected string <b>stripPrefix</b>(string $attribute)</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">$attribute</td>
+  <td class="paramTypeCol">string</td>
+  <td class="paramDescCol">attribute key</td>
+</tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol">string</td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L151">dressing\behaviors\YdEavBehavior.php#L151</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">stripPrefix</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Remove&nbsp;prefix&nbsp;if&nbsp;exists.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(!empty(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributesPrefix</span><span style="color: #007700">)&nbsp;&amp;&amp;&nbsp;</span><span style="color: #0000BB">strpos</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributesPrefix</span><span style="color: #007700">)&nbsp;===&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$attribute&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">substr</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">strlen</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">attributesPrefix</span><span style="color: #007700">));<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">;<br />}</span>
+</span>
+</code></div>
+</div>
+<p>Strip prefix from attribute key.</p>
+
+
+<div class="detailHeader" id="withEavAttributes-detail">
+withEavAttributes()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public <?php echo CHtml::link('CActiveRecord', array('/site/doc', 'view' => 'CActiveRecord')); ?> <b>withEavAttributes</b>(array $attributes=array (
+))</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">$attributes</td>
+  <td class="paramTypeCol">array</td>
+  <td class="paramDescCol">attributes values or key for filter models.</td>
+</tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol"><?php echo CHtml::link('CActiveRecord', array('/site/doc', 'view' => 'CActiveRecord')); ?></td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdEavBehavior.php#L436">dressing\behaviors\YdEavBehavior.php#L436</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">withEavAttributes</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes&nbsp;</span><span style="color: #007700">=&nbsp;array())&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;If&nbsp;not&nbsp;set&nbsp;attributes,&nbsp;search&nbsp;models&nbsp;with&nbsp;anything&nbsp;attributes&nbsp;exists.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(empty(</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$attributes&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getSafeAttributesArray</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;$attributes&nbsp;be&nbsp;array&nbsp;of&nbsp;elements:&nbsp;$attribute&nbsp;=&gt;&nbsp;$values<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$criteria&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getFindByEavAttributesCriteria</span><span style="color: #007700">(</span><span style="color: #0000BB">$attributes</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Merge&nbsp;model&nbsp;criteria.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getOwner</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">getDbCriteria</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">mergeWith</span><span style="color: #007700">(</span><span style="color: #0000BB">$criteria</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;Return&nbsp;model.<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getOwner</span><span style="color: #007700">();<br />}</span>
+</span>
+</code></div>
+</div>
+<p>Limit current AR query to have all attributes and values specified.</p>
 
 

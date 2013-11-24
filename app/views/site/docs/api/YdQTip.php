@@ -34,7 +34,7 @@ $this->breadcrumbs[] = 'YdQTip';
 </table>
 
 <div id="classDescription">
-Class YdQTip</div>
+YdQTip</div>
 <a name="properties"></a>
 
 <div class="summary docProperty">

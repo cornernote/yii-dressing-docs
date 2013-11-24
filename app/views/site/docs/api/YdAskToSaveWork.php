@@ -34,12 +34,15 @@ $this->breadcrumbs[] = 'YdAskToSaveWork';
 </table>
 
 <div id="classDescription">
-This extension ask for a confirmation to user before leaving the page
-when he is editing or creating something
-<br/><br/>
+YdAskToSaveWork will ask for a confirmation to user before leaving the page after they make a change to the form.
 <br/><br/>
 USAGE:
-$this->widget('widgets.AskToSaveWork', array('watchElement' => '#my-form :input', 'message' => Yii::t('dressing', 'Please save before leaving the page')));</div>
+<pre>
+$this-&gt;widget('widgets.AskToSaveWork', array(
+    'watchElement' =&gt; '#my-form :input',
+    'message' =&gt; Yii::t('app', 'Please save before leaving the page')
+));
+</pre></div>
 <a name="properties"></a>
 
 <div class="summary docProperty">
@@ -405,7 +408,7 @@ public void <b>init</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\widgets\YdAskToSaveWork.php#L39">dressing\widgets\YdAskToSaveWork.php#L39</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\widgets\YdAskToSaveWork.php#L40">dressing\widgets\YdAskToSaveWork.php#L40</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">init</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">parent</span><span style="color: #007700">::</span><span style="color: #0000BB">init</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">message&nbsp;</span><span style="color: #007700">=&nbsp;isset(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">message</span><span style="color: #007700">)&nbsp;?&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">message&nbsp;</span><span style="color: #007700">:&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">t</span><span style="color: #007700">(</span><span style="color: #DD0000">'messages'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">"Please&nbsp;save&nbsp;before&nbsp;leaving&nbsp;the&nbsp;page"</span><span style="color: #007700">);<br />}</span>
 </span>
@@ -429,7 +432,7 @@ public void <b>run</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\widgets\YdAskToSaveWork.php#L48">dressing\widgets\YdAskToSaveWork.php#L48</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\widgets\YdAskToSaveWork.php#L49">dressing\widgets\YdAskToSaveWork.php#L49</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">run</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">parent</span><span style="color: #007700">::</span><span style="color: #0000BB">run</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$js&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">''</span><span style="color: #007700">;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(isset(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">watchElement</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$js&nbsp;</span><span style="color: #007700">.=&nbsp;</span><span style="color: #DD0000">"$('</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">watchElement</span><span style="color: #DD0000">').one('change',&nbsp;function()&nbsp;{"</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$js&nbsp;</span><span style="color: #007700">.=&nbsp;</span><span style="color: #DD0000">"$(window).bind('beforeunload',&nbsp;function()&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;\""&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">message&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">"\"&nbsp;;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});"</span><span style="color: #007700">;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$js&nbsp;</span><span style="color: #007700">.=&nbsp;</span><span style="color: #DD0000">"$(':submit').bind('click',&nbsp;function(){<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window.onbeforeunload&nbsp;=&nbsp;function(){};<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(window).unbind('beforeunload');<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});"</span><span style="color: #007700">;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(isset(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">watchElement</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$js&nbsp;</span><span style="color: #007700">.=&nbsp;</span><span style="color: #DD0000">"});"</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">app</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">clientScript</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">registerCoreScript</span><span style="color: #007700">(</span><span style="color: #DD0000">'jquery'</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">app</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">clientScript</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">registerScript</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getId</span><span style="color: #007700">(),&nbsp;</span><span style="color: #0000BB">$js</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">CClientScript</span><span style="color: #007700">::</span><span style="color: #0000BB">POS_READY</span><span style="color: #007700">);<br />}</span>
 </span>

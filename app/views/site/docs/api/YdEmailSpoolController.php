@@ -36,7 +36,7 @@ $this->breadcrumbs[] = 'YdEmailSpoolController';
 </table>
 
 <div id="classDescription">
-EmailSpoolController</div>
+YdEmailSpoolController</div>
 <a name="properties"></a>
 
 <div class="summary docProperty">

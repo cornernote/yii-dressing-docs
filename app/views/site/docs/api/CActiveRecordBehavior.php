@@ -29,7 +29,7 @@ $this->breadcrumbs[] = 'CActiveRecordBehavior';
 </tr>
 <tr>
   <th>Subclasses</th>
-  <td><?php echo CHtml::link('CTimestampBehavior', array('/site/doc', 'view' => 'CTimestampBehavior')); ?>, <?php echo CHtml::link('YdAuditBehavior', array('/site/doc', 'view' => 'YdAuditBehavior')); ?>, <?php echo CHtml::link('YdCacheBehavior', array('/site/doc', 'view' => 'YdCacheBehavior')); ?>, <?php echo CHtml::link('YdEavBaseBehavior', array('/site/doc', 'view' => 'YdEavBaseBehavior')); ?>, <?php echo CHtml::link('YdSoftDeleteBehavior', array('/site/doc', 'view' => 'YdSoftDeleteBehavior')); ?></td>
+  <td><?php echo CHtml::link('CTimestampBehavior', array('/site/doc', 'view' => 'CTimestampBehavior')); ?>, <?php echo CHtml::link('YdAuditBehavior', array('/site/doc', 'view' => 'YdAuditBehavior')); ?>, <?php echo CHtml::link('YdCacheBehavior', array('/site/doc', 'view' => 'YdCacheBehavior')); ?>, <?php echo CHtml::link('YdEavBehavior', array('/site/doc', 'view' => 'YdEavBehavior')); ?>, <?php echo CHtml::link('YdSoftDeleteBehavior', array('/site/doc', 'view' => 'YdSoftDeleteBehavior')); ?></td>
 </tr>
 <tr>
   <th>Source Code</th>

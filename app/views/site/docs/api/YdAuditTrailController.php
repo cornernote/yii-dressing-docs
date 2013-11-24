@@ -36,7 +36,7 @@ $this->breadcrumbs[] = 'YdAuditTrailController';
 </table>
 
 <div id="classDescription">
-AuditTrailController</div>
+YdAuditTrailController</div>
 <a name="properties"></a>
 
 <div class="summary docProperty">

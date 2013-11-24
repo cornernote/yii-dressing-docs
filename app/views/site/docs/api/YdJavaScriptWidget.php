@@ -34,7 +34,7 @@ $this->breadcrumbs[] = 'YdJavaScriptWidget';
 </table>
 
 <div id="classDescription">
-Class YdJavaScriptWidget</div>
+YdJavaScriptWidget</div>
 <a name="properties"></a>
 
 <div class="summary docProperty">
