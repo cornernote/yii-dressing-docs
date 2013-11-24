@@ -17,7 +17,7 @@ class Config extends YdConfig
      */
     public function __construct($file = null)
     {
-        defined('YII_DEBUG') or define('YII_DEBUG', true);
+        //defined('YII_DEBUG') or define('YII_DEBUG', true);
         parent::__construct(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'config.json');
     }
 

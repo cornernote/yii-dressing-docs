@@ -93,7 +93,7 @@ By writing your own Yii class, you can customize some functionalities of YdBase.
 </tr>
 <tr class="inherited" id="createApplication">
   <td><?php echo CHtml::link('createApplication()', array('/site/doc', 'view' => 'YdBase', '#' => 'createApplication-detail')); ?></td>
-  <td>Starts an Audit before returning an Application.</td>
+  <td>Merge YdBase default configuration with the given configuration.</td>
   <td><?php echo CHtml::link('YdBase', array('/site/doc', 'view' => 'YdBase')); ?></td>
 </tr>
 <tr class="inherited" id="createComponent">
@@ -103,12 +103,12 @@ By writing your own Yii class, you can customize some functionalities of YdBase.
 </tr>
 <tr class="inherited" id="createConsoleApplication">
   <td><?php echo CHtml::link('createConsoleApplication()', array('/site/doc', 'view' => 'YdBase', '#' => 'createConsoleApplication-detail')); ?></td>
-  <td></td>
+  <td>Creates a CConsoleApplication, in addition it will configure the command map as well as remove config items that</td>
   <td><?php echo CHtml::link('YdBase', array('/site/doc', 'view' => 'YdBase')); ?></td>
 </tr>
 <tr class="inherited" id="createWebApplication">
   <td><?php echo CHtml::link('createWebApplication()', array('/site/doc', 'view' => 'YdBase', '#' => 'createWebApplication-detail')); ?></td>
-  <td></td>
+  <td>Creates a CWebApplication, in addition it will configure the controller map and log routes as well as remove</td>
   <td><?php echo CHtml::link('YdBase', array('/site/doc', 'view' => 'YdBase')); ?></td>
 </tr>
 <tr class="inherited" id="endProfile">
@@ -118,17 +118,17 @@ By writing your own Yii class, you can customize some functionalities of YdBase.
 </tr>
 <tr class="inherited" id="getCommandMap">
   <td><?php echo CHtml::link('getCommandMap()', array('/site/doc', 'view' => 'YdBase', '#' => 'getCommandMap-detail')); ?></td>
-  <td></td>
+  <td>YdBase Command Map</td>
   <td><?php echo CHtml::link('YdBase', array('/site/doc', 'view' => 'YdBase')); ?></td>
 </tr>
-<tr class="inherited" id="getComponentsConfig">
-  <td><?php echo CHtml::link('getComponentsConfig()', array('/site/doc', 'view' => 'YdBase', '#' => 'getComponentsConfig-detail')); ?></td>
-  <td></td>
+<tr class="inherited" id="getConfig">
+  <td><?php echo CHtml::link('getConfig()', array('/site/doc', 'view' => 'YdBase', '#' => 'getConfig-detail')); ?></td>
+  <td>YdBase Config</td>
   <td><?php echo CHtml::link('YdBase', array('/site/doc', 'view' => 'YdBase')); ?></td>
 </tr>
 <tr class="inherited" id="getControllerMap">
   <td><?php echo CHtml::link('getControllerMap()', array('/site/doc', 'view' => 'YdBase', '#' => 'getControllerMap-detail')); ?></td>
-  <td></td>
+  <td>YdBase Controller Map</td>
   <td><?php echo CHtml::link('YdBase', array('/site/doc', 'view' => 'YdBase')); ?></td>
 </tr>
 <tr class="inherited" id="getFrameworkPath">
@@ -140,11 +140,6 @@ By writing your own Yii class, you can customize some functionalities of YdBase.
   <td><?php echo CHtml::link('getLogger()', array('/site/doc', 'view' => 'YiiBase', '#' => 'getLogger-detail')); ?></td>
   <td>Returns message logger</td>
   <td><?php echo CHtml::link('YiiBase', array('/site/doc', 'view' => 'YiiBase')); ?></td>
-</tr>
-<tr class="inherited" id="getModulesConfig">
-  <td><?php echo CHtml::link('getModulesConfig()', array('/site/doc', 'view' => 'YdBase', '#' => 'getModulesConfig-detail')); ?></td>
-  <td></td>
-  <td><?php echo CHtml::link('YdBase', array('/site/doc', 'view' => 'YdBase')); ?></td>
 </tr>
 <tr class="inherited" id="getPathOfAlias">
   <td><?php echo CHtml::link('getPathOfAlias()', array('/site/doc', 'view' => 'YiiBase', '#' => 'getPathOfAlias-detail')); ?></td>

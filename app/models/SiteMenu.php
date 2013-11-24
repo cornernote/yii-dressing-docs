@@ -6,6 +6,9 @@
 class SiteMenu extends YdSiteMenu
 {
 
+    /**
+     * @return array
+     */
     static public function topMenu()
     {
         $menu = array();
@@ -51,5 +54,24 @@ class SiteMenu extends YdSiteMenu
         return $menu;
     }
 
+    /**
+     * @return mixed
+     */
+    public function relations()
+    {
+        if (!empty(Yii::app()->dressing->modelMap['YdSiteMenu']['relations']))
+            return Yii::app()->dressing->modelMap['YdSiteMenu']['relations'];
+        return array();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function behaviors()
+    {
+        if (!empty(Yii::app()->dressing->modelMap['YdSiteMenu']['behaviors']))
+            return Yii::app()->dressing->modelMap['YdSiteMenu']['behaviors'];
+        return array();
+    }
 
 } 

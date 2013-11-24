@@ -68,10 +68,16 @@ return array(
             'linkAssets' => true,
         ),
         'dressing' => array(
-            'auditUserRelation' => array(
-                'CBelongsToRelation',
-                'User',
-                'user_id',
+            'modelMap' => array(
+                'YdAudit' => array(
+                    'relations' => array(
+                        'user' => array(
+                            'CBelongsToRelation',
+                            'User',
+                            'user_id',
+                        ),
+                    ),
+                ),
             ),
         ),
     ),
@@ -79,6 +85,7 @@ return array(
         'log',
         'fatalErrorCatch',
         'dressing',
+        'auditTracker',
         'bootstrap',
     ),
 

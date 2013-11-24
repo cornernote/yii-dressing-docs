@@ -69,7 +69,7 @@ $this->breadcrumbs[] = Yii::t('app', 'Documentation');
 	  <td>YdErrorEmailCommand will email errors that have been generated into the error runtime folder.</td>
 	</tr>
 		<tr>
-		  <td rowspan="40"><a name="dressing.components"></a>dressing.components</td>
+		  <td rowspan="41"><a name="dressing.components"></a>dressing.components</td>
 		  <td><?php echo CHtml::link('YdActiveDataProvider', array('/site/doc', 'view' => 'YdActiveDataProvider')); ?></td>
 	  <td>YdActiveDataProvider</td>
 	</tr>
@@ -92,6 +92,10 @@ $this->breadcrumbs[] = Yii::t('app', 'Documentation');
 		<tr>
 		  <td><?php echo CHtml::link('YdAssetManager', array('/site/doc', 'view' => 'YdAssetManager')); ?></td>
 	  <td>YdAssetManager</td>
+	</tr>
+		<tr>
+		  <td><?php echo CHtml::link('YdAuditTracker', array('/site/doc', 'view' => 'YdAuditTracker')); ?></td>
+	  <td>YdAuditTracker</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdBPayHelper', array('/site/doc', 'view' => 'YdBPayHelper')); ?></td>

@@ -96,17 +96,13 @@ $this->menu = YdSiteMenu::getItemsFromMenu('Help');
             <p class="lead">Now, that we have placed the library where it belongs, lets configure it.</p>
 
             <p>YiiDressing has the main component called
-                <code>YiiDressing</code> which should be attached as a Yii application component.</p>
+                <code>YdDressing</code> which should be attached as a Yii application component.</p>
 
-            <p>So, the minimal configuration snippet for YiiDressing looks like this:</p>
+            <p>So, the minimal configuration snippet for YdDressing looks like this:</p>
 
-<pre>'aliases' => array(
-    'dressing' => '/path/to/yii-dressing/src',
-    ... other aliases ...
-),
-'components' => array(
+<pre>'components' => array(
     'dressing' => array(
-        'class' => 'dressing.YiiDressing',
+        'class' => 'path/to/yii-dressing/YdDressing',
     ),
     ... other components ...
 ),
@@ -114,12 +110,10 @@ $this->menu = YdSiteMenu::getItemsFromMenu('Help');
 
             <p>You should place this snippet inside the Yii config.</p>
 
-            <p>Proper specification of path alias to the Bootstrap component file is the only crucial part of the config.</p>
-
             <p>
                 <span class="label label-info">Note</span> This is absolutely minimal configuration, all property will be set to defaults.
-                You can see the full list of configuration parameters for Bootstrap component in the
-                <?php echo l(t('Features section'), array('/site/page', 'view' => 'feature-library')); ?>.</p>
+                You can see the full list of configuration parameters for YdDressing component in the
+                <?php echo l(t('YdDressing Class Documentation'), array('/site/doc', 'view' => 'YdDressing')); ?>.</p>
         </section>
         <!-- Configuration END -->
 

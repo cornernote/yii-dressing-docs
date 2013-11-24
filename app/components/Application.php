@@ -13,6 +13,7 @@
  * @property array $onEndRequest
  * @property array $onError
  * @property array $onException
+ * @property YdAuditTracker $auditTracker
  *
  * @method YdClientScript getClientScript() getClientScript()
  *

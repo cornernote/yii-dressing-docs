@@ -72,7 +72,7 @@ if ($this->showNavBar) {
 
             <p class="copy">Copyright &copy; 2013 by <a href="http://mrphp.com.au">Mr PHP</a></p>
             <?php
-            $this->renderPartial('dressing.views.audit._footer');
+            //$this->renderPartial('dressing.views.audit._footer');
             //echo '<p class="pull-right">' . l(t('Back to Top') . ' &uarr;', '#') . '</p>';
             ?>
         </div>
