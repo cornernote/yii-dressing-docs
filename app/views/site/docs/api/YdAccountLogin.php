@@ -1,8 +1,8 @@
 <?php
-$this->pageTitle = $this->pageHeading = 'YdUserPassword';
+$this->pageTitle = $this->pageHeading = 'YdAccountLogin';
 $this->breadcrumbs = array();
 $this->breadcrumbs[Yii::t('app', 'Documentation')] = array('/site/doc');
-$this->breadcrumbs[] = 'YdUserPassword';
+$this->breadcrumbs[] = 'YdAccountLogin';
 ?>
 <div id="nav">
 <a href="#properties">Properties</a> | <a href="#methods">Methods</a> | <a href="#events">Events</a></div>
@@ -18,7 +18,7 @@ $this->breadcrumbs[] = 'YdUserPassword';
 </tr>
 <tr>
   <th>Inheritance</th>
-  <td>class YdUserPassword &raquo;
+  <td>class YdAccountLogin &raquo;
 <?php echo CHtml::link('YdFormModel', array('/site/doc', 'view' => 'YdFormModel')); ?> &raquo;
 <?php echo CHtml::link('CFormModel', array('/site/doc', 'view' => 'CFormModel')); ?> &raquo;
 <?php echo CHtml::link('CModel', array('/site/doc', 'view' => 'CModel')); ?> &raquo;
@@ -30,7 +30,7 @@ $this->breadcrumbs[] = 'YdUserPassword';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/models/YdUserPassword.php">dressing/models/YdUserPassword.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/models/YdAccountLogin.php">dressing/models/YdAccountLogin.php</a></td>
 </tr>
 <tr>
   <th>Authors</th>
@@ -39,8 +39,8 @@ $this->breadcrumbs[] = 'YdUserPassword';
 </table>
 
 <div id="classDescription">
-YdUserPassword is the data structure for keeping user password form data.
-It is used by the 'password' action of 'UserController'.</div>
+YdAccountLogin is the data structure for keeping account login form data.
+It is used by the 'login' action of 'AccountController'.</div>
 <a name="properties"></a>
 
 <div class="summary docProperty">
@@ -64,17 +64,11 @@ It is used by the 'password' action of 'UserController'.</div>
   <td>Returns all attribute values.</td>
   <td><?php echo CHtml::link('CModel', array('/site/doc', 'view' => 'CModel')); ?></td>
 </tr>
-<tr id="confirm_password">
-  <td><?php echo CHtml::link('confirm_password', array('/site/doc', 'view' => 'YdUserPassword', '#' => 'confirm_password-detail')); ?></td>
+<tr id="email">
+  <td><?php echo CHtml::link('email', array('/site/doc', 'view' => 'YdAccountLogin', '#' => 'email-detail')); ?></td>
   <td></td>
   <td></td>
-  <td>YdUserPassword</td>
-</tr>
-<tr id="current_password">
-  <td><?php echo CHtml::link('current_password', array('/site/doc', 'view' => 'YdUserPassword', '#' => 'current_password-detail')); ?></td>
-  <td></td>
-  <td></td>
-  <td>YdUserPassword</td>
+  <td>YdAccountLogin</td>
 </tr>
 <tr class="inherited" id="errorString">
   <td><?php echo CHtml::link('errorString', array('/site/doc', 'view' => 'YdFormModel', '#' => 'errorString-detail')); ?></td>
@@ -95,10 +89,22 @@ It is used by the 'password' action of 'UserController'.</div>
   <td><?php echo CHtml::link('CModel', array('/site/doc', 'view' => 'CModel')); ?></td>
 </tr>
 <tr id="password">
-  <td><?php echo CHtml::link('password', array('/site/doc', 'view' => 'YdUserPassword', '#' => 'password-detail')); ?></td>
+  <td><?php echo CHtml::link('password', array('/site/doc', 'view' => 'YdAccountLogin', '#' => 'password-detail')); ?></td>
   <td></td>
   <td></td>
-  <td>YdUserPassword</td>
+  <td>YdAccountLogin</td>
+</tr>
+<tr id="recaptcha">
+  <td><?php echo CHtml::link('recaptcha', array('/site/doc', 'view' => 'YdAccountLogin', '#' => 'recaptcha-detail')); ?></td>
+  <td></td>
+  <td></td>
+  <td>YdAccountLogin</td>
+</tr>
+<tr id="remember_me">
+  <td><?php echo CHtml::link('remember_me', array('/site/doc', 'view' => 'YdAccountLogin', '#' => 'remember_me-detail')); ?></td>
+  <td></td>
+  <td></td>
+  <td>YdAccountLogin</td>
 </tr>
 <tr class="inherited" id="safeAttributeNames">
   <td><?php echo CHtml::link('safeAttributeNames', array('/site/doc', 'view' => 'CModel', '#' => 'safeAttributeNames-detail')); ?></td>
@@ -121,7 +127,7 @@ It is used by the 'password' action of 'UserController'.</div>
 <tr class="inherited" id="validators">
   <td><?php echo CHtml::link('validators', array('/site/doc', 'view' => 'CModel', '#' => 'validators-detail')); ?></td>
   <td>array</td>
-  <td>Returns the validators applicable to the current <?php echo CHtml::link('scenario', array('/site/doc', 'view' => 'YdUserPassword', '#' => 'scenario')); ?>.</td>
+  <td>Returns the validators applicable to the current <?php echo CHtml::link('scenario', array('/site/doc', 'view' => 'YdAccountLogin', '#' => 'scenario')); ?>.</td>
   <td><?php echo CHtml::link('CModel', array('/site/doc', 'view' => 'CModel')); ?></td>
 </tr>
 </table>
@@ -203,14 +209,19 @@ It is used by the 'password' action of 'UserController'.</div>
   <td><?php echo CHtml::link('CComponent', array('/site/doc', 'view' => 'CComponent')); ?></td>
 </tr>
 <tr id="attributeLabels">
-  <td><?php echo CHtml::link('attributeLabels()', array('/site/doc', 'view' => 'YdUserPassword', '#' => 'attributeLabels-detail')); ?></td>
-  <td></td>
-  <td>YdUserPassword</td>
+  <td><?php echo CHtml::link('attributeLabels()', array('/site/doc', 'view' => 'YdAccountLogin', '#' => 'attributeLabels-detail')); ?></td>
+  <td>Declares attribute labels.</td>
+  <td>YdAccountLogin</td>
 </tr>
 <tr class="inherited" id="attributeNames">
   <td><?php echo CHtml::link('attributeNames()', array('/site/doc', 'view' => 'CFormModel', '#' => 'attributeNames-detail')); ?></td>
   <td>Returns the list of attribute names.</td>
   <td><?php echo CHtml::link('CFormModel', array('/site/doc', 'view' => 'CFormModel')); ?></td>
+</tr>
+<tr id="authenticate">
+  <td><?php echo CHtml::link('authenticate()', array('/site/doc', 'view' => 'YdAccountLogin', '#' => 'authenticate-detail')); ?></td>
+  <td>Authenticates the password.</td>
+  <td>YdAccountLogin</td>
 </tr>
 <tr class="inherited" id="behaviors">
   <td><?php echo CHtml::link('behaviors()', array('/site/doc', 'view' => 'CModel', '#' => 'behaviors-detail')); ?></td>
@@ -234,7 +245,7 @@ It is used by the 'password' action of 'UserController'.</div>
 </tr>
 <tr class="inherited" id="createValidators">
   <td><?php echo CHtml::link('createValidators()', array('/site/doc', 'view' => 'CModel', '#' => 'createValidators-detail')); ?></td>
-  <td>Creates validator objects based on the specification in <?php echo CHtml::link('rules', array('/site/doc', 'view' => 'YdUserPassword', '#' => 'rules')); ?>.</td>
+  <td>Creates validator objects based on the specification in <?php echo CHtml::link('rules', array('/site/doc', 'view' => 'YdAccountLogin', '#' => 'rules')); ?>.</td>
   <td><?php echo CHtml::link('CModel', array('/site/doc', 'view' => 'CModel')); ?></td>
 </tr>
 <tr class="inherited" id="detachBehavior">
@@ -334,7 +345,7 @@ It is used by the 'password' action of 'UserController'.</div>
 </tr>
 <tr class="inherited" id="getValidators">
   <td><?php echo CHtml::link('getValidators()', array('/site/doc', 'view' => 'CModel', '#' => 'getValidators-detail')); ?></td>
-  <td>Returns the validators applicable to the current <?php echo CHtml::link('scenario', array('/site/doc', 'view' => 'YdUserPassword', '#' => 'scenario')); ?>.</td>
+  <td>Returns the validators applicable to the current <?php echo CHtml::link('scenario', array('/site/doc', 'view' => 'YdAccountLogin', '#' => 'scenario')); ?>.</td>
   <td><?php echo CHtml::link('CModel', array('/site/doc', 'view' => 'CModel')); ?></td>
 </tr>
 <tr class="inherited" id="hasErrors">
@@ -371,6 +382,11 @@ It is used by the 'password' action of 'UserController'.</div>
   <td><?php echo CHtml::link('isAttributeSafe()', array('/site/doc', 'view' => 'CModel', '#' => 'isAttributeSafe-detail')); ?></td>
   <td>Returns a value indicating whether the attribute is safe for massive assignments.</td>
   <td><?php echo CHtml::link('CModel', array('/site/doc', 'view' => 'CModel')); ?></td>
+</tr>
+<tr id="login">
+  <td><?php echo CHtml::link('login()', array('/site/doc', 'view' => 'YdAccountLogin', '#' => 'login-detail')); ?></td>
+  <td>Logs in the user using the given email and password in the model.</td>
+  <td>YdAccountLogin</td>
 </tr>
 <tr class="inherited" id="offsetExists">
   <td><?php echo CHtml::link('offsetExists()', array('/site/doc', 'view' => 'CModel', '#' => 'offsetExists-detail')); ?></td>
@@ -418,9 +434,9 @@ It is used by the 'password' action of 'UserController'.</div>
   <td><?php echo CHtml::link('CComponent', array('/site/doc', 'view' => 'CComponent')); ?></td>
 </tr>
 <tr id="rules">
-  <td><?php echo CHtml::link('rules()', array('/site/doc', 'view' => 'YdUserPassword', '#' => 'rules-detail')); ?></td>
-  <td></td>
-  <td>YdUserPassword</td>
+  <td><?php echo CHtml::link('rules()', array('/site/doc', 'view' => 'YdAccountLogin', '#' => 'rules-detail')); ?></td>
+  <td>Declares the validation rules.</td>
+  <td>YdAccountLogin</td>
 </tr>
 <tr class="inherited" id="setAttributes">
   <td><?php echo CHtml::link('setAttributes()', array('/site/doc', 'view' => 'CModel', '#' => 'setAttributes-detail')); ?></td>
@@ -441,11 +457,6 @@ It is used by the 'password' action of 'UserController'.</div>
   <td><?php echo CHtml::link('validate()', array('/site/doc', 'view' => 'CModel', '#' => 'validate-detail')); ?></td>
   <td>Performs the validation.</td>
   <td><?php echo CHtml::link('CModel', array('/site/doc', 'view' => 'CModel')); ?></td>
-</tr>
-<tr id="validateCurrentPassword">
-  <td><?php echo CHtml::link('validateCurrentPassword()', array('/site/doc', 'view' => 'YdUserPassword', '#' => 'validateCurrentPassword-detail')); ?></td>
-  <td></td>
-  <td>YdUserPassword</td>
 </tr>
 </table>
 </div>
@@ -519,26 +530,14 @@ It is used by the 'password' action of 'UserController'.</div>
 </table>
 </div>
 <h2>Property Details</h2>
-<div class="detailHeader" id="confirm_password-detail">
-confirm_password<span class="detailHeaderTag">
+<div class="detailHeader" id="email-detail">
+email<span class="detailHeaderTag">
 property
 </span>
 </div>
 
 <div class="signature">
-public  <b>$confirm_password</b>;</div>
-
-<p></p>
-
-
-<div class="detailHeader" id="current_password-detail">
-current_password<span class="detailHeaderTag">
-property
-</span>
-</div>
-
-<div class="signature">
-public  <b>$current_password</b>;</div>
+public  <b>$email</b>;</div>
 
 <p></p>
 
@@ -551,6 +550,30 @@ property
 
 <div class="signature">
 public  <b>$password</b>;</div>
+
+<p></p>
+
+
+<div class="detailHeader" id="recaptcha-detail">
+recaptcha<span class="detailHeaderTag">
+property
+</span>
+</div>
+
+<div class="signature">
+public  <b>$recaptcha</b>;</div>
+
+<p></p>
+
+
+<div class="detailHeader" id="remember_me-detail">
+remember_me<span class="detailHeaderTag">
+property
+</span>
+</div>
+
+<div class="signature">
+public  <b>$remember_me</b>;</div>
 
 <p></p>
 
@@ -577,13 +600,77 @@ public array <b>attributeLabels</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/models/YdUserPassword.php#L68">dressing/models/YdUserPassword.php#L68</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/models/YdAccountLogin.php#L73">dressing/models/YdAccountLogin.php#L73</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
-<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">attributeLabels</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;array(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'current_password'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">t</span><span style="color: #007700">(</span><span style="color: #DD0000">'dressing'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Current&nbsp;Password'</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'password'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">t</span><span style="color: #007700">(</span><span style="color: #DD0000">'dressing'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'New&nbsp;Password'</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'confirm_password'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">t</span><span style="color: #007700">(</span><span style="color: #DD0000">'dressing'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Confirm&nbsp;Password'</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;);<br />}</span>
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">attributeLabels</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;array(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'email'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">t</span><span style="color: #007700">(</span><span style="color: #DD0000">'dressing'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Email'</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'password'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">t</span><span style="color: #007700">(</span><span style="color: #DD0000">'dressing'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Password'</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'remember_me'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">t</span><span style="color: #007700">(</span><span style="color: #DD0000">'dressing'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Remember&nbsp;me&nbsp;next&nbsp;time'</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'recaptcha'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">t</span><span style="color: #007700">(</span><span style="color: #DD0000">'dressing'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Enter&nbsp;both&nbsp;words&nbsp;separated&nbsp;by&nbsp;a&nbsp;space'</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;);<br />}</span>
 </span>
 </code></div>
 </div>
-<p></p>
+<p>Declares attribute labels.</p>
+
+
+<div class="detailHeader" id="authenticate-detail">
+authenticate()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public void <b>authenticate</b>($attribute $attribute, $params $params)</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">$attribute</td>
+  <td class="paramTypeCol">$attribute</td>
+  <td class="paramDescCol"></td>
+</tr>
+<tr>
+  <td class="paramNameCol">$params</td>
+  <td class="paramTypeCol">$params</td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/models/YdAccountLogin.php#L89">dressing/models/YdAccountLogin.php#L89</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">authenticate</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$params</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_identity&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">YdUserIdentity</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">email</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">password</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_identity</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">authenticate</span><span style="color: #007700">())&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">addError</span><span style="color: #007700">(</span><span style="color: #DD0000">'password'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Incorrect&nbsp;email&nbsp;or&nbsp;password.'</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />}</span>
+</span>
+</code></div>
+</div>
+<p>Authenticates the password.
+This is the 'authenticate' validator as declared in rules().</p>
+
+
+<div class="detailHeader" id="login-detail">
+login()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public boolean <b>login</b>()</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol">boolean</td>
+  <td class="paramDescCol">whether login is successful</td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/models/YdAccountLogin.php#L101">dressing/models/YdAccountLogin.php#L101</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">login</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_identity&nbsp;</span><span style="color: #007700">===&nbsp;</span><span style="color: #0000BB">null</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_identity&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">YdUserIdentity</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">email</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">password</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_identity</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">authenticate</span><span style="color: #007700">())&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$duration&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">remember_me&nbsp;</span><span style="color: #007700">?&nbsp;</span><span style="color: #0000BB">3600&nbsp;</span><span style="color: #007700">*&nbsp;</span><span style="color: #0000BB">24&nbsp;</span><span style="color: #007700">*&nbsp;</span><span style="color: #0000BB">30&nbsp;</span><span style="color: #007700">:&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">//&nbsp;30&nbsp;days<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">app</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">user</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">login</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_identity</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$duration</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">true</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">false</span><span style="color: #007700">;<br />}</span>
+</span>
+</code></div>
+</div>
+<p>Logs in the user using the given email and password in the model.</p>
 
 
 <div class="detailHeader" id="rules-detail">
@@ -606,36 +693,14 @@ public array <b>rules</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/models/YdUserPassword.php#L35">dressing/models/YdUserPassword.php#L35</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/models/YdAccountLogin.php#L49">dressing/models/YdAccountLogin.php#L49</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
-<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">rules</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;array(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;current_password<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">array(</span><span style="color: #DD0000">'current_password'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'required'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'on'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'password'</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(</span><span style="color: #DD0000">'current_password'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'validateCurrentPassword'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'on'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'password'</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(</span><span style="color: #DD0000">'current_password'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'length'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'max'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">64</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'min'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">5</span><span style="color: #007700">),<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;password<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">array(</span><span style="color: #DD0000">'password'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'required'</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(</span><span style="color: #DD0000">'password'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'length'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'max'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">64</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'min'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">5</span><span style="color: #007700">),<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;confirm_password<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">array(</span><span style="color: #DD0000">'confirm_password'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'required'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'on'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'password,&nbsp;recover'</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(</span><span style="color: #DD0000">'confirm_password'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'length'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'max'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">64</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'min'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">5</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(</span><span style="color: #DD0000">'confirm_password'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'compare'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'compareAttribute'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'password'</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;);<br />}</span>
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">rules</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$rules&nbsp;</span><span style="color: #007700">=&nbsp;array(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;email<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">array(</span><span style="color: #DD0000">'email'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'required'</span><span style="color: #007700">),<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;password<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">array(</span><span style="color: #DD0000">'password'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'required'</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(</span><span style="color: #DD0000">'password'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'authenticate'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'skipOnError'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">true</span><span style="color: #007700">),<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;remember_me<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">array(</span><span style="color: #DD0000">'remember_me'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'boolean'</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;recaptcha<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">app</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">dressing</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">recaptcha</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$rules</span><span style="color: #007700">[]&nbsp;=&nbsp;array(</span><span style="color: #DD0000">'recaptcha'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'dressing.validators.YdReCaptchaValidator'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'privateKey'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">app</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">dressing</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">recaptchaPrivate</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'on'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'recaptcha'</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$rules</span><span style="color: #007700">;<br />}</span>
 </span>
 </code></div>
 </div>
-<p></p>
-
-
-<div class="detailHeader" id="validateCurrentPassword-detail">
-validateCurrentPassword()
-<span class="detailHeaderTag">
-method
-</span>
-</div>
-
-<table class="summaryTable">
-<tr><td colspan="3">
-<div class="signature2">
-public void <b>validateCurrentPassword</b>()</div>
-</td></tr>
-</table>
-
-<div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/models/YdUserPassword.php#L57">dressing/models/YdUserPassword.php#L57</a> (<b><a href="#" class="show">show</a></b>)
-<div class="code"><code><span style="color: #000000">
-<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">validateCurrentPassword</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$user&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">YdUser</span><span style="color: #007700">::</span><span style="color: #0000BB">model</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">findByPk</span><span style="color: #007700">(</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">app</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">user</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">id</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!</span><span style="color: #0000BB">$user&nbsp;</span><span style="color: #007700">||&nbsp;!</span><span style="color: #0000BB">$user</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">validatePassword</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">current_password</span><span style="color: #007700">))&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">addError</span><span style="color: #007700">(</span><span style="color: #DD0000">'current_password'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Incorrect&nbsp;password.'</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />}</span>
-</span>
-</code></div>
-</div>
-<p></p>
+<p>Declares the validation rules.
+The rules state that email and password are required,
+and password needs to be authenticated.</p>
 
 

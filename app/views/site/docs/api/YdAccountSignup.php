@@ -1,8 +1,8 @@
 <?php
-$this->pageTitle = $this->pageHeading = 'YdUserRecover';
+$this->pageTitle = $this->pageHeading = 'YdAccountSignup';
 $this->breadcrumbs = array();
 $this->breadcrumbs[Yii::t('app', 'Documentation')] = array('/site/doc');
-$this->breadcrumbs[] = 'YdUserRecover';
+$this->breadcrumbs[] = 'YdAccountSignup';
 ?>
 <div id="nav">
 <a href="#properties">Properties</a> | <a href="#methods">Methods</a> | <a href="#events">Events</a></div>
@@ -18,7 +18,7 @@ $this->breadcrumbs[] = 'YdUserRecover';
 </tr>
 <tr>
   <th>Inheritance</th>
-  <td>class YdUserRecover &raquo;
+  <td>class YdAccountSignup &raquo;
 <?php echo CHtml::link('YdFormModel', array('/site/doc', 'view' => 'YdFormModel')); ?> &raquo;
 <?php echo CHtml::link('CFormModel', array('/site/doc', 'view' => 'CFormModel')); ?> &raquo;
 <?php echo CHtml::link('CModel', array('/site/doc', 'view' => 'CModel')); ?> &raquo;
@@ -30,7 +30,7 @@ $this->breadcrumbs[] = 'YdUserRecover';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/models/YdUserRecover.php">dressing/models/YdUserRecover.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/models/YdAccountSignup.php">dressing/models/YdAccountSignup.php</a></td>
 </tr>
 <tr>
   <th>Authors</th>
@@ -39,8 +39,8 @@ $this->breadcrumbs[] = 'YdUserRecover';
 </table>
 
 <div id="classDescription">
-YdUserRecover is the data structure for keeping user recover form data.
-It is used by the 'recover' action of 'AccountController'.</div>
+YdAccountSignup is the data structure for keeping account registration form data.
+It is used by the 'signup' action of 'AccountController'.</div>
 <a name="properties"></a>
 
 <div class="summary docProperty">
@@ -64,6 +64,18 @@ It is used by the 'recover' action of 'AccountController'.</div>
   <td>Returns all attribute values.</td>
   <td><?php echo CHtml::link('CModel', array('/site/doc', 'view' => 'CModel')); ?></td>
 </tr>
+<tr id="confirm_password">
+  <td><?php echo CHtml::link('confirm_password', array('/site/doc', 'view' => 'YdAccountSignup', '#' => 'confirm_password-detail')); ?></td>
+  <td></td>
+  <td></td>
+  <td>YdAccountSignup</td>
+</tr>
+<tr id="email">
+  <td><?php echo CHtml::link('email', array('/site/doc', 'view' => 'YdAccountSignup', '#' => 'email-detail')); ?></td>
+  <td></td>
+  <td></td>
+  <td>YdAccountSignup</td>
+</tr>
 <tr class="inherited" id="errorString">
   <td><?php echo CHtml::link('errorString', array('/site/doc', 'view' => 'YdFormModel', '#' => 'errorString-detail')); ?></td>
   <td>string</td>
@@ -76,17 +88,35 @@ It is used by the 'recover' action of 'AccountController'.</div>
   <td>Returns the errors for all attribute or a single attribute.</td>
   <td><?php echo CHtml::link('CModel', array('/site/doc', 'view' => 'CModel')); ?></td>
 </tr>
+<tr id="first_name">
+  <td><?php echo CHtml::link('first_name', array('/site/doc', 'view' => 'YdAccountSignup', '#' => 'first_name-detail')); ?></td>
+  <td></td>
+  <td></td>
+  <td>YdAccountSignup</td>
+</tr>
 <tr class="inherited" id="iterator">
   <td><?php echo CHtml::link('iterator', array('/site/doc', 'view' => 'CModel', '#' => 'iterator-detail')); ?></td>
   <td><?php echo CHtml::link('CMapIterator', array('/site/doc', 'view' => 'CMapIterator')); ?></td>
   <td>Returns an iterator for traversing the attributes in the model.</td>
   <td><?php echo CHtml::link('CModel', array('/site/doc', 'view' => 'CModel')); ?></td>
 </tr>
-<tr id="recaptcha">
-  <td><?php echo CHtml::link('recaptcha', array('/site/doc', 'view' => 'YdUserRecover', '#' => 'recaptcha-detail')); ?></td>
+<tr id="last_name">
+  <td><?php echo CHtml::link('last_name', array('/site/doc', 'view' => 'YdAccountSignup', '#' => 'last_name-detail')); ?></td>
   <td></td>
   <td></td>
-  <td>YdUserRecover</td>
+  <td>YdAccountSignup</td>
+</tr>
+<tr id="password">
+  <td><?php echo CHtml::link('password', array('/site/doc', 'view' => 'YdAccountSignup', '#' => 'password-detail')); ?></td>
+  <td></td>
+  <td></td>
+  <td>YdAccountSignup</td>
+</tr>
+<tr id="remember_me">
+  <td><?php echo CHtml::link('remember_me', array('/site/doc', 'view' => 'YdAccountSignup', '#' => 'remember_me-detail')); ?></td>
+  <td></td>
+  <td></td>
+  <td>YdAccountSignup</td>
 </tr>
 <tr class="inherited" id="safeAttributeNames">
   <td><?php echo CHtml::link('safeAttributeNames', array('/site/doc', 'view' => 'CModel', '#' => 'safeAttributeNames-detail')); ?></td>
@@ -100,17 +130,11 @@ It is used by the 'recover' action of 'AccountController'.</div>
   <td>Returns the scenario that this model is used in.</td>
   <td><?php echo CHtml::link('CModel', array('/site/doc', 'view' => 'CModel')); ?></td>
 </tr>
-<tr id="user_id">
-  <td><?php echo CHtml::link('user_id', array('/site/doc', 'view' => 'YdUserRecover', '#' => 'user_id-detail')); ?></td>
+<tr id="username">
+  <td><?php echo CHtml::link('username', array('/site/doc', 'view' => 'YdAccountSignup', '#' => 'username-detail')); ?></td>
   <td></td>
   <td></td>
-  <td>YdUserRecover</td>
-</tr>
-<tr id="username_or_email">
-  <td><?php echo CHtml::link('username_or_email', array('/site/doc', 'view' => 'YdUserRecover', '#' => 'username_or_email-detail')); ?></td>
-  <td></td>
-  <td></td>
-  <td>YdUserRecover</td>
+  <td>YdAccountSignup</td>
 </tr>
 <tr class="inherited" id="validatorList">
   <td><?php echo CHtml::link('validatorList', array('/site/doc', 'view' => 'CModel', '#' => 'validatorList-detail')); ?></td>
@@ -121,7 +145,7 @@ It is used by the 'recover' action of 'AccountController'.</div>
 <tr class="inherited" id="validators">
   <td><?php echo CHtml::link('validators', array('/site/doc', 'view' => 'CModel', '#' => 'validators-detail')); ?></td>
   <td>array</td>
-  <td>Returns the validators applicable to the current <?php echo CHtml::link('scenario', array('/site/doc', 'view' => 'YdUserRecover', '#' => 'scenario')); ?>.</td>
+  <td>Returns the validators applicable to the current <?php echo CHtml::link('scenario', array('/site/doc', 'view' => 'YdAccountSignup', '#' => 'scenario')); ?>.</td>
   <td><?php echo CHtml::link('CModel', array('/site/doc', 'view' => 'CModel')); ?></td>
 </tr>
 </table>
@@ -203,9 +227,9 @@ It is used by the 'recover' action of 'AccountController'.</div>
   <td><?php echo CHtml::link('CComponent', array('/site/doc', 'view' => 'CComponent')); ?></td>
 </tr>
 <tr id="attributeLabels">
-  <td><?php echo CHtml::link('attributeLabels()', array('/site/doc', 'view' => 'YdUserRecover', '#' => 'attributeLabels-detail')); ?></td>
+  <td><?php echo CHtml::link('attributeLabels()', array('/site/doc', 'view' => 'YdAccountSignup', '#' => 'attributeLabels-detail')); ?></td>
   <td>Declares attribute labels.</td>
-  <td>YdUserRecover</td>
+  <td>YdAccountSignup</td>
 </tr>
 <tr class="inherited" id="attributeNames">
   <td><?php echo CHtml::link('attributeNames()', array('/site/doc', 'view' => 'CFormModel', '#' => 'attributeNames-detail')); ?></td>
@@ -227,11 +251,6 @@ It is used by the 'recover' action of 'AccountController'.</div>
   <td>Determines whether a property can be set.</td>
   <td><?php echo CHtml::link('CComponent', array('/site/doc', 'view' => 'CComponent')); ?></td>
 </tr>
-<tr id="checkExists">
-  <td><?php echo CHtml::link('checkExists()', array('/site/doc', 'view' => 'YdUserRecover', '#' => 'checkExists-detail')); ?></td>
-  <td></td>
-  <td>YdUserRecover</td>
-</tr>
 <tr class="inherited" id="clearErrors">
   <td><?php echo CHtml::link('clearErrors()', array('/site/doc', 'view' => 'CModel', '#' => 'clearErrors-detail')); ?></td>
   <td>Removes errors for all attributes or a single attribute.</td>
@@ -239,7 +258,7 @@ It is used by the 'recover' action of 'AccountController'.</div>
 </tr>
 <tr class="inherited" id="createValidators">
   <td><?php echo CHtml::link('createValidators()', array('/site/doc', 'view' => 'CModel', '#' => 'createValidators-detail')); ?></td>
-  <td>Creates validator objects based on the specification in <?php echo CHtml::link('rules', array('/site/doc', 'view' => 'YdUserRecover', '#' => 'rules')); ?>.</td>
+  <td>Creates validator objects based on the specification in <?php echo CHtml::link('rules', array('/site/doc', 'view' => 'YdAccountSignup', '#' => 'rules')); ?>.</td>
   <td><?php echo CHtml::link('CModel', array('/site/doc', 'view' => 'CModel')); ?></td>
 </tr>
 <tr class="inherited" id="detachBehavior">
@@ -339,7 +358,7 @@ It is used by the 'recover' action of 'AccountController'.</div>
 </tr>
 <tr class="inherited" id="getValidators">
   <td><?php echo CHtml::link('getValidators()', array('/site/doc', 'view' => 'CModel', '#' => 'getValidators-detail')); ?></td>
-  <td>Returns the validators applicable to the current <?php echo CHtml::link('scenario', array('/site/doc', 'view' => 'YdUserRecover', '#' => 'scenario')); ?>.</td>
+  <td>Returns the validators applicable to the current <?php echo CHtml::link('scenario', array('/site/doc', 'view' => 'YdAccountSignup', '#' => 'scenario')); ?>.</td>
   <td><?php echo CHtml::link('CModel', array('/site/doc', 'view' => 'CModel')); ?></td>
 </tr>
 <tr class="inherited" id="hasErrors">
@@ -376,6 +395,11 @@ It is used by the 'recover' action of 'AccountController'.</div>
   <td><?php echo CHtml::link('isAttributeSafe()', array('/site/doc', 'view' => 'CModel', '#' => 'isAttributeSafe-detail')); ?></td>
   <td>Returns a value indicating whether the attribute is safe for massive assignments.</td>
   <td><?php echo CHtml::link('CModel', array('/site/doc', 'view' => 'CModel')); ?></td>
+</tr>
+<tr id="login">
+  <td><?php echo CHtml::link('login()', array('/site/doc', 'view' => 'YdAccountSignup', '#' => 'login-detail')); ?></td>
+  <td>Logs in the user using the given username and password in the model.</td>
+  <td>YdAccountSignup</td>
 </tr>
 <tr class="inherited" id="offsetExists">
   <td><?php echo CHtml::link('offsetExists()', array('/site/doc', 'view' => 'CModel', '#' => 'offsetExists-detail')); ?></td>
@@ -423,9 +447,14 @@ It is used by the 'recover' action of 'AccountController'.</div>
   <td><?php echo CHtml::link('CComponent', array('/site/doc', 'view' => 'CComponent')); ?></td>
 </tr>
 <tr id="rules">
-  <td><?php echo CHtml::link('rules()', array('/site/doc', 'view' => 'YdUserRecover', '#' => 'rules-detail')); ?></td>
+  <td><?php echo CHtml::link('rules()', array('/site/doc', 'view' => 'YdAccountSignup', '#' => 'rules-detail')); ?></td>
   <td>Declares the validation rules.</td>
-  <td>YdUserRecover</td>
+  <td>YdAccountSignup</td>
+</tr>
+<tr id="save">
+  <td><?php echo CHtml::link('save()', array('/site/doc', 'view' => 'YdAccountSignup', '#' => 'save-detail')); ?></td>
+  <td></td>
+  <td>YdAccountSignup</td>
 </tr>
 <tr class="inherited" id="setAttributes">
   <td><?php echo CHtml::link('setAttributes()', array('/site/doc', 'view' => 'CModel', '#' => 'setAttributes-detail')); ?></td>
@@ -519,38 +548,86 @@ It is used by the 'recover' action of 'AccountController'.</div>
 </table>
 </div>
 <h2>Property Details</h2>
-<div class="detailHeader" id="recaptcha-detail">
-recaptcha<span class="detailHeaderTag">
+<div class="detailHeader" id="confirm_password-detail">
+confirm_password<span class="detailHeaderTag">
 property
 </span>
 </div>
 
 <div class="signature">
-public  <b>$recaptcha</b>;</div>
+public  <b>$confirm_password</b>;</div>
 
 <p></p>
 
 
-<div class="detailHeader" id="user_id-detail">
-user_id<span class="detailHeaderTag">
+<div class="detailHeader" id="email-detail">
+email<span class="detailHeaderTag">
 property
 </span>
 </div>
 
 <div class="signature">
-public  <b>$user_id</b>;</div>
+public  <b>$email</b>;</div>
 
 <p></p>
 
 
-<div class="detailHeader" id="username_or_email-detail">
-username_or_email<span class="detailHeaderTag">
+<div class="detailHeader" id="first_name-detail">
+first_name<span class="detailHeaderTag">
 property
 </span>
 </div>
 
 <div class="signature">
-public  <b>$username_or_email</b>;</div>
+public  <b>$first_name</b>;</div>
+
+<p></p>
+
+
+<div class="detailHeader" id="last_name-detail">
+last_name<span class="detailHeaderTag">
+property
+</span>
+</div>
+
+<div class="signature">
+public  <b>$last_name</b>;</div>
+
+<p></p>
+
+
+<div class="detailHeader" id="password-detail">
+password<span class="detailHeaderTag">
+property
+</span>
+</div>
+
+<div class="signature">
+public  <b>$password</b>;</div>
+
+<p></p>
+
+
+<div class="detailHeader" id="remember_me-detail">
+remember_me<span class="detailHeaderTag">
+property
+</span>
+</div>
+
+<div class="signature">
+public  <b>$remember_me</b>;</div>
+
+<p></p>
+
+
+<div class="detailHeader" id="username-detail">
+username<span class="detailHeaderTag">
+property
+</span>
+</div>
+
+<div class="signature">
+public  <b>$username</b>;</div>
 
 <p></p>
 
@@ -577,17 +654,17 @@ public array <b>attributeLabels</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/models/YdUserRecover.php#L57">dressing/models/YdUserRecover.php#L57</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/models/YdAccountSignup.php#L96">dressing/models/YdAccountSignup.php#L96</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
-<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">attributeLabels</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;array(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'username_or_email'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">t</span><span style="color: #007700">(</span><span style="color: #DD0000">'dressing'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Username&nbsp;or&nbsp;Email'</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'recaptcha'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">t</span><span style="color: #007700">(</span><span style="color: #DD0000">'dressing'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Enter&nbsp;both&nbsp;words&nbsp;separated&nbsp;by&nbsp;a&nbsp;space'</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;);<br />}</span>
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">attributeLabels</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;array(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'username'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">t</span><span style="color: #007700">(</span><span style="color: #DD0000">'Username'</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'first_name'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">t</span><span style="color: #007700">(</span><span style="color: #DD0000">'First&nbsp;Name'</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'last_name'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">t</span><span style="color: #007700">(</span><span style="color: #DD0000">'Last&nbsp;Name'</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'email'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">t</span><span style="color: #007700">(</span><span style="color: #DD0000">'Email'</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'password'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">t</span><span style="color: #007700">(</span><span style="color: #DD0000">'Password'</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;);<br />}</span>
 </span>
 </code></div>
 </div>
 <p>Declares attribute labels.</p>
 
 
-<div class="detailHeader" id="checkExists-detail">
-checkExists()
+<div class="detailHeader" id="login-detail">
+login()
 <span class="detailHeaderTag">
 method
 </span>
@@ -596,28 +673,23 @@ method
 <table class="summaryTable">
 <tr><td colspan="3">
 <div class="signature2">
-public void <b>checkExists</b>($attribute $attribute, $params $params)</div>
+public boolean <b>login</b>()</div>
 </td></tr>
 <tr>
-  <td class="paramNameCol">$attribute</td>
-  <td class="paramTypeCol">$attribute</td>
-  <td class="paramDescCol"></td>
-</tr>
-<tr>
-  <td class="paramNameCol">$params</td>
-  <td class="paramTypeCol">$params</td>
-  <td class="paramDescCol"></td>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol">boolean</td>
+  <td class="paramDescCol">whether login is successful</td>
 </tr>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/models/YdUserRecover.php#L69">dressing/models/YdUserRecover.php#L69</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/models/YdAccountSignup.php#L139">dressing/models/YdAccountSignup.php#L139</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
-<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">checkExists</span><span style="color: #007700">(</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$params</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">hasErrors</span><span style="color: #007700">())&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #0000BB">strpos</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">username_or_email</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'@'</span><span style="color: #007700">))<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$user&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">User</span><span style="color: #007700">::</span><span style="color: #0000BB">model</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">findByAttributes</span><span style="color: #007700">(array(</span><span style="color: #DD0000">'email'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">username_or_email</span><span style="color: #007700">));<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$user&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">User</span><span style="color: #007700">::</span><span style="color: #0000BB">model</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">findByAttributes</span><span style="color: #007700">(array(</span><span style="color: #DD0000">'username'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">username_or_email</span><span style="color: #007700">));<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #0000BB">$user&nbsp;</span><span style="color: #007700">===&nbsp;</span><span style="color: #0000BB">null&nbsp;</span><span style="color: #007700">||&nbsp;</span><span style="color: #0000BB">$user</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">deleted</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #0000BB">strpos</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">username_or_email</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'@'</span><span style="color: #007700">))<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">addError</span><span style="color: #007700">(</span><span style="color: #DD0000">'username_or_email'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Email&nbsp;is&nbsp;incorrect.'</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">addError</span><span style="color: #007700">(</span><span style="color: #DD0000">'username_or_email'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Username&nbsp;is&nbsp;incorrect.'</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">user_id&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$user</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">id</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />}</span>
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">login</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_identity&nbsp;</span><span style="color: #007700">===&nbsp;</span><span style="color: #0000BB">null</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_identity&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">YdUserIdentity</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">email</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">password</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_identity</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">authenticate</span><span style="color: #007700">())&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$duration&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">remember_me&nbsp;</span><span style="color: #007700">?&nbsp;</span><span style="color: #0000BB">3600&nbsp;</span><span style="color: #007700">*&nbsp;</span><span style="color: #0000BB">24&nbsp;</span><span style="color: #007700">*&nbsp;</span><span style="color: #0000BB">30&nbsp;</span><span style="color: #007700">:&nbsp;</span><span style="color: #0000BB">0</span><span style="color: #007700">;&nbsp;</span><span style="color: #FF8000">//&nbsp;30&nbsp;days<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">app</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">user</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">login</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_identity</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$duration</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">true</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">false</span><span style="color: #007700">;<br />}</span>
 </span>
 </code></div>
 </div>
-<p></p>
+<p>Logs in the user using the given username and password in the model.</p>
 
 
 <div class="detailHeader" id="rules-detail">
@@ -640,14 +712,43 @@ public array <b>rules</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/models/YdUserRecover.php#L39">dressing/models/YdUserRecover.php#L39</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/models/YdAccountSignup.php#L64">dressing/models/YdAccountSignup.php#L64</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
-<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">rules</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$rules&nbsp;</span><span style="color: #007700">=&nbsp;array(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;username_or_email<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">array(</span><span style="color: #DD0000">'username_or_email'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'required'</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(</span><span style="color: #DD0000">'username_or_email'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'checkExists'</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;&nbsp;);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;recaptcha<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">if&nbsp;(</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">app</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">dressing</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">recaptcha</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$rules</span><span style="color: #007700">[]&nbsp;=&nbsp;array(</span><span style="color: #DD0000">'recaptcha'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'dressing.validators.YdReCaptchaValidator'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'privateKey'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">app</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">dressing</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">recaptchaPrivate</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'on'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'recaptcha'</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$rules</span><span style="color: #007700">;<br />}</span>
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">rules</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$rules&nbsp;</span><span style="color: #007700">=&nbsp;array();<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;required<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$rules</span><span style="color: #007700">[]&nbsp;=&nbsp;array(</span><span style="color: #DD0000">'username,&nbsp;email,&nbsp;password,&nbsp;confirm_password'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'required'</span><span style="color: #007700">);<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;first_name<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$rules</span><span style="color: #007700">[]&nbsp;=&nbsp;array(</span><span style="color: #DD0000">'first_name'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'length'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'max'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">255</span><span style="color: #007700">);<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;last_name<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$rules</span><span style="color: #007700">[]&nbsp;=&nbsp;array(</span><span style="color: #DD0000">'last_name'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'length'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'max'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">255</span><span style="color: #007700">);<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;email<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$rules</span><span style="color: #007700">[]&nbsp;=&nbsp;array(</span><span style="color: #DD0000">'email'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'length'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'max'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">255</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$rules</span><span style="color: #007700">[]&nbsp;=&nbsp;array(</span><span style="color: #DD0000">'email'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'email'</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$rules</span><span style="color: #007700">[]&nbsp;=&nbsp;array(</span><span style="color: #DD0000">'email'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'unique'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'className'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'YdUser'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'criteria'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;array(</span><span style="color: #DD0000">'condition'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'t.deleted&nbsp;IS&nbsp;NULL'</span><span style="color: #007700">));<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;username<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$rules</span><span style="color: #007700">[]&nbsp;=&nbsp;array(</span><span style="color: #DD0000">'username'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'length'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'max'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">255</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$rules</span><span style="color: #007700">[]&nbsp;=&nbsp;array(</span><span style="color: #DD0000">'username'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'unique'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'className'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'YdUser'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'criteria'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;array(</span><span style="color: #DD0000">'condition'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'t.deleted&nbsp;IS&nbsp;NULL'</span><span style="color: #007700">));<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;confirm_password<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$rules</span><span style="color: #007700">[]&nbsp;=&nbsp;array(</span><span style="color: #DD0000">'confirm_password'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'compare'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'compareAttribute'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'password'</span><span style="color: #007700">);<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$rules</span><span style="color: #007700">;<br />}</span>
 </span>
 </code></div>
 </div>
 <p>Declares the validation rules.
-The rules state that username and password are required,
+The rules state that email and password are required,
 and password needs to be authenticated.</p>
+
+
+<div class="detailHeader" id="save-detail">
+save()
+<span class="detailHeaderTag">
+method
+</span>
+</div>
+
+<table class="summaryTable">
+<tr><td colspan="3">
+<div class="signature2">
+public bool <b>save</b>()</div>
+</td></tr>
+<tr>
+  <td class="paramNameCol">{return}</td>
+  <td class="paramTypeCol">bool</td>
+  <td class="paramDescCol"></td>
+</tr>
+</table>
+
+<div class="sourceCode">
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/models/YdAccountSignup.php#L110">dressing/models/YdAccountSignup.php#L110</a> (<b><a href="#" class="show">show</a></b>)
+<div class="code"><code><span style="color: #000000">
+<span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">save</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">validate</span><span style="color: #007700">())&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">false</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;create&nbsp;user<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$user&nbsp;</span><span style="color: #007700">=&nbsp;new&nbsp;</span><span style="color: #0000BB">YdUser</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$user</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">username&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">username</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$user</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">first_name&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">first_name</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$user</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">last_name&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">last_name</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$user</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">email&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">email</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$user</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">password&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$user</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">hashPassword</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">password</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$user</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">web_status&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">1</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(!</span><span style="color: #0000BB">$user</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">save</span><span style="color: #007700">())&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">false</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">YdEMailHelper</span><span style="color: #007700">::</span><span style="color: #0000BB">sendUserWelcome</span><span style="color: #007700">(</span><span style="color: #0000BB">$user</span><span style="color: #007700">);<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">//&nbsp;login<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">login</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$user</span><span style="color: #007700">;<br />}</span>
+</span>
+</code></div>
+</div>
+<p></p>
 
 

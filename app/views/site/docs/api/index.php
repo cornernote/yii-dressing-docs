@@ -284,6 +284,22 @@ $this->breadcrumbs[] = Yii::t('app', 'Documentation');
 	</tr>
 		<tr>
 		  <td rowspan="17"><a name="dressing.models"></a>dressing.models</td>
+		  <td><?php echo CHtml::link('YdAccountLogin', array('/site/doc', 'view' => 'YdAccountLogin')); ?></td>
+	  <td>YdAccountLogin is the data structure for keeping account login form data.</td>
+	</tr>
+		<tr>
+		  <td><?php echo CHtml::link('YdAccountPassword', array('/site/doc', 'view' => 'YdAccountPassword')); ?></td>
+	  <td>YdAccountPassword is the data structure for keeping account password form data.</td>
+	</tr>
+		<tr>
+		  <td><?php echo CHtml::link('YdAccountRecover', array('/site/doc', 'view' => 'YdAccountRecover')); ?></td>
+	  <td>YdAccountRecover is the data structure for keeping account recover form data.</td>
+	</tr>
+		<tr>
+		  <td><?php echo CHtml::link('YdAccountSignup', array('/site/doc', 'view' => 'YdAccountSignup')); ?></td>
+	  <td>YdAccountSignup is the data structure for keeping account registration form data.</td>
+	</tr>
+		<tr>
 		  <td><?php echo CHtml::link('YdAttachment', array('/site/doc', 'view' => 'YdAttachment')); ?></td>
 	  <td>YdAttachment</td>
 	</tr>
@@ -330,22 +346,6 @@ $this->breadcrumbs[] = Yii::t('app', 'Documentation');
 		<tr>
 		  <td><?php echo CHtml::link('YdUser', array('/site/doc', 'view' => 'YdUser')); ?></td>
 	  <td>YdUser</td>
-	</tr>
-		<tr>
-		  <td><?php echo CHtml::link('YdUserLogin', array('/site/doc', 'view' => 'YdUserLogin')); ?></td>
-	  <td>YdUserLogin is the data structure for keeping user login form data.</td>
-	</tr>
-		<tr>
-		  <td><?php echo CHtml::link('YdUserPassword', array('/site/doc', 'view' => 'YdUserPassword')); ?></td>
-	  <td>YdUserPassword is the data structure for keeping user password form data.</td>
-	</tr>
-		<tr>
-		  <td><?php echo CHtml::link('YdUserRecover', array('/site/doc', 'view' => 'YdUserRecover')); ?></td>
-	  <td>YdUserRecover is the data structure for keeping user recover form data.</td>
-	</tr>
-		<tr>
-		  <td><?php echo CHtml::link('YdUserSignup', array('/site/doc', 'view' => 'YdUserSignup')); ?></td>
-	  <td>YdUserSignup is the data structure for keeping user registration form data.</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdUserToRole', array('/site/doc', 'view' => 'YdUserToRole')); ?></td>
