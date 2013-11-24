@@ -22,7 +22,7 @@ $this->breadcrumbs[] = 'YdSwiftMailer';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/0.1.0/yii-dressing/components/YdSwiftMailer.php">dressing/components/YdSwiftMailer.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/yii-dressing-0.1.0/yii-dressing/components/YdSwiftMailer.php">dressing/components/YdSwiftMailer.php</a></td>
 </tr>
 <tr>
   <th>Author</th>
@@ -121,7 +121,7 @@ public mixed <b>attachment</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/0.1.0/yii-dressing/components/YdSwiftMailer.php#L34">dressing/components/YdSwiftMailer.php#L34</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/yii-dressing-0.1.0/yii-dressing/components/YdSwiftMailer.php#L34">dressing/components/YdSwiftMailer.php#L34</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">attachment</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">Swift_Attachment</span><span style="color: #007700">;<br />}</span>
 </span>
@@ -150,7 +150,7 @@ public mixed <b>image</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/0.1.0/yii-dressing/components/YdSwiftMailer.php#L60">dressing/components/YdSwiftMailer.php#L60</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/yii-dressing-0.1.0/yii-dressing/components/YdSwiftMailer.php#L60">dressing/components/YdSwiftMailer.php#L60</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">image</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">Swift_Image</span><span style="color: #007700">;<br />}</span>
 </span>
@@ -174,7 +174,7 @@ public void <b>init</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/0.1.0/yii-dressing/components/YdSwiftMailer.php#L18">dressing/components/YdSwiftMailer.php#L18</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/yii-dressing-0.1.0/yii-dressing/components/YdSwiftMailer.php#L18">dressing/components/YdSwiftMailer.php#L18</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">init</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;require_once(</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">getPathOfAlias</span><span style="color: #007700">(</span><span style="color: #DD0000">'vendor'</span><span style="color: #007700">)&nbsp;.&nbsp;</span><span style="color: #0000BB">DIRECTORY_SEPARATOR&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'/swiftmailer/swiftmailer/lib/swift_required.php'</span><span style="color: #007700">);<br />}</span>
 </span>
@@ -203,7 +203,7 @@ public mixed <b>mailTransport</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/0.1.0/yii-dressing/components/YdSwiftMailer.php#L87">dressing/components/YdSwiftMailer.php#L87</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/yii-dressing-0.1.0/yii-dressing/components/YdSwiftMailer.php#L87">dressing/components/YdSwiftMailer.php#L87</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">mailTransport</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">Swift_MailTransport</span><span style="color: #007700">::</span><span style="color: #0000BB">newInstance</span><span style="color: #007700">();<br />}</span>
 </span>
@@ -237,7 +237,7 @@ public mixed <b>mailer</b>(null $transport=NULL)</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/0.1.0/yii-dressing/components/YdSwiftMailer.php#L52">dressing/components/YdSwiftMailer.php#L52</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/yii-dressing-0.1.0/yii-dressing/components/YdSwiftMailer.php#L52">dressing/components/YdSwiftMailer.php#L52</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">mailer</span><span style="color: #007700">(</span><span style="color: #0000BB">$transport&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">Swift_Mailer</span><span style="color: #007700">::</span><span style="color: #0000BB">newInstance</span><span style="color: #007700">(</span><span style="color: #0000BB">$transport</span><span style="color: #007700">);<br />}</span>
 </span>
@@ -271,7 +271,7 @@ public mixed <b>newMessage</b>($subject $subject)</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/0.1.0/yii-dressing/components/YdSwiftMailer.php#L43">dressing/components/YdSwiftMailer.php#L43</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/yii-dressing-0.1.0/yii-dressing/components/YdSwiftMailer.php#L43">dressing/components/YdSwiftMailer.php#L43</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">newMessage</span><span style="color: #007700">(</span><span style="color: #0000BB">$subject</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">Swift_Message</span><span style="color: #007700">::</span><span style="color: #0000BB">newInstance</span><span style="color: #007700">(</span><span style="color: #0000BB">$subject</span><span style="color: #007700">);<br />}</span>
 </span>
@@ -300,7 +300,7 @@ public mixed <b>preferences</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/0.1.0/yii-dressing/components/YdSwiftMailer.php#L26">dressing/components/YdSwiftMailer.php#L26</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/yii-dressing-0.1.0/yii-dressing/components/YdSwiftMailer.php#L26">dressing/components/YdSwiftMailer.php#L26</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">preferences</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">Swift_Preferences</span><span style="color: #007700">;<br />}</span>
 </span>
@@ -334,7 +334,7 @@ public mixed <b>sendmailTransport</b>(null $command=NULL)</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/0.1.0/yii-dressing/components/YdSwiftMailer.php#L79">dressing/components/YdSwiftMailer.php#L79</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/yii-dressing-0.1.0/yii-dressing/components/YdSwiftMailer.php#L79">dressing/components/YdSwiftMailer.php#L79</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">sendmailTransport</span><span style="color: #007700">(</span><span style="color: #0000BB">$command&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">Swift_SendmailTransport</span><span style="color: #007700">::</span><span style="color: #0000BB">newInstance</span><span style="color: #007700">(</span><span style="color: #0000BB">$command</span><span style="color: #007700">);<br />}</span>
 </span>
@@ -373,7 +373,7 @@ public mixed <b>smtpTransport</b>(null $host=NULL, null $port=NULL)</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/0.1.0/yii-dressing/components/YdSwiftMailer.php#L70">dressing/components/YdSwiftMailer.php#L70</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/yii-dressing-0.1.0/yii-dressing/components/YdSwiftMailer.php#L70">dressing/components/YdSwiftMailer.php#L70</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">smtpTransport</span><span style="color: #007700">(</span><span style="color: #0000BB">$host&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$port&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">Swift_SmtpTransport</span><span style="color: #007700">::</span><span style="color: #0000BB">newInstance</span><span style="color: #007700">(</span><span style="color: #0000BB">$host</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$port</span><span style="color: #007700">);<br />}</span>
 </span>

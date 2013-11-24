@@ -159,7 +159,7 @@ EOD;
         if (substr($this->version, -3) == 'dev')
             $this->dressingSourceUrl .= '/master/yii-dressing';
         else
-            $this->dressingSourceUrl .= '/' . $this->version . '/yii-dressing';
+            $this->dressingSourceUrl .= '/yii-dressing-' . $this->version . '/yii-dressing';
 
         $this->pageTitle = Yii::app()->name . ' Class Reference';
         $themePath = dirname(__FILE__) . '/docs';
