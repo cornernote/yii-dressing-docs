@@ -28,7 +28,7 @@ $this->breadcrumbs[] = 'CConsoleCommandEvent';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\console\CConsoleCommandEvent.php">yii\console\CConsoleCommandEvent.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/console/CConsoleCommandEvent.php">yii/console/CConsoleCommandEvent.php</a></td>
 </tr>
 <tr>
   <th>Author</th>
@@ -319,7 +319,7 @@ public void <b>__construct</b>(mixed $sender=NULL, string $params=NULL, string $
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\console\CConsoleCommandEvent.php#L47">yii\console\CConsoleCommandEvent.php#L47</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/console/CConsoleCommandEvent.php#L47">yii/console/CConsoleCommandEvent.php#L47</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">__construct</span><span style="color: #007700">(</span><span style="color: #0000BB">$sender</span><span style="color: #007700">=</span><span style="color: #0000BB">null</span><span style="color: #007700">,</span><span style="color: #0000BB">$params</span><span style="color: #007700">=</span><span style="color: #0000BB">null</span><span style="color: #007700">,</span><span style="color: #0000BB">$action</span><span style="color: #007700">=</span><span style="color: #0000BB">null</span><span style="color: #007700">,</span><span style="color: #0000BB">$exitCode</span><span style="color: #007700">=</span><span style="color: #0000BB">0</span><span style="color: #007700">){<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">parent</span><span style="color: #007700">::</span><span style="color: #0000BB">__construct</span><span style="color: #007700">(</span><span style="color: #0000BB">$sender</span><span style="color: #007700">,</span><span style="color: #0000BB">$params</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">action</span><span style="color: #007700">=</span><span style="color: #0000BB">$action</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">exitCode</span><span style="color: #007700">=</span><span style="color: #0000BB">$exitCode</span><span style="color: #007700">;<br />}</span>
 </span>

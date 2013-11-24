@@ -25,7 +25,7 @@ $this->breadcrumbs[] = 'YdClueTip';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob//master/yii-dressing\widgets\YdClueTip.php">dressing\widgets\YdClueTip.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/widgets/YdClueTip.php">dressing/widgets/YdClueTip.php</a></td>
 </tr>
 </table>
 
@@ -400,7 +400,7 @@ public void <b>init</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob//master/yii-dressing\widgets\YdClueTip.php#L23">dressing\widgets\YdClueTip.php#L23</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/widgets/YdClueTip.php#L23">dressing/widgets/YdClueTip.php#L23</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">init</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">publishAssets</span><span style="color: #007700">();<br />}</span>
 </span>
@@ -424,7 +424,7 @@ public void <b>publishAssets</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob//master/yii-dressing\widgets\YdClueTip.php#L32">dressing\widgets\YdClueTip.php#L32</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/widgets/YdClueTip.php#L32">dressing/widgets/YdClueTip.php#L32</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">publishAssets</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$cs&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">app</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">clientScript</span><span style="color: #007700">;<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$cs</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">registerPackage</span><span style="color: #007700">(</span><span style="color: #DD0000">'jquery-cluetip'</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$cs</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">registerScript</span><span style="color: #007700">(</span><span style="color: #DD0000">'cluetip'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'$("'&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">target&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #DD0000">'").cluetip('&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #0000BB">json_encode</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">config</span><span style="color: #007700">)&nbsp;.&nbsp;</span><span style="color: #DD0000">');'</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">CClientScript</span><span style="color: #007700">::</span><span style="color: #0000BB">POS_READY</span><span style="color: #007700">);<br />}</span>
 </span>

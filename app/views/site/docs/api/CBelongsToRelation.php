@@ -29,7 +29,7 @@ $this->breadcrumbs[] = 'CBelongsToRelation';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\db\ar\CActiveRecord.php">yii\db\ar\CActiveRecord.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/db/ar/CActiveRecord.php">yii/db/ar/CActiveRecord.php</a></td>
 </tr>
 <tr>
   <th>Author</th>

@@ -31,7 +31,7 @@ $this->breadcrumbs[] = 'CLogRoute';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\logging\CLogRoute.php">yii\logging\CLogRoute.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/logging/CLogRoute.php">yii/logging/CLogRoute.php</a></td>
 </tr>
 <tr>
   <th>Author</th>
@@ -395,7 +395,7 @@ public void <b>collectLogs</b>(<?php echo CHtml::link('CLogger', array('/site/do
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\logging\CLogRoute.php#L95">yii\logging\CLogRoute.php#L95</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/logging/CLogRoute.php#L95">yii/logging/CLogRoute.php#L95</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">collectLogs</span><span style="color: #007700">(</span><span style="color: #0000BB">$logger</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$processLogs</span><span style="color: #007700">=</span><span style="color: #0000BB">false</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$logs</span><span style="color: #007700">=</span><span style="color: #0000BB">$logger</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getLogs</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">levels</span><span style="color: #007700">,</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">categories</span><span style="color: #007700">,</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">except</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">logs</span><span style="color: #007700">=empty(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">logs</span><span style="color: #007700">)&nbsp;?&nbsp;</span><span style="color: #0000BB">$logs&nbsp;</span><span style="color: #007700">:&nbsp;</span><span style="color: #0000BB">array_merge</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">logs</span><span style="color: #007700">,</span><span style="color: #0000BB">$logs</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;if(</span><span style="color: #0000BB">$processLogs&nbsp;</span><span style="color: #007700">&amp;&amp;&nbsp;!empty(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">logs</span><span style="color: #007700">))<br />&nbsp;&nbsp;&nbsp;&nbsp;{<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">filter</span><span style="color: #007700">!==</span><span style="color: #0000BB">null</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">createComponent</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">filter</span><span style="color: #007700">)-&gt;</span><span style="color: #0000BB">filter</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">logs</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">logs</span><span style="color: #007700">!==array())<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">processLogs</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">logs</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">logs</span><span style="color: #007700">=array();<br />&nbsp;&nbsp;&nbsp;&nbsp;}<br />}</span>
 </span>
@@ -444,7 +444,7 @@ protected string <b>formatLogMessage</b>(string $message, integer $level, string
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\logging\CLogRoute.php#L85">yii\logging\CLogRoute.php#L85</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/logging/CLogRoute.php#L85">yii/logging/CLogRoute.php#L85</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">formatLogMessage</span><span style="color: #007700">(</span><span style="color: #0000BB">$message</span><span style="color: #007700">,</span><span style="color: #0000BB">$level</span><span style="color: #007700">,</span><span style="color: #0000BB">$category</span><span style="color: #007700">,</span><span style="color: #0000BB">$time</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;@</span><span style="color: #0000BB">date</span><span style="color: #007700">(</span><span style="color: #DD0000">'Y/m/d&nbsp;H:i:s'</span><span style="color: #007700">,</span><span style="color: #0000BB">$time</span><span style="color: #007700">).</span><span style="color: #DD0000">"&nbsp;[</span><span style="color: #0000BB">$level</span><span style="color: #DD0000">]&nbsp;[</span><span style="color: #0000BB">$category</span><span style="color: #DD0000">]&nbsp;</span><span style="color: #0000BB">$message</span><span style="color: #DD0000">\n"</span><span style="color: #007700">;<br />}</span>
 </span>
@@ -468,7 +468,7 @@ public void <b>init</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\logging\CLogRoute.php#L73">yii\logging\CLogRoute.php#L73</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/logging/CLogRoute.php#L73">yii/logging/CLogRoute.php#L73</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">init</span><span style="color: #007700">()<br />{<br />}</span>
 </span>
@@ -504,7 +504,7 @@ array(
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\logging\CLogRoute.php#L120">yii\logging\CLogRoute.php#L120</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/logging/CLogRoute.php#L120">yii/logging/CLogRoute.php#L120</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">abstract&nbsp;protected&nbsp;function&nbsp;</span><span style="color: #0000BB">processLogs</span><span style="color: #007700">(</span><span style="color: #0000BB">$logs</span><span style="color: #007700">);</span>
 </span>

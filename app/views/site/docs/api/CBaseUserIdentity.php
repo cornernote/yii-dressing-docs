@@ -35,7 +35,7 @@ $this->breadcrumbs[] = 'CBaseUserIdentity';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\auth\CBaseUserIdentity.php">yii\web\auth\CBaseUserIdentity.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/web/auth/CBaseUserIdentity.php">yii/web/auth/CBaseUserIdentity.php</a></td>
 </tr>
 <tr>
   <th>Author</th>
@@ -391,7 +391,7 @@ public void <b>clearState</b>(string $name)</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\auth\CBaseUserIdentity.php#L127">yii\web\auth\CBaseUserIdentity.php#L127</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/web/auth/CBaseUserIdentity.php#L127">yii/web/auth/CBaseUserIdentity.php#L127</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">clearState</span><span style="color: #007700">(</span><span style="color: #0000BB">$name</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;unset(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_state</span><span style="color: #007700">[</span><span style="color: #0000BB">$name</span><span style="color: #007700">]);<br />}</span>
 </span>
@@ -421,7 +421,7 @@ The default implementation simply returns <?php echo CHtml::link('name', array('
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\auth\CBaseUserIdentity.php#L57">yii\web\auth\CBaseUserIdentity.php#L57</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/web/auth/CBaseUserIdentity.php#L57">yii/web/auth/CBaseUserIdentity.php#L57</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">getId</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getName</span><span style="color: #007700">();<br />}</span>
 </span>
@@ -450,7 +450,7 @@ public boolean <b>getIsAuthenticated</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\auth\CBaseUserIdentity.php#L97">yii\web\auth\CBaseUserIdentity.php#L97</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/web/auth/CBaseUserIdentity.php#L97">yii/web/auth/CBaseUserIdentity.php#L97</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">getIsAuthenticated</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">errorCode</span><span style="color: #007700">==</span><span style="color: #0000BB">self</span><span style="color: #007700">::</span><span style="color: #0000BB">ERROR_NONE</span><span style="color: #007700">;<br />}</span>
 </span>
@@ -481,7 +481,7 @@ The default implementation simply returns empty string.</td>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\auth\CBaseUserIdentity.php#L67">yii\web\auth\CBaseUserIdentity.php#L67</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/web/auth/CBaseUserIdentity.php#L67">yii/web/auth/CBaseUserIdentity.php#L67</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">getName</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #DD0000">''</span><span style="color: #007700">;<br />}</span>
 </span>
@@ -510,7 +510,7 @@ public array <b>getPersistentStates</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\auth\CBaseUserIdentity.php#L77">yii\web\auth\CBaseUserIdentity.php#L77</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/web/auth/CBaseUserIdentity.php#L77">yii/web/auth/CBaseUserIdentity.php#L77</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">getPersistentStates</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_state</span><span style="color: #007700">;<br />}</span>
 </span>
@@ -550,7 +550,7 @@ public mixed <b>getState</b>(string $name, mixed $defaultValue=NULL)</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\auth\CBaseUserIdentity.php#L108">yii\web\auth\CBaseUserIdentity.php#L108</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/web/auth/CBaseUserIdentity.php#L108">yii/web/auth/CBaseUserIdentity.php#L108</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">getState</span><span style="color: #007700">(</span><span style="color: #0000BB">$name</span><span style="color: #007700">,</span><span style="color: #0000BB">$defaultValue</span><span style="color: #007700">=</span><span style="color: #0000BB">null</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;isset(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_state</span><span style="color: #007700">[</span><span style="color: #0000BB">$name</span><span style="color: #007700">])?</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_state</span><span style="color: #007700">[</span><span style="color: #0000BB">$name</span><span style="color: #007700">]:</span><span style="color: #0000BB">$defaultValue</span><span style="color: #007700">;<br />}</span>
 </span>
@@ -579,7 +579,7 @@ public void <b>setPersistentStates</b>(array $states)</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\auth\CBaseUserIdentity.php#L87">yii\web\auth\CBaseUserIdentity.php#L87</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/web/auth/CBaseUserIdentity.php#L87">yii/web/auth/CBaseUserIdentity.php#L87</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">setPersistentStates</span><span style="color: #007700">(</span><span style="color: #0000BB">$states</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_state&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$states</span><span style="color: #007700">;<br />}</span>
 </span>
@@ -613,7 +613,7 @@ public void <b>setState</b>(string $name, mixed $value)</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\auth\CBaseUserIdentity.php#L118">yii\web\auth\CBaseUserIdentity.php#L118</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/web/auth/CBaseUserIdentity.php#L118">yii/web/auth/CBaseUserIdentity.php#L118</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">setState</span><span style="color: #007700">(</span><span style="color: #0000BB">$name</span><span style="color: #007700">,</span><span style="color: #0000BB">$value</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_state</span><span style="color: #007700">[</span><span style="color: #0000BB">$name</span><span style="color: #007700">]=</span><span style="color: #0000BB">$value</span><span style="color: #007700">;<br />}</span>
 </span>

@@ -26,7 +26,7 @@ $this->breadcrumbs[] = 'CEnumerable';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\base\CComponent.php">yii\base\CComponent.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/base/CComponent.php">yii/base/CComponent.php</a></td>
 </tr>
 <tr>
   <th>Author</th>

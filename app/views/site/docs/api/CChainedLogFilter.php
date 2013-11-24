@@ -31,7 +31,7 @@ $this->breadcrumbs[] = 'CChainedLogFilter';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\logging\CChainedLogFilter.php">yii\logging\CChainedLogFilter.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/logging/CChainedLogFilter.php">yii/logging/CChainedLogFilter.php</a></td>
 </tr>
 <tr>
   <th>Author</th>
@@ -251,7 +251,7 @@ public void <b>filter</b>(array &$logs)</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\logging\CChainedLogFilter.php#L34">yii\logging\CChainedLogFilter.php#L34</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/logging/CChainedLogFilter.php#L34">yii/logging/CChainedLogFilter.php#L34</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">filter</span><span style="color: #007700">(&amp;</span><span style="color: #0000BB">$logs</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;foreach(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">filters&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">$filter</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">createComponent</span><span style="color: #007700">(</span><span style="color: #0000BB">$filter</span><span style="color: #007700">)-&gt;</span><span style="color: #0000BB">filter</span><span style="color: #007700">(</span><span style="color: #0000BB">$logs</span><span style="color: #007700">);<br />}</span>
 </span>

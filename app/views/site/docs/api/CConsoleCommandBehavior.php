@@ -32,7 +32,7 @@ $this->breadcrumbs[] = 'CConsoleCommandBehavior';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\console\CConsoleCommandBehavior.php">yii\console\CConsoleCommandBehavior.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/console/CConsoleCommandBehavior.php">yii/console/CConsoleCommandBehavior.php</a></td>
 </tr>
 <tr>
   <th>Author</th>
@@ -291,7 +291,7 @@ protected void <b>afterAction</b>(<?php echo CHtml::link('CConsoleCommandEvent',
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\console\CConsoleCommandBehavior.php#L50">yii\console\CConsoleCommandBehavior.php#L50</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/console/CConsoleCommandBehavior.php#L50">yii/console/CConsoleCommandBehavior.php#L50</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">afterAction</span><span style="color: #007700">(</span><span style="color: #0000BB">$event</span><span style="color: #007700">)<br />{<br />}</span>
 </span>
@@ -321,7 +321,7 @@ protected void <b>beforeAction</b>(<?php echo CHtml::link('CConsoleCommandEvent'
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\console\CConsoleCommandBehavior.php#L41">yii\console\CConsoleCommandBehavior.php#L41</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/console/CConsoleCommandBehavior.php#L41">yii/console/CConsoleCommandBehavior.php#L41</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">beforeAction</span><span style="color: #007700">(</span><span style="color: #0000BB">$event</span><span style="color: #007700">)<br />{<br />}</span>
 </span>
@@ -351,7 +351,7 @@ public array <b>events</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\console\CConsoleCommandBehavior.php#L29">yii\console\CConsoleCommandBehavior.php#L29</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/console/CConsoleCommandBehavior.php#L29">yii/console/CConsoleCommandBehavior.php#L29</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">events</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;array(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'onBeforeAction'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'beforeAction'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'onAfterAction'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'afterAction'<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">);<br />}</span>
 </span>

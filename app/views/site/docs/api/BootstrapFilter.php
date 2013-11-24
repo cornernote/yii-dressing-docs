@@ -28,7 +28,7 @@ $this->breadcrumbs[] = 'BootstrapFilter';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/clevertech/YiiBooster/blob/master/src\filters\BootstrapFilter.php">booster\filters\BootstrapFilter.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/clevertech/YiiBooster/blob/master/src/filters/BootstrapFilter.php">booster/filters/BootstrapFilter.php</a></td>
 </tr>
 </table>
 
@@ -245,7 +245,7 @@ protected void <b>preFilter</b>($filterChain)</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/clevertech/YiiBooster/blob/master/src\filters\BootstrapFilter.php#L28">booster\filters\BootstrapFilter.php#L28</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/clevertech/YiiBooster/blob/master/src/filters/BootstrapFilter.php#L28">booster/filters/BootstrapFilter.php#L28</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">preFilter</span><span style="color: #007700">(</span><span style="color: #0000BB">$filterChain</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">app</span><span style="color: #007700">()-&gt;</span><span style="color: #0000BB">getComponent</span><span style="color: #007700">(</span><span style="color: #DD0000">"bootstrap"</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">true</span><span style="color: #007700">;<br />}</span>
 </span>

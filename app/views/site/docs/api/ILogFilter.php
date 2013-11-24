@@ -30,7 +30,7 @@ $this->breadcrumbs[] = 'ILogFilter';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\base\interfaces.php">yii\base\interfaces.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/base/interfaces.php">yii/base/interfaces.php</a></td>
 </tr>
 </table>
 
@@ -94,7 +94,7 @@ array(
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\base\interfaces.php#L629">yii\base\interfaces.php#L629</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/base/interfaces.php#L629">yii/base/interfaces.php#L629</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">filter</span><span style="color: #007700">(&amp;</span><span style="color: #0000BB">$logs</span><span style="color: #007700">);</span>
 </span>

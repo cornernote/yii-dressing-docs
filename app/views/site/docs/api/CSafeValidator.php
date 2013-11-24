@@ -28,7 +28,7 @@ $this->breadcrumbs[] = 'CSafeValidator';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\validators\CSafeValidator.php">yii\validators\CSafeValidator.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/validators/CSafeValidator.php">yii/validators/CSafeValidator.php</a></td>
 </tr>
 <tr>
   <th>Author</th>
@@ -324,7 +324,7 @@ protected void <b>validateAttribute</b>(<?php echo CHtml::link('CModel', array('
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\validators\CSafeValidator.php#L26">yii\validators\CSafeValidator.php#L26</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/validators/CSafeValidator.php#L26">yii/validators/CSafeValidator.php#L26</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">validateAttribute</span><span style="color: #007700">(</span><span style="color: #0000BB">$object</span><span style="color: #007700">,</span><span style="color: #0000BB">$attribute</span><span style="color: #007700">)<br />{<br />}</span>
 </span>

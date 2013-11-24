@@ -29,7 +29,7 @@ $this->breadcrumbs[] = 'YdController';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob//master/yii-dressing\components\YdController.php">dressing\components\YdController.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/components/YdController.php">dressing/components/YdController.php</a></td>
 </tr>
 <tr>
   <th>Authors</th>
@@ -685,7 +685,7 @@ public array <b>filters</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob//master/yii-dressing\components\YdController.php#L23">dressing\components\YdController.php#L23</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/components/YdController.php#L23">dressing/components/YdController.php#L23</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">filters</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;array(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'accessControl'</span><span style="color: #007700">,&nbsp;</span><span style="color: #FF8000">//&nbsp;perform&nbsp;access&nbsp;control&nbsp;for&nbsp;CRUD&nbsp;operations<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">);<br />}</span>
 </span>

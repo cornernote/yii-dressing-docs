@@ -36,7 +36,7 @@ $this->breadcrumbs[] = 'CAuthManager';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\auth\CAuthManager.php">yii\web\auth\CAuthManager.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/web/auth/CAuthManager.php">yii/web/auth/CAuthManager.php</a></td>
 </tr>
 <tr>
   <th>Author</th>
@@ -532,7 +532,7 @@ protected void <b>checkItemChildType</b>(integer $parentType, integer $childType
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\auth\CAuthManager.php#L158">yii\web\auth\CAuthManager.php#L158</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/web/auth/CAuthManager.php#L158">yii/web/auth/CAuthManager.php#L158</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">checkItemChildType</span><span style="color: #007700">(</span><span style="color: #0000BB">$parentType</span><span style="color: #007700">,</span><span style="color: #0000BB">$childType</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;static&nbsp;</span><span style="color: #0000BB">$types</span><span style="color: #007700">=array(</span><span style="color: #DD0000">'operation'</span><span style="color: #007700">,</span><span style="color: #DD0000">'task'</span><span style="color: #007700">,</span><span style="color: #DD0000">'role'</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;if(</span><span style="color: #0000BB">$parentType&nbsp;</span><span style="color: #007700">&lt;&nbsp;</span><span style="color: #0000BB">$childType</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw&nbsp;new&nbsp;</span><span style="color: #0000BB">CException</span><span style="color: #007700">(</span><span style="color: #0000BB">Yii</span><span style="color: #007700">::</span><span style="color: #0000BB">t</span><span style="color: #007700">(</span><span style="color: #DD0000">'yii'</span><span style="color: #007700">,</span><span style="color: #DD0000">'Cannot&nbsp;add&nbsp;an&nbsp;item&nbsp;of&nbsp;type&nbsp;"{child}"&nbsp;to&nbsp;an&nbsp;item&nbsp;of&nbsp;type&nbsp;"{parent}".'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array(</span><span style="color: #DD0000">'{child}'</span><span style="color: #007700">=&gt;</span><span style="color: #0000BB">$types</span><span style="color: #007700">[</span><span style="color: #0000BB">$childType</span><span style="color: #007700">],&nbsp;</span><span style="color: #DD0000">'{parent}'</span><span style="color: #007700">=&gt;</span><span style="color: #0000BB">$types</span><span style="color: #007700">[</span><span style="color: #0000BB">$parentType</span><span style="color: #007700">])));<br />}</span>
 </span>
@@ -581,7 +581,7 @@ public <?php echo CHtml::link('CAuthItem', array('/site/doc', 'view' => 'CAuthIt
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\auth\CAuthManager.php#L98">yii\web\auth\CAuthManager.php#L98</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/web/auth/CAuthManager.php#L98">yii/web/auth/CAuthManager.php#L98</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">createOperation</span><span style="color: #007700">(</span><span style="color: #0000BB">$name</span><span style="color: #007700">,</span><span style="color: #0000BB">$description</span><span style="color: #007700">=</span><span style="color: #DD0000">''</span><span style="color: #007700">,</span><span style="color: #0000BB">$bizRule</span><span style="color: #007700">=</span><span style="color: #0000BB">null</span><span style="color: #007700">,</span><span style="color: #0000BB">$data</span><span style="color: #007700">=</span><span style="color: #0000BB">null</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">createAuthItem</span><span style="color: #007700">(</span><span style="color: #0000BB">$name</span><span style="color: #007700">,</span><span style="color: #0000BB">CAuthItem</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_OPERATION</span><span style="color: #007700">,</span><span style="color: #0000BB">$description</span><span style="color: #007700">,</span><span style="color: #0000BB">$bizRule</span><span style="color: #007700">,</span><span style="color: #0000BB">$data</span><span style="color: #007700">);<br />}</span>
 </span>
@@ -631,7 +631,7 @@ public <?php echo CHtml::link('CAuthItem', array('/site/doc', 'view' => 'CAuthIt
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\auth\CAuthManager.php#L70">yii\web\auth\CAuthManager.php#L70</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/web/auth/CAuthManager.php#L70">yii/web/auth/CAuthManager.php#L70</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">createRole</span><span style="color: #007700">(</span><span style="color: #0000BB">$name</span><span style="color: #007700">,</span><span style="color: #0000BB">$description</span><span style="color: #007700">=</span><span style="color: #DD0000">''</span><span style="color: #007700">,</span><span style="color: #0000BB">$bizRule</span><span style="color: #007700">=</span><span style="color: #0000BB">null</span><span style="color: #007700">,</span><span style="color: #0000BB">$data</span><span style="color: #007700">=</span><span style="color: #0000BB">null</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">createAuthItem</span><span style="color: #007700">(</span><span style="color: #0000BB">$name</span><span style="color: #007700">,</span><span style="color: #0000BB">CAuthItem</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_ROLE</span><span style="color: #007700">,</span><span style="color: #0000BB">$description</span><span style="color: #007700">,</span><span style="color: #0000BB">$bizRule</span><span style="color: #007700">,</span><span style="color: #0000BB">$data</span><span style="color: #007700">);<br />}</span>
 </span>
@@ -681,7 +681,7 @@ public <?php echo CHtml::link('CAuthItem', array('/site/doc', 'view' => 'CAuthIt
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\auth\CAuthManager.php#L84">yii\web\auth\CAuthManager.php#L84</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/web/auth/CAuthManager.php#L84">yii/web/auth/CAuthManager.php#L84</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">createTask</span><span style="color: #007700">(</span><span style="color: #0000BB">$name</span><span style="color: #007700">,</span><span style="color: #0000BB">$description</span><span style="color: #007700">=</span><span style="color: #DD0000">''</span><span style="color: #007700">,</span><span style="color: #0000BB">$bizRule</span><span style="color: #007700">=</span><span style="color: #0000BB">null</span><span style="color: #007700">,</span><span style="color: #0000BB">$data</span><span style="color: #007700">=</span><span style="color: #0000BB">null</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">createAuthItem</span><span style="color: #007700">(</span><span style="color: #0000BB">$name</span><span style="color: #007700">,</span><span style="color: #0000BB">CAuthItem</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_TASK</span><span style="color: #007700">,</span><span style="color: #0000BB">$description</span><span style="color: #007700">,</span><span style="color: #0000BB">$bizRule</span><span style="color: #007700">,</span><span style="color: #0000BB">$data</span><span style="color: #007700">);<br />}</span>
 </span>
@@ -727,7 +727,7 @@ If the business rule is empty, it will still return true.</td>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\auth\CAuthManager.php#L147">yii\web\auth\CAuthManager.php#L147</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/web/auth/CAuthManager.php#L147">yii/web/auth/CAuthManager.php#L147</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">executeBizRule</span><span style="color: #007700">(</span><span style="color: #0000BB">$bizRule</span><span style="color: #007700">,</span><span style="color: #0000BB">$params</span><span style="color: #007700">,</span><span style="color: #0000BB">$data</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$bizRule</span><span style="color: #007700">===</span><span style="color: #DD0000">''&nbsp;</span><span style="color: #007700">||&nbsp;</span><span style="color: #0000BB">$bizRule</span><span style="color: #007700">===</span><span style="color: #0000BB">null&nbsp;</span><span style="color: #007700">||&nbsp;(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">showErrors&nbsp;</span><span style="color: #007700">?&nbsp;eval(</span><span style="color: #0000BB">$bizRule</span><span style="color: #007700">)!=</span><span style="color: #0000BB">0&nbsp;</span><span style="color: #007700">:&nbsp;@eval(</span><span style="color: #0000BB">$bizRule</span><span style="color: #007700">)!=</span><span style="color: #0000BB">0</span><span style="color: #007700">);<br />}</span>
 </span>
@@ -762,7 +762,7 @@ will be returned. Otherwise, all operations will be returned.</td>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\auth\CAuthManager.php#L134">yii\web\auth\CAuthManager.php#L134</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/web/auth/CAuthManager.php#L134">yii/web/auth/CAuthManager.php#L134</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">getOperations</span><span style="color: #007700">(</span><span style="color: #0000BB">$userId</span><span style="color: #007700">=</span><span style="color: #0000BB">null</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getAuthItems</span><span style="color: #007700">(</span><span style="color: #0000BB">CAuthItem</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_OPERATION</span><span style="color: #007700">,</span><span style="color: #0000BB">$userId</span><span style="color: #007700">);<br />}</span>
 </span>
@@ -798,7 +798,7 @@ will be returned. Otherwise, all roles will be returned.</td>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\auth\CAuthManager.php#L110">yii\web\auth\CAuthManager.php#L110</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/web/auth/CAuthManager.php#L110">yii/web/auth/CAuthManager.php#L110</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">getRoles</span><span style="color: #007700">(</span><span style="color: #0000BB">$userId</span><span style="color: #007700">=</span><span style="color: #0000BB">null</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getAuthItems</span><span style="color: #007700">(</span><span style="color: #0000BB">CAuthItem</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_ROLE</span><span style="color: #007700">,</span><span style="color: #0000BB">$userId</span><span style="color: #007700">);<br />}</span>
 </span>
@@ -834,7 +834,7 @@ will be returned. Otherwise, all tasks will be returned.</td>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\auth\CAuthManager.php#L122">yii\web\auth\CAuthManager.php#L122</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/web/auth/CAuthManager.php#L122">yii/web/auth/CAuthManager.php#L122</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">getTasks</span><span style="color: #007700">(</span><span style="color: #0000BB">$userId</span><span style="color: #007700">=</span><span style="color: #0000BB">null</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">getAuthItems</span><span style="color: #007700">(</span><span style="color: #0000BB">CAuthItem</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_TASK</span><span style="color: #007700">,</span><span style="color: #0000BB">$userId</span><span style="color: #007700">);<br />}</span>
 </span>

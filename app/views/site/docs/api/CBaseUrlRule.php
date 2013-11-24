@@ -31,7 +31,7 @@ $this->breadcrumbs[] = 'CBaseUrlRule';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\CUrlManager.php">yii\web\CUrlManager.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/web/CUrlManager.php">yii/web/CUrlManager.php</a></td>
 </tr>
 <tr>
   <th>Author</th>
@@ -274,7 +274,7 @@ abstract public mixed <b>createUrl</b>(<?php echo CHtml::link('CUrlManager', arr
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\CUrlManager.php#L540">yii\web\CUrlManager.php#L540</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/web/CUrlManager.php#L540">yii/web/CUrlManager.php#L540</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">abstract&nbsp;public&nbsp;function&nbsp;</span><span style="color: #0000BB">createUrl</span><span style="color: #007700">(</span><span style="color: #0000BB">$manager</span><span style="color: #007700">,</span><span style="color: #0000BB">$route</span><span style="color: #007700">,</span><span style="color: #0000BB">$params</span><span style="color: #007700">,</span><span style="color: #0000BB">$ampersand</span><span style="color: #007700">);</span>
 </span>
@@ -323,7 +323,7 @@ abstract public mixed <b>parseUrl</b>(<?php echo CHtml::link('CUrlManager', arra
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\CUrlManager.php#L549">yii\web\CUrlManager.php#L549</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/web/CUrlManager.php#L549">yii/web/CUrlManager.php#L549</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">abstract&nbsp;public&nbsp;function&nbsp;</span><span style="color: #0000BB">parseUrl</span><span style="color: #007700">(</span><span style="color: #0000BB">$manager</span><span style="color: #007700">,</span><span style="color: #0000BB">$request</span><span style="color: #007700">,</span><span style="color: #0000BB">$pathInfo</span><span style="color: #007700">,</span><span style="color: #0000BB">$rawPathInfo</span><span style="color: #007700">);</span>
 </span>

@@ -19,7 +19,7 @@ Exception</td>
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob//master/yii-dressing\components\YdMustache.php">dressing\components\YdMustache.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/components/YdMustache.php">dressing/components/YdMustache.php</a></td>
 </tr>
 </table>
 

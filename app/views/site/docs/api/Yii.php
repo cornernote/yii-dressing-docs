@@ -20,7 +20,7 @@ $this->breadcrumbs[] = 'Yii';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td>app\yii.php</td>
+  <td>app/yii.php</td>
 </tr>
 </table>
 
@@ -232,7 +232,7 @@ public static Application <b>app</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> app\yii.php#L16 (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> app/yii.php#L16 (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;static&nbsp;function&nbsp;</span><span style="color: #0000BB">app</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">parent</span><span style="color: #007700">::</span><span style="color: #0000BB">app</span><span style="color: #007700">();<br />}</span>
 </span>

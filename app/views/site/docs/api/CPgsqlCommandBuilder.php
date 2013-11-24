@@ -28,7 +28,7 @@ $this->breadcrumbs[] = 'CPgsqlCommandBuilder';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\db\schema\pgsql\CPgsqlCommandBuilder.php">yii\db\schema\pgsql\CPgsqlCommandBuilder.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/db/schema/pgsql/CPgsqlCommandBuilder.php">yii/db/schema/pgsql/CPgsqlCommandBuilder.php</a></td>
 </tr>
 <tr>
   <th>Author</th>
@@ -431,7 +431,7 @@ protected string <b>getIntegerPrimaryKeyDefaultValue</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\db\schema\pgsql\CPgsqlCommandBuilder.php#L26">yii\db\schema\pgsql\CPgsqlCommandBuilder.php#L26</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/db/schema/pgsql/CPgsqlCommandBuilder.php#L26">yii/db/schema/pgsql/CPgsqlCommandBuilder.php#L26</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">getIntegerPrimaryKeyDefaultValue</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #DD0000">'DEFAULT'</span><span style="color: #007700">;<br />}</span>
 </span>

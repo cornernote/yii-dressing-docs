@@ -31,7 +31,7 @@ Exception</td>
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\base\CException.php">yii\base\CException.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/base/CException.php">yii/base/CException.php</a></td>
 </tr>
 <tr>
   <th>Author</th>

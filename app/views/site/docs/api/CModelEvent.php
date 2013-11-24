@@ -28,7 +28,7 @@ $this->breadcrumbs[] = 'CModelEvent';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\base\CModelEvent.php">yii\base\CModelEvent.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/base/CModelEvent.php">yii/base/CModelEvent.php</a></td>
 </tr>
 <tr>
   <th>Author</th>

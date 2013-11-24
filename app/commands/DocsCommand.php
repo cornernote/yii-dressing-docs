@@ -31,9 +31,9 @@ class DocsCommand extends CConsoleCommand
     public $currentClass;
     public $currentView;
     public $appSourceUrl;
-    public $dressingSourceUrl = 'https://github.com/cornernote/yii-dressing/blob/';
+    public $dressingSourceUrl = 'https://github.com/cornernote/yii-dressing/blob';
     public $boosterSourceUrl = 'https://github.com/clevertech/YiiBooster/blob/master/src';
-    public $yiiSourceUrl = 'https://github.com/yiisoft/yii/blob/master/framework/';
+    public $yiiSourceUrl = 'https://github.com/yiisoft/yii/blob/master/framework';
     public $version;
     public $enableViews = true;
     public $appOptions = array();
@@ -223,7 +223,7 @@ EOD;
 
     public function renderSourceLink($sourcePath, $line = null)
     {
-
+        $sourcePath = str_replace('\\', '/', $sourcePath);
         if (file_exists(BUILD_PATH . $sourcePath)) {
             if ($this->appSourceUrl) {
                 if ($line === null)

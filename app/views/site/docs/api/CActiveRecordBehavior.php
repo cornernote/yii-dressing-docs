@@ -33,7 +33,7 @@ $this->breadcrumbs[] = 'CActiveRecordBehavior';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\db\ar\CActiveRecordBehavior.php">yii\db\ar\CActiveRecordBehavior.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/db/ar/CActiveRecordBehavior.php">yii/db/ar/CActiveRecordBehavior.php</a></td>
 </tr>
 <tr>
   <th>Author</th>
@@ -334,7 +334,7 @@ protected void <b>afterDelete</b>(<?php echo CHtml::link('CEvent', array('/site/
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\db\ar\CActiveRecordBehavior.php#L80">yii\db\ar\CActiveRecordBehavior.php#L80</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/db/ar/CActiveRecordBehavior.php#L80">yii/db/ar/CActiveRecordBehavior.php#L80</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">afterDelete</span><span style="color: #007700">(</span><span style="color: #0000BB">$event</span><span style="color: #007700">)<br />{<br />}</span>
 </span>
@@ -365,7 +365,7 @@ protected void <b>afterFind</b>(<?php echo CHtml::link('CEvent', array('/site/do
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\db\ar\CActiveRecordBehavior.php#L100">yii\db\ar\CActiveRecordBehavior.php#L100</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/db/ar/CActiveRecordBehavior.php#L100">yii/db/ar/CActiveRecordBehavior.php#L100</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">afterFind</span><span style="color: #007700">(</span><span style="color: #0000BB">$event</span><span style="color: #007700">)<br />{<br />}</span>
 </span>
@@ -396,7 +396,7 @@ protected void <b>afterSave</b>(<?php echo CHtml::link('CModelEvent', array('/si
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\db\ar\CActiveRecordBehavior.php#L59">yii\db\ar\CActiveRecordBehavior.php#L59</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/db/ar/CActiveRecordBehavior.php#L59">yii/db/ar/CActiveRecordBehavior.php#L59</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">afterSave</span><span style="color: #007700">(</span><span style="color: #0000BB">$event</span><span style="color: #007700">)<br />{<br />}</span>
 </span>
@@ -428,7 +428,7 @@ protected void <b>beforeCount</b>(<?php echo CHtml::link('CEvent', array('/site/
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\db\ar\CActiveRecordBehavior.php#L111">yii\db\ar\CActiveRecordBehavior.php#L111</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/db/ar/CActiveRecordBehavior.php#L111">yii/db/ar/CActiveRecordBehavior.php#L111</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">beforeCount</span><span style="color: #007700">(</span><span style="color: #0000BB">$event</span><span style="color: #007700">)<br />{<br />}</span>
 </span>
@@ -459,7 +459,7 @@ protected void <b>beforeDelete</b>(<?php echo CHtml::link('CEvent', array('/site
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\db\ar\CActiveRecordBehavior.php#L70">yii\db\ar\CActiveRecordBehavior.php#L70</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/db/ar/CActiveRecordBehavior.php#L70">yii/db/ar/CActiveRecordBehavior.php#L70</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">beforeDelete</span><span style="color: #007700">(</span><span style="color: #0000BB">$event</span><span style="color: #007700">)<br />{<br />}</span>
 </span>
@@ -491,7 +491,7 @@ protected void <b>beforeFind</b>(<?php echo CHtml::link('CEvent', array('/site/d
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\db\ar\CActiveRecordBehavior.php#L90">yii\db\ar\CActiveRecordBehavior.php#L90</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/db/ar/CActiveRecordBehavior.php#L90">yii/db/ar/CActiveRecordBehavior.php#L90</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">beforeFind</span><span style="color: #007700">(</span><span style="color: #0000BB">$event</span><span style="color: #007700">)<br />{<br />}</span>
 </span>
@@ -522,7 +522,7 @@ protected void <b>beforeSave</b>(<?php echo CHtml::link('CModelEvent', array('/s
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\db\ar\CActiveRecordBehavior.php#L49">yii\db\ar\CActiveRecordBehavior.php#L49</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/db/ar/CActiveRecordBehavior.php#L49">yii/db/ar/CActiveRecordBehavior.php#L49</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">beforeSave</span><span style="color: #007700">(</span><span style="color: #0000BB">$event</span><span style="color: #007700">)<br />{<br />}</span>
 </span>
@@ -554,7 +554,7 @@ public array <b>events</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\db\ar\CActiveRecordBehavior.php#L29">yii\db\ar\CActiveRecordBehavior.php#L29</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/db/ar/CActiveRecordBehavior.php#L29">yii/db/ar/CActiveRecordBehavior.php#L29</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">events</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">array_merge</span><span style="color: #007700">(</span><span style="color: #0000BB">parent</span><span style="color: #007700">::</span><span style="color: #0000BB">events</span><span style="color: #007700">(),&nbsp;array(<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'onBeforeSave'</span><span style="color: #007700">=&gt;</span><span style="color: #DD0000">'beforeSave'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'onAfterSave'</span><span style="color: #007700">=&gt;</span><span style="color: #DD0000">'afterSave'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'onBeforeDelete'</span><span style="color: #007700">=&gt;</span><span style="color: #DD0000">'beforeDelete'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'onAfterDelete'</span><span style="color: #007700">=&gt;</span><span style="color: #DD0000">'afterDelete'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'onBeforeFind'</span><span style="color: #007700">=&gt;</span><span style="color: #DD0000">'beforeFind'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'onAfterFind'</span><span style="color: #007700">=&gt;</span><span style="color: #DD0000">'afterFind'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">'onBeforeCount'</span><span style="color: #007700">=&gt;</span><span style="color: #DD0000">'beforeCount'</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;));<br />}</span>
 </span>
