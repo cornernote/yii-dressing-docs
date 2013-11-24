@@ -17,7 +17,7 @@ if ($this->showNavBar) {
         'fixed' => 'top',
         'fluid' => false,
         'collapse' => true,
-        'items' => Menu::topMenu(),
+        'items' => SiteMenu::topMenu(),
 //        'constantItems' => array(
 //            YdMenu::userMenu(),
 //        ),
@@ -26,7 +26,7 @@ if ($this->showNavBar) {
 ?>
 <div id="holder">
     <div id="body">
-        <header class="jumbotron<?php echo isFront() ? '' : ' subhead'; ?>">
+        <header class="jumbotron<?php echo YdHelper::isFrontPage() ? '' : ' subhead'; ?>">
             <div class="container">
                 <?php
                 if ($this->pageHeading) {

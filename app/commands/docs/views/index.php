@@ -20,7 +20,7 @@ $packages = $this->packages;
 <tr>
   <th>Package</th><th>Class</th><th>Description</th>
 </tr>
-<?php 
+<?php
 foreach($packages as $package=>$classes){
 	if (!$package || ($package!='dressing' && strpos($package,'dressing.')===false)) continue;
 	unset($packages[$package]);
@@ -47,6 +47,10 @@ foreach($packages as $package=>$classes){
 ?>
 </table>
 
+<?php
+// no more packages
+return;
+?>
 <h2>YiiBooster</h2>
 <table class="table table-condensed">
 <colgroup>

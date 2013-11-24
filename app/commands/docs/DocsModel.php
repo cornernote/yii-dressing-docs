@@ -256,7 +256,7 @@ class DocsModel
             $text = $url;
 
         if (preg_match('/^(http|ftp):\/\//i', $url)) // an external URL
-        return "<a href=\"$url\">$text</a>";
+            return "<a href=\"$url\">$text</a>";
         $url = $this->resolveInternalUrl($url);
         return $url === '' ? $text : '{{' . $url . '|' . $text . '}}';
     }
@@ -675,7 +675,7 @@ class DocsModel
         $oldConstants = get_defined_constants(true);
 
         $classFiles = $this->getClassFiles($this->_sourcePath);
-        require_once($this->_sourcePath . '/yii.php');
+        //require_once($this->_sourcePath . '/yii.php');
         foreach ($classFiles as $classFile)
             require_once($classFile);
 
@@ -831,16 +831,16 @@ class BaseDoc
     {
         $filename = $reflection->getFilename();
         if (substr($filename, 0, strlen(YII_PATH)) === YII_PATH) {
-            $this->sourcePath = str_replace('\\', '/', str_replace(YII_PATH, '', $reflection->getFileName()));
+            $this->sourcePath = YdConfig::cleanPath(str_replace(YII_PATH, '', $reflection->getFileName()));
         }
         else if (substr($filename, 0, strlen(Yii::getPathOfAlias('dressing'))) === Yii::getPathOfAlias('dressing')) {
-            $this->sourcePath = str_replace('\\', '/', str_replace(Yii::getPathOfAlias('dressing'), '', $reflection->getFileName()));
+            $this->sourcePath = YdConfig::cleanPath(str_replace(Yii::getPathOfAlias('dressing'), '', $reflection->getFileName()));
         }
         else if (substr($filename, 0, strlen(Yii::getPathOfAlias('bootstrap'))) === Yii::getPathOfAlias('bootstrap')) {
-            $this->sourcePath = str_replace('\\', '/', str_replace(Yii::getPathOfAlias('bootstrap'), '', $reflection->getFileName()));
+            $this->sourcePath = YdConfig::cleanPath(str_replace(Yii::getPathOfAlias('bootstrap'), '', $reflection->getFileName()));
         }
         else {
-            $this->sourcePath = str_replace('\\', '/', str_replace(BUILD_PATH, '', $reflection->getFileName()));
+            $this->sourcePath = str_replace(array('\\', '/'), DS, str_replace(BUILD_PATH, '', $reflection->getFileName()));
         }
 
 

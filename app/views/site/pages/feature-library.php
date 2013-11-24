@@ -12,7 +12,7 @@ $this->pageTitle = $this->pageHeading = t('Feature Library');
 $this->pageSubheading = t('Learn how to use the awesome features in YiiDressing');
 
 // menu
-$this->menu = YdMenu::getItemsFromMenu('Help');
+$this->menu = YdSiteMenu::getItemsFromMenu('Help');
 
 // breadcrumbs
 //$this->breadcrumbs[] = t('Getting Started');
@@ -206,7 +206,7 @@ $this->menu = YdMenu::getItemsFromMenu('Help');
 //                array('label' => t('YdEmailTemplate'), 'url' => array('/site/doc', 'view' => 'YdEmailTemplate')),
 //                array('label' => t('YdLoginForm'), 'url' => array('/site/doc', 'view' => 'YdLoginForm')),
 //                array('label' => t('YdLookup'), 'url' => array('/site/doc', 'view' => 'YdLookup')),
-//                array('label' => t('YdMenu'), 'url' => array('/site/doc', 'view' => 'YdMenu')),
+//                array('label' => t('YdSiteMenu'), 'url' => array('/site/doc', 'view' => 'YdSiteMenu')),
 //                array('label' => t('YdRole'), 'url' => array('/site/doc', 'view' => 'YdRole')),
 //                array('label' => t('YdSetting'), 'url' => array('/site/doc', 'view' => 'YdSetting')),
 //                array('label' => t('YdToken'), 'url' => array('/site/doc', 'view' => 'YdToken')),

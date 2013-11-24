@@ -11,7 +11,7 @@
 $this->pageTitle = $this->pageHeading = t('Help');
 
 // menu
-$this->menu = YdMenu::getItemsFromMenu('Help');
+$this->menu = YdSiteMenu::getItemsFromMenu('Help');
 
 // breadcrumbs
 $this->breadcrumbs[] = t('Help');

@@ -30,7 +30,8 @@ class DocsCommand extends CConsoleCommand
     public $themePath;
     public $currentClass;
     public $currentView;
-    public $dressingSourceUrl = 'https://github.com/cornernote/yii-dressing/blob/master/src';
+    public $appSourceUrl;
+    public $dressingSourceUrl = 'https://github.com/cornernote/yii-dressing/blob/master/yii-dressing';
     public $boosterSourceUrl = 'https://github.com/clevertech/YiiBooster/blob/master/src';
     public $yiiSourceUrl = 'https://github.com/yiisoft/yii/blob/master/framework';
     public $version;
@@ -72,7 +73,7 @@ EOD;
      */
     public function run($args)
     {
-		ini_set('memory_limit', '512M');
+        ini_set('memory_limit', '512M');
         $this->appOptions = array(
             'fileTypes' => array('php'),
             'exclude' => array(
@@ -94,7 +95,7 @@ EOD;
                 '/views',
                 '/migrations',
                 '/gii',
-                '/packages.php',
+                '/yii.php',
             ),
         );
         $this->boosterOptions = array(
@@ -104,6 +105,7 @@ EOD;
                 '/gii',
                 '/views',
                 '/assets',
+                '/userdoc',
             ),
         );
         $this->yiiOptions = array(
@@ -122,6 +124,8 @@ EOD;
                 '/utils/mimeTypes.php',
                 '/gii',
                 '/test',
+                '/yii.php',
+                '/yiic.php',
             ),
         );
 
@@ -140,13 +144,13 @@ EOD;
             $this->usageError("the output directory {$docPath} does not exist.");
 
         //if (isset($args[1]) && $args[1] == "noviews") {
-            $this->enableViews = false;
+        $this->enableViews = false;
         //}
         /*$offline=true;
         if(isset($args[1]) && $args[1]==='online')
             $offline=false;
 */
-        $this->version = YiiDressing::getVersion();
+        $this->version = YdDressing::getVersion();
 
         /*
          * development version - link to trunk
@@ -221,18 +225,18 @@ EOD;
     {
 
         if (file_exists(BUILD_PATH . $sourcePath)) {
-			if ($this->appSourceUrl) {
-				if ($line === null)
-					return CHtml::link('app' . $sourcePath, $this->appSourceUrl . $sourcePath, array('class' => 'sourceLink'));
-				else
-					return CHtml::link('app' . $sourcePath . '#L' . $line, $this->appSourceUrl . $sourcePath . '#L' . $line, array('class' => 'sourceLink'));
-			}
-			else {
-				if ($line === null)
-					return 'app' . $sourcePath;
-				else
-					return 'app' . $sourcePath . '#L' . $line;
-			}
+            if ($this->appSourceUrl) {
+                if ($line === null)
+                    return CHtml::link('app' . $sourcePath, $this->appSourceUrl . $sourcePath, array('class' => 'sourceLink'));
+                else
+                    return CHtml::link('app' . $sourcePath . '#L' . $line, $this->appSourceUrl . $sourcePath . '#L' . $line, array('class' => 'sourceLink'));
+            }
+            else {
+                if ($line === null)
+                    return 'app' . $sourcePath;
+                else
+                    return 'app' . $sourcePath . '#L' . $line;
+            }
         }
         else if (file_exists(Yii::getPathOfAlias('dressing') . $sourcePath)) {
             if ($line === null)
@@ -320,10 +324,10 @@ EOD;
         foreach (CFileHelper::findFiles(YII_PATH, $this->yiiOptions) as $file) {
             $files[] = $file;
         }
-        foreach (CFileHelper::findFiles(Yii::getPathOfAlias('dressing'), $this->dressingOptions) as $file) {
+        foreach (CFileHelper::findFiles(Yii::getPathOfAlias('bootstrap'), $this->boosterOptions) as $file) {
             $files[] = $file;
         }
-        foreach (CFileHelper::findFiles(Yii::getPathOfAlias('bootstrap'), $this->boosterOptions) as $file) {
+        foreach (CFileHelper::findFiles(Yii::getPathOfAlias('dressing'), $this->dressingOptions) as $file) {
             $files[] = $file;
         }
         if ($this->enableViews) {
@@ -332,6 +336,8 @@ EOD;
         else {
             $viewFiles = array();
         }
+        foreach ($files as $k => $v)
+            $files[$k] = str_replace(array('\\', '/'), DS, $v);
         $model = new DocsModel;
         $model->build($files, $viewFiles);
         return $model;

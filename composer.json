@@ -1,4 +1,5 @@
 {
+	"minimum-stability": "dev",
     "require": {
 		"mrphp/yii-dressing": "dev-master",
 		"clevertech/yii-booster": "dev-master",

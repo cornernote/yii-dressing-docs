@@ -4,15 +4,10 @@
  *
  * @author Brett O'Donnell <cornernote@gmail.com>
  * @author Zain Ul abidin <zainengineer@gmail.com>
- * @copyright 2013 Brett O'Donnell <cornernote@gmail.com>, Zain Ul abidin <zainengineer@gmail.com>
+ * @copyright 2013 Mr PHP
  * @link https://github.com/cornernote/yii-skeleton
  * @license http://www.gnu.org/copyleft/gpl.html
  */
-
-/**
- * Shortcut to DIRECTORY_SEPARATOR
- */
-defined('DS') or define('DS', DIRECTORY_SEPARATOR);
 
 /**
  * Debug your variables in the coolest way possible
@@ -41,7 +36,7 @@ function debug($var, $name = '')
 /**
  * Shortcut to Yii::app()
  *
- * @return WebApplication
+ * @return Application
  */
 function app()
 {
@@ -57,6 +52,36 @@ function db()
 {
     return Yii::app()->getDb();
 }
+
+/**
+ * Shortcut to Yii::app()->cache
+ *
+ * @param string $cache mem|file|db
+ * @return CCache
+ */
+function cache($cache = null)
+{
+    if ($cache == 'file')
+        $cache = 'cacheFile';
+    elseif ($cache == 'db')
+        $cache = 'cacheDb';
+    else
+        $cache = 'cache';
+    return Yii::app()->$cache;
+}
+
+/**
+ * Gets the named application parameter.
+ * Shortcut to Yii::app()->params[$name].
+ *
+ * @param $name
+ * @return bool
+ */
+function param($name)
+{
+    return isset(Yii::app()->params[$name]) ? Yii::app()->params[$name] : null;
+}
+
 
 /**
  * Shortcut to Yii::app()->clientScript
@@ -79,6 +104,34 @@ function user()
 }
 
 /**
+ * HTTP Request
+ *
+ * @return CHttpRequest
+ */
+function request()
+{
+    return Yii::app()->getRequest();
+}
+
+/**
+ * Shortcut to Yii::app()->email
+ *
+ * @return YdEmail
+ */
+function email()
+{
+    return Yii::app()->email;
+}
+
+/**
+ * @return YdReturnUrl
+ */
+function returnUrl()
+{
+    return Yii::app()->returnUrl;
+}
+
+/**
  * URL
  * eg: url('/example/view', array('id' => $model->id);
  *
@@ -89,6 +142,10 @@ function user()
  */
 function url($route, $params = array(), $ampersand = '&')
 {
+    if (is_array($route)) {
+        $params = CMap::mergeArray($route, $params);
+        $route = array_shift($params);
+    }
     return Yii::app()->createUrl($route, $params, $ampersand);
 }
 
@@ -104,27 +161,11 @@ function url($route, $params = array(), $ampersand = '&')
  */
 function absoluteUrl($route, $params = array(), $schema = '', $ampersand = '&')
 {
+    if (is_array($route)) {
+        $params = CMap::mergeArray($route, $params);
+        $route = array_shift($params);
+    }
     return Yii::app()->createAbsoluteUrl($route, $params, $schema, $ampersand);
-}
-
-/**
- * HTTP Request
- *
- * @return CHttpRequest
- */
-function request()
-{
-    return Yii::app()->getRequest();
-}
-
-/**
- * Request Uri
- *
- * @return string
- */
-function ru()
-{
-    return Yii::app()->getRequest()->getRequestUri();
 }
 
 /**
@@ -136,17 +177,6 @@ function ru()
 function parseUrl($url)
 {
     return Yii::app()->getUrlManager()->parseUrl($url);
-}
-
-/**
- * HTML Encode
- *
- * @param $text
- * @return string
- */
-function h($text)
-{
-    return htmlspecialchars($text, ENT_QUOTES, Yii::app()->charset);
 }
 
 /**
@@ -191,13 +221,35 @@ function t($message, $params = array(), $source = null, $language = null)
 }
 
 /**
- * Base Url
+ * HTML Encode
+ *
+ * @param $text
+ * @return string
+ */
+function h($text)
+{
+    return htmlspecialchars($text, ENT_QUOTES, Yii::app()->charset);
+}
+
+/**
+ * Request Uri
  *
  * @return string
  */
-function bu()
+function ru()
 {
-    return Yii::app()->getRequest()->getBaseUrl();
+    return Yii::app()->getRequest()->getRequestUri();
+}
+
+/**
+ * Base Url
+ *
+ * @param bool $absolute
+ * @return string
+ */
+function bu($absolute = false)
+{
+    return Yii::app()->getBaseUrl($absolute);
 }
 
 /**
@@ -207,7 +259,7 @@ function bu()
  */
 function bp()
 {
-    return Yii::app()->basePath;
+    return Yii::app()->getBasePath();
 }
 
 /**
@@ -217,21 +269,11 @@ function bp()
  */
 function au()
 {
-    return Yii::app()->getAssetManager()->publish(ap(), false, 1, YII_DEBUG);
+    return Yii::app()->getAssetManager()->publish(Yii::getPathOfAlias('application.assets'), false, 1, YII_DEBUG);
 }
 
 /**
- * Assets Path
- *
- * @return string
- */
-function ap()
-{
-    return Yii::getPathOfAlias('application.assets');
-}
-
-/**
- * Vendors Path
+ * Vendor Path
  *
  * @return string
  */
@@ -241,56 +283,17 @@ function vp()
 }
 
 /**
- * Htroot Path
+ * Public Path
  *
  * @return string
  */
-function hp()
+function pp()
 {
-    return dirname(Yii::app()->request->scriptFile);
+    return Yii::getPathOfAlias('public');
 }
 
 /**
- * Gets the named application parameter.
- * Shortcut to Yii::app()->params[$name].
- *
- * @param $name
- * @return bool
- */
-function param($name)
-{
-    return isset(Yii::app()->params[$name]) ? Yii::app()->params[$name] : false;
-}
-
-/**
- * Shortcut to Yii::app()->cache
- *
- * @param string $cache mem|file
- * @return CCache
- */
-function cache($cache = null)
-{
-    if ($cache == 'file')
-        $cache = 'cacheFile';
-    elseif ($cache == 'db')
-        $cache = 'cacheDb';
-    else
-        $cache = 'cache';
-    return Yii::app()->$cache;
-}
-
-/**
- * Shortcut to Yii::app()->format
- *
- * @return CFormatter
- */
-function format()
-{
-    return Yii::app()->format;
-}
-
-/**
- * Gets a submitted field
+ * Submitted Field
  * Shortcut to YdHelper::getSubmittedField
  *
  * @param $field
@@ -303,63 +306,27 @@ function sf($field, $model = null)
 }
 
 /**
- * Returns the a key in an array if it is set, otherwise returns false.
+ * Safe Index
+ * Returns the a key in an array if it is set, otherwise returns null.
  *
  * @param $array
  * @param $index
- * @return bool
+ * @return mixed
  */
 function si($array, $index)
 {
-    return isset($array[$index]) ? $array[$index] : false;
+    return isset($array[$index]) ? $array[$index] : null;
 }
 
 /**
- * Is this an AJAX request
+ * Value or Default
+ * Returns the a value if it is set, otherwise returns the default.
  *
- * @return bool
+ * @param $value
+ * @param $default
+ * @return mixed
  */
-function isAjax()
+function vd(&$value, $default = null)
 {
-    return Yii::app()->getRequest()->getIsAjaxRequest();
-}
-
-/**
- * Is this a Post request
- *
- * @return bool
- */
-function isPost()
-{
-    return Yii::app()->getRequest()->getIsPostRequest();
-}
-
-/**
- * Is this a CLI request
- *
- * @return bool
- */
-function isCli()
-{
-    return YdHelper::isCli();
-}
-
-/**
- * Is this a Mobile request
- *
- * @return bool
- */
-function isMobile()
-{
-    return YdHelper::isMobileBrowser();
-}
-
-/**
- * Is this a Front Page request
- *
- * @return bool
- */
-function isFront()
-{
-    return YdHelper::isFrontPage();
+    return isset($value) ? $value : $default;
 }

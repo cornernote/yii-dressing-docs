@@ -12,7 +12,7 @@ $this->pageTitle = $this->pageHeading = t('Getting Started');
 $this->pageSubheading = t('How to configure the library in your Yii Application');
 
 // menu
-$this->menu = YdMenu::getItemsFromMenu('Help');
+$this->menu = YdSiteMenu::getItemsFromMenu('Help');
 
 // breadcrumbs
 //$this->breadcrumbs[] = t('Getting Started');
