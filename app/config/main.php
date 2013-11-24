@@ -14,8 +14,8 @@ $db = vd(Config::instance()->getConfig('db'), array(
 return array(
 
     // yii settings
-    'id' => vd($app['id'], 'app'),
-    'name' => vd($app['name'], 'App'),
+    'id' => vd($app['id'], 'yii-dressing'),
+    'name' => vd($app['name'], 'YiiDressing'),
     'language' => vd($app['language'], 'en'),
     'theme' => vd($app['theme']),
     'params' => vd($app['params'], array()),
