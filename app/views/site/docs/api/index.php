@@ -17,13 +17,17 @@ $this->breadcrumbs[] = Yii::t('app', 'Documentation');
   <th>Package</th><th>Class</th><th>Description</th>
 </tr>
 	<tr>
-		  <td rowspan="2"><a name="dressing"></a>dressing</td>
+		  <td rowspan="3"><a name="dressing"></a>dressing</td>
 		  <td><?php echo CHtml::link('YdBase', array('/site/doc', 'view' => 'YdBase')); ?></td>
 	  <td>YdBase is a helper class serving common framework functionalities.</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdConfig', array('/site/doc', 'view' => 'YdConfig')); ?></td>
 	  <td>YdConfig implements protocols for configuring the environment before the application is loaded.</td>
+	</tr>
+		<tr>
+		  <td><?php echo CHtml::link('YdDressing', array('/site/doc', 'view' => 'YdDressing')); ?></td>
+	  <td>In configuration file main.php add this lines of code:</td>
 	</tr>
 		<tr>
 		  <td rowspan="1"><a name="dressing.actions"></a>dressing.actions</td>
@@ -65,7 +69,7 @@ $this->breadcrumbs[] = Yii::t('app', 'Documentation');
 	  <td>YdErrorEmailCommand</td>
 	</tr>
 		<tr>
-		  <td rowspan="41"><a name="dressing.components"></a>dressing.components</td>
+		  <td rowspan="40"><a name="dressing.components"></a>dressing.components</td>
 		  <td><?php echo CHtml::link('YdActiveDataProvider', array('/site/doc', 'view' => 'YdActiveDataProvider')); ?></td>
 	  <td>YdActiveDataProvider</td>
 	</tr>
@@ -116,10 +120,6 @@ $this->breadcrumbs[] = Yii::t('app', 'Documentation');
 		<tr>
 		  <td><?php echo CHtml::link('YdDbMigration', array('/site/doc', 'view' => 'YdDbMigration')); ?></td>
 	  <td>Class YdDbMigration</td>
-	</tr>
-		<tr>
-		  <td><?php echo CHtml::link('YdDressing', array('/site/doc', 'view' => 'YdDressing')); ?></td>
-	  <td>In configuration file main.php add this lines of code:</td>
 	</tr>
 		<tr>
 		  <td><?php echo CHtml::link('YdEmail', array('/site/doc', 'view' => 'YdEmail')); ?></td>
