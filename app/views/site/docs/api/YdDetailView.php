@@ -27,7 +27,7 @@ $this->breadcrumbs[] = 'YdDetailView';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\widgets\YdDetailView.php">dressing\widgets\YdDetailView.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob//master/yii-dressing\widgets\YdDetailView.php">dressing\widgets\YdDetailView.php</a></td>
 </tr>
 <tr>
   <th>Authors</th>

@@ -24,7 +24,7 @@ $this->breadcrumbs[] = 'CMssqlTableSchema';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework\db\schema\mssql\CMssqlTableSchema.php">yii\db\schema\mssql\CMssqlTableSchema.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\db\schema\mssql\CMssqlTableSchema.php">yii\db\schema\mssql\CMssqlTableSchema.php</a></td>
 </tr>
 <tr>
   <th>Authors</th>

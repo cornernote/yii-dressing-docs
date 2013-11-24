@@ -31,9 +31,9 @@ class DocsCommand extends CConsoleCommand
     public $currentClass;
     public $currentView;
     public $appSourceUrl;
-    public $dressingSourceUrl = 'https://github.com/cornernote/yii-dressing/blob/master/yii-dressing';
+    public $dressingSourceUrl = 'https://github.com/cornernote/yii-dressing/blob/';
     public $boosterSourceUrl = 'https://github.com/clevertech/YiiBooster/blob/master/src';
-    public $yiiSourceUrl = 'https://github.com/yiisoft/yii/blob/master/framework';
+    public $yiiSourceUrl = 'https://github.com/yiisoft/yii/blob/master/framework/';
     public $version;
     public $enableViews = true;
     public $appOptions = array();
@@ -157,9 +157,9 @@ EOD;
          * release version link to tags
          */
         if (substr($this->version, -3) == 'dev')
-            $this->dressingSourceUrl .= '/master/src';
+            $this->dressingSourceUrl .= '/master/yii-dressing';
         else
-            $this->dressingSourceUrl .= '/' . $this->version . '/src';
+            $this->dressingSourceUrl .= '/' . $this->version . '/yii-dressing';
 
         $this->pageTitle = Yii::app()->name . ' Class Reference';
         $themePath = dirname(__FILE__) . '/docs';

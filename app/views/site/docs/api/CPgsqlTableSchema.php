@@ -28,7 +28,7 @@ $this->breadcrumbs[] = 'CPgsqlTableSchema';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework\db\schema\pgsql\CPgsqlTableSchema.php">yii\db\schema\pgsql\CPgsqlTableSchema.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\db\schema\pgsql\CPgsqlTableSchema.php">yii\db\schema\pgsql\CPgsqlTableSchema.php</a></td>
 </tr>
 <tr>
   <th>Author</th>

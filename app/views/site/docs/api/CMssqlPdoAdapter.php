@@ -23,7 +23,7 @@ PDO</td>
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework\db\schema\mssql\CMssqlPdoAdapter.php">yii\db\schema\mssql\CMssqlPdoAdapter.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\db\schema\mssql\CMssqlPdoAdapter.php">yii\db\schema\mssql\CMssqlPdoAdapter.php</a></td>
 </tr>
 <tr>
   <th>Author</th>
@@ -163,7 +163,7 @@ public boolean <b>beginTransaction</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework\db\schema\mssql\CMssqlPdoAdapter.php#L39">yii\db\schema\mssql\CMssqlPdoAdapter.php#L39</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\db\schema\mssql\CMssqlPdoAdapter.php#L39">yii\db\schema\mssql\CMssqlPdoAdapter.php#L39</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">beginTransaction&nbsp;</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">exec</span><span style="color: #007700">(</span><span style="color: #DD0000">'BEGIN&nbsp;TRANSACTION'</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">true</span><span style="color: #007700">;<br />}</span>
 </span>
@@ -195,7 +195,7 @@ public boolean <b>commit</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework\db\schema\mssql\CMssqlPdoAdapter.php#L53">yii\db\schema\mssql\CMssqlPdoAdapter.php#L53</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\db\schema\mssql\CMssqlPdoAdapter.php#L53">yii\db\schema\mssql\CMssqlPdoAdapter.php#L53</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">commit&nbsp;</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">exec</span><span style="color: #007700">(</span><span style="color: #DD0000">'COMMIT&nbsp;TRANSACTION'</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">true</span><span style="color: #007700">;<br />}</span>
 </span>
@@ -232,7 +232,7 @@ public integer <b>lastInsertId</b>(string|null $sequence=NULL)</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework\db\schema\mssql\CMssqlPdoAdapter.php#L26">yii\db\schema\mssql\CMssqlPdoAdapter.php#L26</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\db\schema\mssql\CMssqlPdoAdapter.php#L26">yii\db\schema\mssql\CMssqlPdoAdapter.php#L26</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">lastInsertId&nbsp;</span><span style="color: #007700">(</span><span style="color: #0000BB">$sequence</span><span style="color: #007700">=</span><span style="color: #0000BB">NULL</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">query</span><span style="color: #007700">(</span><span style="color: #DD0000">'SELECT&nbsp;CAST(COALESCE(SCOPE_IDENTITY(),&nbsp;@@IDENTITY)&nbsp;AS&nbsp;bigint)'</span><span style="color: #007700">)-&gt;</span><span style="color: #0000BB">fetchColumn</span><span style="color: #007700">();<br />}</span>
 </span>
@@ -262,7 +262,7 @@ public boolean <b>rollBack</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework\db\schema\mssql\CMssqlPdoAdapter.php#L67">yii\db\schema\mssql\CMssqlPdoAdapter.php#L67</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\db\schema\mssql\CMssqlPdoAdapter.php#L67">yii\db\schema\mssql\CMssqlPdoAdapter.php#L67</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">rollBack&nbsp;</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">exec</span><span style="color: #007700">(</span><span style="color: #DD0000">'ROLLBACK&nbsp;TRANSACTION'</span><span style="color: #007700">);<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">true</span><span style="color: #007700">;<br />}</span>
 </span>

@@ -24,7 +24,7 @@ $this->breadcrumbs[] = 'COciTableSchema';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework\db\schema\oci\COciTableSchema.php">yii\db\schema\oci\COciTableSchema.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\db\schema\oci\COciTableSchema.php">yii\db\schema\oci\COciTableSchema.php</a></td>
 </tr>
 <tr>
   <th>Author</th>

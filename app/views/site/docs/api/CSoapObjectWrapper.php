@@ -22,7 +22,7 @@ $this->breadcrumbs[] = 'CSoapObjectWrapper';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework\web\services\CWebService.php">yii\web\services\CWebService.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\services\CWebService.php">yii\web\services\CWebService.php</a></td>
 </tr>
 <tr>
   <th>Author</th>
@@ -132,7 +132,7 @@ public mixed <b>__call</b>(string $name, array $arguments)</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework\web\services\CWebService.php#L286">yii\web\services\CWebService.php#L286</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\services\CWebService.php#L286">yii\web\services\CWebService.php#L286</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">__call</span><span style="color: #007700">(</span><span style="color: #0000BB">$name</span><span style="color: #007700">,</span><span style="color: #0000BB">$arguments</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">call_user_func_array</span><span style="color: #007700">(array(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">object</span><span style="color: #007700">,</span><span style="color: #0000BB">$name</span><span style="color: #007700">),</span><span style="color: #0000BB">$arguments</span><span style="color: #007700">);<br />}</span>
 </span>
@@ -162,7 +162,7 @@ public void <b>__construct</b>(object $object)</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework\web\services\CWebService.php#L274">yii\web\services\CWebService.php#L274</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\web\services\CWebService.php#L274">yii\web\services\CWebService.php#L274</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">__construct</span><span style="color: #007700">(</span><span style="color: #0000BB">$object</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">object</span><span style="color: #007700">=</span><span style="color: #0000BB">$object</span><span style="color: #007700">;<br />}</span>
 </span>

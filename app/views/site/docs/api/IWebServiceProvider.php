@@ -26,7 +26,7 @@ $this->breadcrumbs[] = 'IWebServiceProvider';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework\base\interfaces.php">yii\base\interfaces.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\base\interfaces.php">yii\base\interfaces.php</a></td>
 </tr>
 <tr>
   <th>Author</th>
@@ -93,7 +93,7 @@ abstract public void <b>afterWebMethod</b>(<?php echo CHtml::link('CWebService',
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework\base\interfaces.php#L207">yii\base\interfaces.php#L207</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\base\interfaces.php#L207">yii\base\interfaces.php#L207</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">afterWebMethod</span><span style="color: #007700">(</span><span style="color: #0000BB">$service</span><span style="color: #007700">);</span>
 </span>
@@ -127,7 +127,7 @@ abstract public boolean <b>beforeWebMethod</b>(<?php echo CHtml::link('CWebServi
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework\base\interfaces.php#L202">yii\base\interfaces.php#L202</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\base\interfaces.php#L202">yii\base\interfaces.php#L202</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">beforeWebMethod</span><span style="color: #007700">(</span><span style="color: #0000BB">$service</span><span style="color: #007700">);</span>
 </span>

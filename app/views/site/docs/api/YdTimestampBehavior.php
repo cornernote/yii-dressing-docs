@@ -31,7 +31,7 @@ $this->breadcrumbs[] = 'YdTimestampBehavior';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdTimestampBehavior.php">dressing\behaviors\YdTimestampBehavior.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob//master/yii-dressing\behaviors\YdTimestampBehavior.php">dressing\behaviors\YdTimestampBehavior.php</a></td>
 </tr>
 <tr>
   <th>Authors</th>
@@ -442,7 +442,7 @@ public void <b>beforeSave</b>(<?php echo CHtml::link('CModelEvent', array('/site
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob/master/yii-dressing/master/src\behaviors\YdTimestampBehavior.php#L41">dressing\behaviors\YdTimestampBehavior.php#L41</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/cornernote/yii-dressing/blob//master/yii-dressing\behaviors\YdTimestampBehavior.php#L41">dressing\behaviors\YdTimestampBehavior.php#L41</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">beforeSave</span><span style="color: #007700">(</span><span style="color: #0000BB">$event</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_setAttributes</span><span style="color: #007700">();<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">parent</span><span style="color: #007700">::</span><span style="color: #0000BB">beforeSave</span><span style="color: #007700">(</span><span style="color: #0000BB">$event</span><span style="color: #007700">);<br />}</span>
 </span>

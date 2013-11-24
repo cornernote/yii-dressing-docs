@@ -31,7 +31,7 @@ $this->breadcrumbs[] = 'CGettextFile';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework\i18n\gettext\CGettextFile.php">yii\i18n\gettext\CGettextFile.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\i18n\gettext\CGettextFile.php">yii\i18n\gettext\CGettextFile.php</a></td>
 </tr>
 <tr>
   <th>Author</th>
@@ -225,7 +225,7 @@ abstract public array <b>load</b>(string $file, string $context)</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework\i18n\gettext\CGettextFile.php#L26">yii\i18n\gettext\CGettextFile.php#L26</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\i18n\gettext\CGettextFile.php#L26">yii\i18n\gettext\CGettextFile.php#L26</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">abstract&nbsp;public&nbsp;function&nbsp;</span><span style="color: #0000BB">load</span><span style="color: #007700">(</span><span style="color: #0000BB">$file</span><span style="color: #007700">,</span><span style="color: #0000BB">$context</span><span style="color: #007700">);</span>
 </span>
@@ -261,7 +261,7 @@ the context with chr(4) as the separator.</td>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework\i18n\gettext\CGettextFile.php#L34">yii\i18n\gettext\CGettextFile.php#L34</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\i18n\gettext\CGettextFile.php#L34">yii\i18n\gettext\CGettextFile.php#L34</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">abstract&nbsp;public&nbsp;function&nbsp;</span><span style="color: #0000BB">save</span><span style="color: #007700">(</span><span style="color: #0000BB">$file</span><span style="color: #007700">,</span><span style="color: #0000BB">$messages</span><span style="color: #007700">);</span>
 </span>

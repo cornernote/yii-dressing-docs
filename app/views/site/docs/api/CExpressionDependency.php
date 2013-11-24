@@ -32,7 +32,7 @@ $this->breadcrumbs[] = 'CExpressionDependency';
 </tr>
 <tr>
   <th>Source Code</th>
-  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework\caching\dependencies\CExpressionDependency.php">yii\caching\dependencies\CExpressionDependency.php</a></td>
+  <td><a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\caching\dependencies\CExpressionDependency.php">yii\caching\dependencies\CExpressionDependency.php</a></td>
 </tr>
 <tr>
   <th>Author</th>
@@ -319,7 +319,7 @@ public void <b>__construct</b>(string $expression='true')</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework\caching\dependencies\CExpressionDependency.php#L41">yii\caching\dependencies\CExpressionDependency.php#L41</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\caching\dependencies\CExpressionDependency.php#L41">yii\caching\dependencies\CExpressionDependency.php#L41</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">public&nbsp;function&nbsp;</span><span style="color: #0000BB">__construct</span><span style="color: #007700">(</span><span style="color: #0000BB">$expression</span><span style="color: #007700">=</span><span style="color: #DD0000">'true'</span><span style="color: #007700">)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">expression</span><span style="color: #007700">=</span><span style="color: #0000BB">$expression</span><span style="color: #007700">;<br />}</span>
 </span>
@@ -348,7 +348,7 @@ protected mixed <b>generateDependentData</b>()</div>
 </table>
 
 <div class="sourceCode">
-<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework\caching\dependencies\CExpressionDependency.php#L51">yii\caching\dependencies\CExpressionDependency.php#L51</a> (<b><a href="#" class="show">show</a></b>)
+<b>Source Code:</b> <a class="sourceLink" href="https://github.com/yiisoft/yii/blob/master/framework/\caching\dependencies\CExpressionDependency.php#L51">yii\caching\dependencies\CExpressionDependency.php#L51</a> (<b><a href="#" class="show">show</a></b>)
 <div class="code"><code><span style="color: #000000">
 <span style="color: #0000BB"></span><span style="color: #007700">protected&nbsp;function&nbsp;</span><span style="color: #0000BB">generateDependentData</span><span style="color: #007700">()<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">evaluateExpression</span><span style="color: #007700">(</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">expression</span><span style="color: #007700">);<br />}</span>
 </span>
