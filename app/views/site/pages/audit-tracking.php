@@ -47,7 +47,7 @@ $this->menu = YdSiteMenu::getItemsFromMenu('Help');
                 <li>Superglobals - ($_GET/$_POST/$_SESSION/$_FILES/$_COOKIE), the arrays are serialized then compressed using gzip</li>
                 <li>Timers - Start and end times of the application</li>
                 <li>Memory - Memory usage and peak memory usage</li>
-                <li>AuditTrails - A count of the AuditTrails, see YdAuditTrailBehavior below</li>
+                <li>AuditTrails - A count of the AuditTrails, see YdAuditBehavior below</li>
             </ul>
 
 
