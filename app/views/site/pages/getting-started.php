@@ -76,7 +76,7 @@ $this->menu = YdSiteMenu::getItemsFromMenu('Help');
 
             <p>Mr PHP has another opensource project called
                 <a href="https://github.com/mrphp/yii-skeleton">YiiSkeleton</a>, which is the prepared web application we use in our own workflow.
-                YiiSkeleton includes YiiDressing as one of it's extensions. All you need is probably configure it as specified in next section.
+                YiiSkeleton is configured to use YiiDressing and all of it's components.
             </p>
 
             <p>
@@ -108,7 +108,7 @@ $this->menu = YdSiteMenu::getItemsFromMenu('Help');
 ),
 </pre>
 
-            <p>You should place this snippet inside the Yii config.</p>
+            <p>You should place this snippet inside the Yii config, usually config/main.php.</p>
 
             <p>
                 <span class="label label-info">Note</span> This is absolutely minimal configuration, all property will be set to defaults.
