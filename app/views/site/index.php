@@ -11,14 +11,23 @@
 
 $this->pageTitle = $this->pageHeading = Yii::app()->name;
 
-echo '<p>You may change the content of this page by modifying the file <code>' . __FILE__ . '</code>.</p>';
-if (!YdHelper::tableExists('migration')) {
-    echo '<p>To install the database run:</p>';
-    echo '<pre>';
-    $win = YdHelper::isWindowsServer();
-    echo ($win ? 'copy' : 'cp') . ' ' . Yii::getPathOfAlias('dressing') . DS . 'migrations' . DS . '*' . ($win ? '.*' : '') . ' ' . Yii::getPathOfAlias('application') . DS . 'migrations' . "\n";
-    echo Yii::getPathOfAlias('core') . DS . 'bin' . DS . 'yiic migrate' . "\n";
-    echo '</pre>';
-}
-
-
+echo '<h1>' . t('Features') . '</h1>';
+$this->widget('bootstrap.widgets.TbMenu', array(
+    'type' => 'pills',
+    //'stacked' => true,
+    'items' => array(
+        array('label' => t('Attachment Management'), 'url' => array('/site/page', 'view' => 'attachment-management')),
+        array('label' => t('Audit Tracking'), 'url' => array('/site/page', 'view' => 'audit-tracking')),
+        array('label' => t('Code Generation'), 'url' => array('/site/page', 'view' => 'code-generation')),
+        array('label' => t('Contact Us Management'), 'url' => array('/site/page', 'view' => 'contact-us-management')),
+        array('label' => t('Email Handling'), 'url' => array('/site/page', 'view' => 'email-handling')),
+        array('label' => t('Error Handling'), 'url' => array('/site/page', 'view' => 'error-handling')),
+        array('label' => t('Model Behaviors'), 'url' => array('/site/page', 'view' => 'model-behaviors')),
+        array('label' => t('Model Extras'), 'url' => array('/site/page', 'view' => 'model-extras')),
+        array('label' => t('Return URL'), 'url' => array('/site/page', 'view' => 'return-url')),
+        array('label' => t('Settings Management'), 'url' => array('/site/page', 'view' => 'settings-management')),
+        array('label' => t('Site Menu'), 'url' => array('/site/page', 'view' => 'site-menu')),
+        array('label' => t('User Management'), 'url' => array('/site/page', 'view' => 'user-management')),
+        array('label' => t('Yii Loader'), 'url' => array('/site/page', 'view' => 'yii-loader')),
+    ),
+));
