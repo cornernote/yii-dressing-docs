@@ -19,4 +19,4 @@ $config = Config::createInstance();
  */
 require_once(APP_PATH . DS . 'globals.php');
 require_once(APP_PATH . DS . 'yii.php');
-Yii::createWebApplication(APP_CONFIG)->run();
+Yii::createWebApplication($config->getAppConfig())->run();

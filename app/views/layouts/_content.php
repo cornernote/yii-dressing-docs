@@ -26,7 +26,7 @@ if ($this->showNavBar) {
 ?>
 <div id="holder">
     <div id="body">
-        <header class="jumbotron<?php echo YdHelper::isFrontPage() ? '' : ' subhead'; ?>">
+        <header class="jumbotron<?php echo YdHelper::isLoginPage() ? '' : ' subhead'; ?>">
             <div class="container">
                 <?php
                 if ($this->pageHeading) {

@@ -19,42 +19,67 @@ $this->menu = YdSiteMenu::getItemsFromMenu('Help');
 ?>
 <div class="row">
 
-<!-- Left menu BEGIN -->
-<div id="sidebar" class="span3">
-    <ul class="nav nav-list bs-docs-sidenav affix-top">
-        <li><a href="#error-handler"><i class="icon-chevron-right"></i> Error Handler</a></li>
-        <li><a href="#fatal-error-catch"><i class="icon-chevron-right"></i> Fatal Error Catch</a></li>
-    </ul>
-</div>
-<!-- Left menu END -->
+    <!-- Left menu BEGIN -->
+    <div id="sidebar" class="span3">
+        <ul class="nav nav-list bs-docs-sidenav affix-top">
+            <li><a href="#error-handler"><i class="icon-chevron-right"></i> Error Handler</a></li>
+            <li><a href="#fatal-error-catch"><i class="icon-chevron-right"></i> Catch Fatal Errors</a></li>
+        </ul>
+    </div>
+    <!-- Left menu END -->
 
-<div class="span9">
-<section id="error-handler">
-    <?php
-    echo '<div class="page-header"><h1>' . t('Error Handler') . '</h1></div>';
-    $this->widget('bootstrap.widgets.TbMenu', array(
-        'type' => 'pills',
-        'stacked' => true,
-        'items' => array( //array('label' => t('YdGeneratePropertiesAction'), 'url' => array('/site/doc', 'view' => 'YdGeneratePropertiesAction')),
-        ),
-    ));
-    ?>
-</section>
-<section id="fatal-error-catch">
-    <?php
-    echo '<div class="page-header"><h1>' . t('Fatal Error Catch') . '</h1></div>';
-    $this->widget('bootstrap.widgets.TbMenu', array(
-        'type' => 'pills',
-        'stacked' => true,
-        'items' => array( //            array('label' => t('YdAuditBehavior'), 'url' => array('/site/doc', 'view' => 'YdAuditBehavior')),
-//            array('label' => t('YdCacheBehavior'), 'url' => array('/site/doc', 'view' => 'YdCacheBehavior')),
-//            array('label' => t('YdEavBehavior'), 'url' => array('/site/doc', 'view' => 'YdEavBehavior')),
-//            array('label' => t('YdSoftDeleteBehavior'), 'url' => array('/site/doc', 'view' => 'YdSoftDeleteBehavior')),
-//            array('label' => t('YdTimestampBehavior'), 'url' => array('/site/doc', 'view' => 'YdTimestampBehavior')),
-        ),
-    ));
-    ?>
-</section>
+    <div class="span9">
+        <section id="error-handler">
+            <div class="page-header"><h1>Error Handler</h1></div>
 
-</div>
+            <p class="lead">In live mode, keep your pretty HTML stack dumps so that you can view them later.</p>
+
+            <p>Yii's built-in error handling is amazing... when you are in debug mode. However as soon as you set
+                <code>YII_DEBUG</code> to false you stop getting those pretty error messages, which can make it tricky to
+                find a problem in a live environment.</p>
+
+            <p>YiiDressing provides an extension of Yii's error handler called <?php echo l('YdErrorHandler', array('/site/doc', 'view' => 'YdErrorHandler')); ?>.</p>
+
+            <h2>Installation</h2>
+
+            <p>Setup is a breeze, simply override the default error handler in your Yii config.</p>
+
+<pre>'components' => array(
+    'errorHandler' => array(
+        'class' => 'dressing.components.YdErrorHandler',
+    ),
+),
+</pre>
+            <p>Now any errors will automatically be written to <code>runtime/errors</code> as plain html files.
+                If <code>YII_DEBUG</code> is turned on then you will also see the messages on the screen as you usually
+                would.</p>
+
+        </section>
+        <section id="fatal-error-catch">
+            <div class="page-header"><h1>Catch Fatal Errors</h1></div>
+
+            <p class="lead">Don't let any fatal errors slip by without your notice.</p>
+
+            <p>The <?php echo l('YdFatalErrorCatch', array('/site/doc', 'view' => 'YdFatalErrorCatch')); ?> class allows
+                you to make use of PHP's <code>register_shutdown_function()</code> to handle errors that would usually
+                abort PHP's execution.</p>
+
+            <p>It takes advantage of YdErrorHandler to save the fatal error messages to the
+                <code>runtime/errors</code> folder.</p>
+
+            <h2>Installation</h2>
+
+            <p>You will need to add the following to your <code>preload</code> and <code>components</code> sections in
+                your Yii config:</p>
+
+            <pre>'preload' => array('log', 'fatalErrorCatch'),</pre>
+<pre>'components' => array(
+    'fatalErrorCatch' => array(
+        'class' => 'dressing.components.YdFatalErrorCatch',
+    ),
+),
+</pre>
+        </section>
+
+    </div>
 </div>

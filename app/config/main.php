@@ -4,8 +4,8 @@
  *
  * At this point in the runtime all constants have been defined and the environment has been configured.
  */
-$app = Config::instance()->getConfig('app');
-$db = vd(Config::instance()->getConfig('db'), array(
+$app = Config::instance()->getValue('app');
+$db = vd(Config::instance()->getValue('db'), array(
     'host' => 'localhost',
     'name' => 'test',
     'user' => 'root',
@@ -26,8 +26,8 @@ return array(
     'aliases' => array(
         'public' => PUBLIC_PATH,
         'vendor' => VENDOR_PATH,
-        'dressing' => YII_DRESSING_PATH,
-        'bootstrap' => YII_BOOSTER_PATH, // needs to be named bootstrap
+        'dressing' => Config::cleanPath(VENDOR_PATH . '/mrphp/yii-dressing/yii-dressing'),
+        'bootstrap' => Config::cleanPath(VENDOR_PATH . '/clevertech/yii-booster/src'), // needs to be named bootstrap
     ),
     'import' => array(
         'application.models.*',
@@ -66,19 +66,6 @@ return array(
             'basePath' => PUBLIC_PATH . DS . 'assets',
             'baseUrl' => PUBLIC_URL . '/assets',
             'linkAssets' => true,
-        ),
-        'dressing' => array(
-            'modelMap' => array(
-                'YdAudit' => array(
-                    'relations' => array(
-                        'user' => array(
-                            'CBelongsToRelation',
-                            'User',
-                            'user_id',
-                        ),
-                    ),
-                ),
-            ),
         ),
     ),
     'preload' => array(
