@@ -27,7 +27,6 @@ class SiteController extends YdWebController
         );
     }
 
-
     /**
      * Declares class-based actions.
      * @return array
